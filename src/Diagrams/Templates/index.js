@@ -1,0 +1,21 @@
+import annotationLabelTemplate from './AnnotationLabelTemplate';
+import buttonsTemplate from './ButtonsTemplate';
+import checkBoxTemplate from './CheckBoxTemplate';
+import cursorTemplate from './CursorTemplate';
+import dotHighlightTemplate from './DotHighlightTemplate';
+import groupTitleTemplate from './GroupTitleTemplate';
+import highlightTemplate from './HighlightTemplate';
+import itemTemplate from './ItemTemplate';
+import userTemplate from './UserTemplate';
+import labelAnnotationTemplate from './LabelAnnotationTemplate';
+
+export const AnnotationLabelTemplate = annotationLabelTemplate;
+export const ButtonsTemplate = buttonsTemplate;
+export const CheckBoxTemplate = checkBoxTemplate;
+export const CursorTemplate = cursorTemplate;
+export const DotHighlightTemplate = dotHighlightTemplate;
+export const GroupTitleTemplate = groupTitleTemplate;
+export const HighlightTemplate = highlightTemplate;
+export const ItemTemplate = itemTemplate;
+export const UserTemplate = userTemplate;
+export const LabelAnnotationTemplate = labelAnnotationTemplate;

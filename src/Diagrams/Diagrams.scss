@@ -1,0 +1,250 @@
+.BPScrollPanel {
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+
+.BPMousePanel {
+  position: absolute;
+  overflow: hidden;
+}
+
+.BPPlaceholderPanel {
+  position: absolute;
+  overflow: hidden;
+}
+
+.BPLayerPanel {
+  position: absolute;
+  overflow: visible;
+}
+
+.BPCalloutPlaceholderPanel {
+  position: absolute;
+  overflow: visible;
+}
+
+.BPItemPlaceholder {
+	position: absolute;
+	overflow: visible;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+}
+
+
+.BPItem {
+	position: absolute;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+}
+
+.BPCornerAll {
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.BPItemFrame {
+	border: 1px solid #dddddd;
+	background: #eeeeee;
+	color: #333333;
+}
+
+.BPTitle {
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	line-height: 16px;
+	color: white;
+	padding: 0;
+}
+
+.BPPhotoFrame {
+	border: 1px solid #cccccc;
+	background: #f6f6f6;
+	color: #1c94c4;
+}
+
+.BPDefaultTemplate {
+  @extend .BPItem, .BPCornerAll, .BPItemFrame;
+	width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+
+	.BPTitleBackground {
+    @extend .BPItem, .BPCornerAll, .BPItemFrame;
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		height: 20px;
+
+		.BPTitle {
+    @extend .BPItem, .BPTitle;
+		top: 2px;
+    left: 2px;
+    right: 2px;
+		height: 16px;
+		}
+	}
+
+	.BPPhotoFrame {
+    @extend .BPItem, .BPPhotoFrame;
+		top: 26px;
+		left: 2px;
+		width: 50px;
+		height: 60px;
+
+		.BPPhoto {
+		height:60px;
+		width:50px;
+		}
+	}
+
+	.BPDescription {
+    @extend .BPItem;
+    overflow: hidden;
+		top: 26px;
+		left: 56px;
+		right: 2px;
+		bottom: 2px;
+		font-size: 12px;
+	}
+}
+
+.BPHighlightFrame {
+	position: absolute;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+  border-radius: 4px;
+  
+  border: 1px solid #fbcb09;
+	background: #fdf5ce;
+  color: #c77405;
+  
+  width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+}
+
+.BPHighlightDotFrame {
+	position: absolute;
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+
+  border: 1px solid #fbcb09;
+	background: #fdf5ce;
+  color: #c77405;
+  
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+}
+
+.BPCursorFrame {
+	position: absolute;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+  border-radius: 4px;
+  
+  border: 2px solid #fbd850;
+	background: #ffffff;
+  color: #eb8f00;
+  
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  top: -2px;
+}
+
+.BPGroupTitleFrame {
+	position: absolute;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+  border-radius: 4px;
+  
+	background: royalblue;
+	border-width: 0;
+	color: white;
+	padding: 0;
+  
+  width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+}
+
+.BPSelectionCheckBox {
+	font-size: 12px;
+	line-height: 12px;
+  vertical-align: top;
+}
+
+.BPSelectionText {
+	font-size: 12px;
+	line-height: 18px;
+  vertical-align: middle;
+}
