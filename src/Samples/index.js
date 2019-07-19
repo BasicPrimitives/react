@@ -22,6 +22,7 @@ import customLayoutWithInvisibleItems from './CustomLayoutWithInvisibleItems';
 import skippedLevels from './SkippedLevels';
 import inactiveFamilyItems from './InactiveFamilyItems';
 import itemTemplate from './ItemTemplate';
+import connectorAnnotation from './ConnectorAnnotation';
 
 export const FirstOrganizationalChart = firstOrganizationalChart;
 export const FirstFamilyChart = firstFamilyChart;
@@ -47,3 +48,4 @@ export const CustomLayoutWithInvisibleItems = customLayoutWithInvisibleItems;
 export const SkippedLevels = skippedLevels;
 export const InactiveFamilyItems = inactiveFamilyItems; 
 export const ItemTemplate = itemTemplate;
+export const ConnectorAnnotation = connectorAnnotation;

@@ -20,21 +20,21 @@ class Sample extends Component {
             parent: null,
             title: 'Scott Aasrud',
             description: 'VP, Public Sector',
-            image: '/photos/a.png'
+            image: 'photos/a.png'
           },
           {
             id: 1,
             parent: 0,
             title: 'Ted Lucas',
             description: 'VP, Human Resources',
-            image: '/photos/b.png'
+            image: 'photos/b.png'
           },
           {
             id: 2,
             parent: 0,
             title: 'Fritz Stuger',
             description: 'Business Solutions, US',
-            image: '/photos/c.png'
+            image: 'photos/c.png'
           }
         ]
       }

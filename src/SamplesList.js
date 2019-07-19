@@ -23,7 +23,8 @@ import {
   CustomLayoutWithInvisibleItems,
   SkippedLevels,
   InactiveFamilyItems,
-  ItemTemplate
+  ItemTemplate,
+  ConnectorAnnotation
 } from './Samples';
 
 const SamplesList = [
@@ -197,7 +198,7 @@ const SamplesList = [
     items: [
       {
         label: "On-screen Connector Annotation",
-        // component: ConnectorAnnotation
+        component: <ConnectorAnnotation />
       },
       {
         label: "Shape & Background Annotations",

@@ -69,7 +69,7 @@ class Sample extends Component {
           image: "../images/photos/a.png",
           phone: "(123) 456-78-90",
           email: "itema@org.com",
-          image: "/photos/a.png",
+          image: "photos/a.png",
           templateName: "contactTemplate",
           itemTitleColor: "red",
           groupTitle: "Group 2"
@@ -79,7 +79,7 @@ class Sample extends Component {
           parent: 0,
           title: "Ted Lucas",
           description: "VP, Human Resources",
-          image: "/photos/b.png",
+          image: "photos/b.png",
           groupTitle: "Group 1"
         },
         {
@@ -89,7 +89,7 @@ class Sample extends Component {
           phone: "(123) 654-78-90",
           email: "itemc@org.com",
           description: "Business Solutions, US",
-          image: "/photos/c.png",
+          image: "photos/c.png",
           templateName: "contactTemplate",
           groupTitle: "Group 3"
         }
