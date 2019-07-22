@@ -1,6 +1,6 @@
 # [Basic Primitives](https://www.basicprimitives.com) Diagrams for React
 
-Data visualization components library implementing organizational chart and multi-parent dependency diagrams. 
+Data visualization components library that implements organizational chart and multi-parent dependency diagrams. 
 
 
 ## Supported Diagrams
