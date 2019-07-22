@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# [Basic Primitives](https://www.basicprimitives.com)
 
-## Available Scripts
+Basic Primitives Diagrams for React - data visualization components library implements organizational chart and multi-parent dependency diagrams. 
 
-In the project directory, you can run:
 
-### `npm start`
+## Supported Diagrams
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Tree
+* Hierarchy Visualization
+* Organizational Chart
+* Multi-parent hierarchical chart
+* Family Tree
+* Dependencies Diagram
+* PERT chart
+* Financial Ownership Diagram
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Getting Started
+* [http://www.basicprimitives.com](https://www.basicprimitives.com) project home.
+* [NPM](https://www.npmjs.com/package/basicprimitives-react) release package.
+* [GitHub](https://github.com/BasicPrimitives) repositories.
+* [React Live Samples](https://basicprimitives.github.io/react/)
+* [React Live Demos](http://react.basicprimitives.com:8080)
 
-### `npm test`
+## Free for Non-commercial
+* Do you want to use Basic Primitives Diagrams for a personal website, a school site or a non-profit organization? Then you don't need the author's permission, just go on and use Basic Primitives Diagrams. For commercial websites and projects, see [License and Pricing](https://www.basicprimitives.com/index.php?option=com_content&view=article&id=14&Itemid=18&lang=en).
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Open
 
-### `npm run build`
+One of the key features of Basic Primitives Diagrams that under any of the licenses, free or not, you are allowed to download the source code and make your own edits. This allows personal modifications and a great flexibility. The comprehensive set of samples, demos and unit tests guarantees quality of the library's source code.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Created for visual data analytics of hierarchies and dependencies
+Business Intelligence systems and applications are designed for two major purposes: Reporting and Analytics. Reporting applications are meant to be a legal statements, so reported data should be 100% complete, it should not have any discrepancy in form of omitted data, improperly rounded values or excessive abbreviations. On the other side, applications designed for data analytics should show only the most valuable and related data to current user focus and gracefully degrade details for less relevant data. So Basic Primitives components design is to provide API for simplified visual data analysis of diagrams:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Auto layout
+The main problem of diagrams drawn in graphics editor is in sparse distribution of items on layout. Large gaps between nodes make diagrams hard to overview, edit and navigate. Sometimes the diagram is so big that it could have screen size intervals between items. This issue makes the whole idea of visualizing diagrams useless. At the same time computer UI allows to scale and fit visualization into screen, but in that case items become small and unreadable. The primary goal of our approach to Organizational chart and other diagrams visualization is to resolve these issues and make good use of them at the same time. The component finds the best way to display a large hierarchy within available screen space without scrolling or with minimal scrolling not affecting usability. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Diagram shape overview. Component minimizes items in order to fit diagram visualization into available screen space and provides user with  possibility to overview general diagram layout.
+* User focus navigation goes node by node. Chart displays cursor item and its neighbors full size and minimizes all other less relevant nodes. By clicking on neighboring nodes user will move the focus of interest to the newly selected part of the diagram. 
+* Pinning of items in diagram. All selected/check marked items are always displayed full size, all other items stay minimized, so it allows to pin/select items in different branches and show them side by side within available screen space for location comparison.
+* Diagram design consistency. Auto layout without user's manual editing provides visual consistency across all diagramming documents. All users have various skills and preferences, so auto layout provides consistent diagrams visualization.
+* Always up to date. Your application diagrams will not be affected by changes in components's layout algorithms and application data. Your visualizations will be always up to date and in sync with your data. 
 
-### `npm run eject`
+### Annotations
+Every time we make changes to diagram we need to visualize performed modification otherwise it is hard to trace changes before and after modification. So in order to visualize diagram transition from one state to another control provides annotations. Annotations are API elements attached to diagram nodes and are drawn in front or in the background of them. Annotations don't change nodes placement, so controls redraw them instantaneously without diagram layout. The general logic of annotations is that they are not supposed to be displayed for every node in diagram, application is supposed to create them and add to diagram in the context of current user cursor or operation, user perform with data. Annotations compared to diagram layout itself have minimal conflict resolution abilities. So it is very easy to clutter diagram with excessive number of annotations. But they come very handy when we need to add context specific visuals.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## API
+### Provides simple API for the most common use cases
+* Default item template - allows to render first diagram with minimal options defined.
+* Selection Check Box - provide selection API similar to regular tree and list controls
+* User buttons panel - in layout context panel with yser defined buttons
+* Vertical node titles
+* Labels
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Flexible API for more complex use cases
+* User defined item, highlight, cursor and butons panel with JSX templates. 
+* Custom layout parent/child relation types: Adviser, Assistant and various partners. Multiple parents, multiple managers or co-heads visualization.
+* Custom children and leaves layout: Vertical, Horizontal and Matrix
+* Left/Right layout alignment support.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2013 - 2019 Basic Primitives Inc
+* [Non-commercial - Free](http://creativecommons.org/licenses/by-nc/3.0/)
+* [Commercial and government licenses](license.pdf)

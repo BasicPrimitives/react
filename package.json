@@ -24,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "node-sass src/ -o src/",
-    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
+    "publish": "gh-pages -d build --src '*/' --repo https://github.com/BasicPrimitives/react"
   },
   "eslintConfig": {
     "extends": "react-app"
