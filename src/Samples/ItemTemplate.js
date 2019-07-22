@@ -66,10 +66,9 @@ class Sample extends Component {
           parent: null,
           title: "Scott Aasrud",
           description: "VP, Public Sector",
-          image: "../images/photos/a.png",
+          image: "photos/a.png",
           phone: "(123) 456-78-90",
           email: "itema@org.com",
-          image: "photos/a.png",
           templateName: "contactTemplate",
           itemTitleColor: "red",
           groupTitle: "Group 2"

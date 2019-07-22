@@ -63,7 +63,7 @@ class Sample extends Component {
             name="selectionPathMode"
             type="radio"
             value="0"
-            checked={selectionPathMode == 0 ? 'checked' : ''}
+            checked={selectionPathMode === 0 ? 'checked' : ''}
           />
           None
         </label>
@@ -74,7 +74,7 @@ class Sample extends Component {
             name="selectionPathMode"
             type="radio"
             value="1"
-            checked={selectionPathMode == 1 ? 'checked' : ''}
+            checked={selectionPathMode === 1 ? 'checked' : ''}
           />
           Full Stack
         </label>

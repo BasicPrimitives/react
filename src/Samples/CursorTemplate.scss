@@ -1,0 +1,36 @@
+.TemplateItem {
+	position: absolute;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+}
+
+.CursorBadge {
+  @extend .TemplateItem;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -khtml-border-radius: 16px;
+  border-radius: 16px;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  font-weight: bold;
+  font-family: Arial;
+  padding: 4px;
+  float: left;
+  width:16px; 
+  height:16px;
+  top: 45px;
+  left: 114px;
+  z-index: 1000;
+  background-color: green;
+  color: white;
+}

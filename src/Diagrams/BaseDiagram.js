@@ -24,8 +24,7 @@ class BaseDiagram extends Component {
     onCursorChanging: PropTypes.func, // eslint-disable-line react/no-unused-prop-types
     onCursorChanged: PropTypes.func, // eslint-disable-line react/no-unused-prop-types
     onSelectionChanging: PropTypes.func, // eslint-disable-line react/no-unused-prop-types
-    onSelectionChanged: PropTypes.func, // eslint-disable-line react/no-unused-prop-types
-    onButtonsRender: PropTypes.func // eslint-disable-line react/no-unused-prop-types
+    onSelectionChanged: PropTypes.func // eslint-disable-line react/no-unused-prop-types
   };
 
   static defaultProps = {
@@ -35,8 +34,7 @@ class BaseDiagram extends Component {
     onCursorChanging: null,
     onCursorChanged: null,
     onSelectionChanging: null,
-    onSelectionChanged: null,
-    onButtonsRender: null
+    onSelectionChanged: null
   };
 
   constructor(props, namespace) {
@@ -53,8 +51,8 @@ class BaseDiagram extends Component {
         height: 0
       },
       contentPosition: {
-        x: 200,
-        y: 100
+        x: 0,
+        y: 0
       },
       centerOnCursor,
       highlightItem,
@@ -472,7 +470,9 @@ class BaseDiagram extends Component {
       highlightItem,
       cursorItem,
       selectedItems,
-      onItemRender: this.onItemRender
+      onItemRender: this.onItemRender,
+      onCursorRender: this.onCursorRender,
+      onHighlightRender: this.onHighlightRender
     };
   }
 
@@ -554,16 +554,19 @@ class BaseDiagram extends Component {
               "MozTransform": scaletext /* Firefox */
             }}>
             {graphics.map(this, "placeholder", (layerKey, elements) =>
-              <div key={layerKey} className="BPLayerPanel" style={placeholderRectCSS}>
+              <div key={layerKey} className="BPLayerPanel" style={{ left: "0px", top: "0px" }}>
                 {elements}
               </div>
             )}
             {calloutplaceholder &&
               <div key="Callout"
                 className="BPCalloutPlaceholderPanel"
-                style={calloutplaceholder.rect.getCSS()}>
+                style={{
+                  left: calloutplaceholder.rect.x + "px",
+                  top: calloutplaceholder.rect.y + "px"
+                }}>
                 {graphics.map(this, "calloutplaceholder", (layerKey, elements) =>
-                  <div key={layerKey} className="BPLayerPanel" style={calloutplaceholder.size.getCSS()}>
+                  <div key={layerKey} className="BPLayerPanel">
                     {elements}
                   </div>
                 )}

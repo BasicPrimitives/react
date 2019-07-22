@@ -1,4 +1,3 @@
-import React from 'react';
 import AbstractTemplate from './AbstractTemplate';
 
 class ButtonsTemplate extends AbstractTemplate {

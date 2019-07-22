@@ -100,8 +100,8 @@ class Sample extends Component {
       groupTitleColor: primitives.common.Colors.Olive
     });
 
-    for (var index = 15; index <= 21; index += 1) {
-      if (index == 18) {
+    for (index = 15; index <= 21; index += 1) {
+      if (index === 18) {
         /* add invibsle item between chidlren */
         items.push({
           id: 18,
@@ -123,7 +123,7 @@ class Sample extends Component {
       }
     }
 
-    for (var index = 22; index <= 33; index += 1) {
+    for (index = 22; index <= 33; index += 1) {
       items.push({
         id: index,
         parent: 18,

@@ -1,0 +1,52 @@
+.TemplateItem, .HighlightFrame, .HighlightBadgePlaceholder, .HighlightBadge {
+  position: absolute;
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: content-box; }
+
+.BPCornerAll, .HighlightFrame {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px; }
+
+.HighlightFrame {
+  border: 2px solid #fbcb09;
+  background: white;
+  color: #c77405;
+  width: 100%;
+  height: 100%;
+  left: -2px;
+  top: -2px; }
+
+.HighlightBadgePlaceholder {
+  right: 0px;
+  top: 45px; }
+
+.HighlightBadge {
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -khtml-border-radius: 16px;
+  border-radius: 16px;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  font-weight: bold;
+  font-family: Arial;
+  padding: 4px;
+  float: left;
+  width: 16px;
+  height: 16px;
+  top: 0px;
+  left: -10px;
+  z-index: 1000;
+  background-color: green;
+  color: white; }

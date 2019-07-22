@@ -1,0 +1,93 @@
+.PERTTemplateItem, .PERTTemplate, .PERTTemplate .PERTTitleBackground, .PERTTemplate .PERTTitleBackground .PERTTitle, .PERTTemplate .PERTETTitle, .PERTTemplate .PERTLTTitle, .PERTTemplate .PERTET, .PERTTemplate .PERTLT, .PERTTemplate .PERTVerticalLine, .PERTTemplate .PERTHorizontalLine {
+  position: absolute;
+  font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: content-box; }
+
+.PERTTemplateCornerAll, .PERTTemplate, .PERTTemplate .PERTTitleBackground {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px; }
+
+.PERTTemplateItemFrame, .PERTTemplate, .PERTTemplate .PERTTitleBackground {
+  border: 1px solid #dddddd;
+  background: #eeeeee;
+  color: #333333; }
+
+.PERTTemplateTitle, .PERTTemplate .PERTTitleBackground .PERTTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  padding: 0; }
+
+.PERTTemplate {
+  width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px; }
+  .PERTTemplate .PERTTitleBackground {
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    height: 20px; }
+    .PERTTemplate .PERTTitleBackground .PERTTitle {
+      top: 2px;
+      left: 2px;
+      height: 18px;
+      width: 88px; }
+  .PERTTemplate .PERTETTitle {
+    overflow: hidden;
+    top: 20px;
+    left: 0px;
+    width: 50px;
+    height: 20px;
+    padding: 4px;
+    font-size: 12px; }
+  .PERTTemplate .PERTLTTitle {
+    overflow: hidden;
+    top: 20px;
+    left: 50px;
+    width: 50px;
+    height: 20px;
+    padding: 4px;
+    font-size: 12px; }
+  .PERTTemplate .PERTET {
+    overflow: hidden;
+    top: 40px;
+    left: 0px;
+    width: 50px;
+    height: 20px;
+    padding: 4px;
+    font-size: 12px; }
+  .PERTTemplate .PERTLT {
+    overflow: hidden;
+    top: 40px;
+    left: 50px;
+    width: 50px;
+    height: 20px;
+    padding: 4px;
+    font-size: 12px; }
+  .PERTTemplate .PERTVerticalLine {
+    line-height: 0px;
+    border-left: 1px solid gray;
+    top: 24px;
+    left: 50px;
+    width: 1px;
+    height: 32px; }
+  .PERTTemplate .PERTHorizontalLine {
+    line-height: 0px;
+    border-top: 1px solid gray;
+    top: 40px;
+    left: 4px;
+    width: 92px;
+    height: 1px; }

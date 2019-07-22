@@ -61,10 +61,10 @@ class Sample extends Component {
 
     return <>
       <p>Minimum Auto Size:&nbsp;
-        {Object.keys(this.sizes).map(key => <label key={key}><input onClick={() => this.setMinimumSize(key)} name="autoSizeMinimum" type="radio" checked={autoSizeMinimum == key ? 'checked' : ''} value="{key}" />{key}</label>)}
+        {Object.keys(this.sizes).map(key => <label key={key}><input onClick={() => this.setMinimumSize(key)} name="autoSizeMinimum" type="radio" checked={autoSizeMinimum === key ? 'checked' : ''} value="{key}" />{key}</label>)}
       </p>
       <p>Maximum Auto Size:&nbsp;
-        {Object.keys(this.sizes).map(key => <label key={key}><input onClick={() => this.setMaximumSize(key)} name="autoSizeMaximum" type="radio" checked={autoSizeMaximum == key ? 'checked' : ''} value="{key}" />{key}</label>)}
+        {Object.keys(this.sizes).map(key => <label key={key}><input onClick={() => this.setMaximumSize(key)} name="autoSizeMaximum" type="radio" checked={autoSizeMaximum === key ? 'checked' : ''} value="{key}" />{key}</label>)}
       </p>
       <OrgDiagram centerOnCursor={true} config={config} />
     </>

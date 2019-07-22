@@ -43,6 +43,24 @@ class RotatedText extends Component {
 
     const transform = this.getTransform(orientation);
 
+    let size = null;
+    if (orientation === "Horizontal") {
+      size = {
+        width: width + "px",
+        height: height + "px",
+        maxWidth: width + "px",
+        maxHeight: height + "px"
+      }
+    } else {
+      size = {
+        width: height + "px",
+        height: width + "px",
+        maxWidth: height + "px",
+        maxHeight: width + "px",
+        left: Math.round(width / 2.0 - height / 2.0) + "px",
+        top: Math.round(height / 2.0 - width / 2.0) + "px"
+      }
+    }
     var style = {
       position: "absolute",
       padding: 0,
@@ -58,13 +76,7 @@ class RotatedText extends Component {
       OTransform: transform,
       msTransform: transform,
       transform,
-
-      left: Math.round(width / 2.0 - height / 2.0) + "px",
-      top: Math.round(height / 2.0 - width / 2.0) + "px",
-      width: height + "px",
-      height: width + "px",
-      maxWidth: height + "px",
-      maxHeight: width + "px"
+      ...size
     };
 
     return (

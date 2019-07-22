@@ -1,5 +1,6 @@
 import React from 'react';
 import primitives from 'basicprimitives';
+import RotatedText from './Templates/RotatedText';
 
 class Placeholder {
   constructor(name) {
@@ -41,6 +42,10 @@ class Graphics {
       agg[primitives.common.Layers[key]] = key;
       return agg;
     }, []);
+
+    this.orientations = ['Horizontal', 'RotateLeft', 'RotateRight', 'Horizontal'];
+    this.horizontalAlignments = ['center', 'left', 'right'];
+    this.verticalAlignments = ['top', 'middle', 'bottom'];
   }
 
   clean() {
@@ -139,18 +144,25 @@ class Graphics {
   }
 
   text(x, y, width, height, label, orientation, horizontalAlignment, verticalAlignment, attr) {
-    // this.activePlaceholder.activeLayer.items.push({
-    //   primitiveType: "text",
-    //   x,
-    //   y,
-    //   width,
-    //   height,
-    //   label,
-    //   orientation,
-    //   horizontalAlignment,
-    //   verticalAlignment,
-    //   attr
-    // });
+    this.activePlaceholder.activeLayer.items.push(
+      <div
+        className="BPItemPlaceholder"
+        key={this.activePlaceholder.activeLayer.items.length}
+        style={{
+          ...attr,
+          top: y + "px",
+          left: x + "px"
+        }}
+      >
+        <RotatedText
+          width={width}
+          height={height}
+          orientation={this.orientations[orientation]}
+          horizontalAlignment={this.horizontalAlignments[horizontalAlignment]}
+          verticalAlignment={this.verticalAlignments[verticalAlignment]}
+        >{label}</RotatedText>
+      </div>
+    );
   };
 
   polylinesBuffer(buffer) {

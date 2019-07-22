@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
+import './ConnectorAnnotation.css';
 
 class Sample extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Sample extends Component {
     }
   }
 
-  onSelectionPathModeChanged(connectorPlacementType) {
+  onConnectorPlacementTypeChanged(connectorPlacementType) {
     this.setState({ connectorPlacementType });
   }
 
@@ -20,10 +21,10 @@ class Sample extends Component {
     const config = {
       items: [
         /* JSON noname objects equivalent to primitives.orgdiagram.ItemConfig */
-        { id: 0, parent: null, title: "Scott Aasrud", description: "VP, Public Sector", image: "../images/photos/a.png" },
-        { id: 1, parent: 0, title: "Ted Lucas", description: "VP, Human Resources", image: "../images/photos/b.png" },
-        { id: 2, parent: 0, title: "Fritz Stuger", description: "Business Solutions, US", image: "../images/photos/c.png" },
-        { id: 3, parent: 0, title: "Joseph Gipson", description: "President, Entertainment & Devices Devision", image: "../images/photos/d.png" }
+        { id: 0, parent: null, title: "Scott Aasrud", description: "VP, Public Sector", image: "photos/a.png" },
+        { id: 1, parent: 0, title: "Ted Lucas", description: "VP, Human Resources", image: "photos/b.png" },
+        { id: 2, parent: 0, title: "Fritz Stuger", description: "Business Solutions, US", image: "photos/c.png" },
+        { id: 3, parent: 0, title: "Joseph Gipson", description: "President, Entertainment & Devices Devision", image: "photos/d.png" }
       ],
       annotations: [
         /* JSON noname object equivalent to primitives.orgdiagram.ConnectorAnnotationConfig */
@@ -31,11 +32,8 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 0,
           toItem: 2,
-          label: <div class='bp-badge' style={{
-            width:"10px",
-            height:"10px",
-            backgroundColor: "red", 
-            color: "white"
+          label: <div className="BPBadge" style={{
+            backgroundColor: primitives.common.Colors.Green
           }}>2</div>,
           labelSize: { width: 80, height: 30 },
           connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
@@ -51,11 +49,8 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 0,
           toItem: 1,
-          label: <div class='bp-badge' style={{
-            width:"10px",
-            height:"10px",
-            backgroundColor: "red", 
-            color: "white"
+          label: <div className="BPBadge" style={{
+            backgroundColor: primitives.common.Colors.Red
           }}>1</div>,
           labelSize: new primitives.common.Size(80, 30),
           connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
@@ -71,12 +66,9 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 0,
           toItem: 3,
-          label: <div class='bp-badge' style={{
-            width:"10px",
-            height:"10px",
-            backgroundColor: "red", 
-            color: "white"
-          }}>1</div>,
+          label: <div className="BPBadge" style={{
+            backgroundColor: primitives.common.Colors.Blue
+          }}>3</div>,
           labelSize: new primitives.common.Size(80, 30),
           connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
           color: primitives.common.Colors.Blue,
@@ -98,22 +90,22 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onSelectionPathModeChanged(primitives.common.ConnectorPlacementType.Offbeat)}
+            onClick={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Offbeat)}
             name="connectorPlacementType"
             type="radio"
             value="0"
-            checked={connectorPlacementType == 0 ? 'checked' : ''}
+            checked={connectorPlacementType === 0 ? 'checked' : ''}
           />
           Offbeat
         </label>
         <br />
         <label>
           <input
-            onClick={() => this.onSelectionPathModeChanged(primitives.common.ConnectorPlacementType.Straight)}
+            onClick={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Straight)}
             name="connectorPlacementType"
             type="radio"
             value="1"
-            checked={connectorPlacementType == 1 ? 'checked' : ''}
+            checked={connectorPlacementType === 1 ? 'checked' : ''}
           />
           Straight
         </label>
