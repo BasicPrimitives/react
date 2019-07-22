@@ -16,7 +16,7 @@ class Sample extends Component {
           parent: null,
           title: "Scott Aasrud",
           description: "Parent Item",
-          image: "/photos/a.png"
+          image: "photos/a.png"
         },
         {
           id: 1,
@@ -26,7 +26,7 @@ class Sample extends Component {
           title: "Robert Canon",
           description: "Sub Adviser item",
           groupTitle: "SubAdviser",
-          image: "/photos/b.png"
+          image: "photos/b.png"
         },
         {
           id: 2,
@@ -36,7 +36,7 @@ class Sample extends Component {
           title: "Ted Lucas",
           description: "Sub Assitant Item",
           groupTitle: "SubAssistant",
-          image: "/photos/c.png"
+          image: "photos/c.png"
         },
         {
           id: 3,
@@ -44,7 +44,7 @@ class Sample extends Component {
           title: "Fritz Stuger",
           description: "Regular Item",
           groupTitle: "Regular",
-          image: "/photos/d.png"
+          image: "photos/d.png"
         }
       ]
     };

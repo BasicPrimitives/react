@@ -1,0 +1,260 @@
+.TemplateItem {
+	position: absolute;
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  box-sizing:content-box;
+}
+
+.TemplateCornerAll {
+  -moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.TemplateItemFrame {
+	border: 1px solid #dddddd;
+	background: #eeeeee;
+	color: #333333;
+}
+
+.TemplateTitle {
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	line-height: 16px;
+	color: white;
+	padding: 0;
+}
+
+.TemplatePhotoFrame {
+	border: 1px solid #cccccc;
+	background: #f6f6f6;
+	color: #1c94c4;
+}
+
+.xlTemplate {
+  @extend .TemplateItem, .TemplateCornerAll, .TemplateItemFrame;
+	width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+
+	.xlTitleBackground {
+    @extend .TemplateItem, .TemplateCornerAll, .TemplateItemFrame;
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		height: 20px;
+
+		.xlTitle {
+    @extend .TemplateItem, .TemplateTitle;
+		top: 2px;
+    left: 2px;
+    right: 2px;
+		height: 16px;
+		}
+	}
+
+	.xlPhotoFrame {
+    @extend .TemplateItem, .TemplatePhotoFrame;
+		top: 26px;
+		left: 2px;
+		width: 50px;
+		height: 60px;
+
+		.Photo {
+		height:60px;
+		width:50px;
+		}
+  }
+  
+	.xlPhone {
+    @extend .TemplateItem;
+    overflow: hidden;
+		top: 26px;
+		left: 56px;
+		height: 16px;
+		bottom: 2px;
+		font-size: 12px;
+	}
+
+  .xlEmail {
+    @extend .TemplateItem;
+    overflow: hidden;
+		top: 44px;
+		left: 56px;
+		height: 16px;
+		bottom: 2px;
+		font-size: 12px;
+  }
+  
+	.xlDescription {
+    @extend .TemplateItem;
+    overflow: hidden;
+		top: 62px;
+		left: 56px;
+		right: 2px;
+		bottom: 2px;
+		font-size: 12px;
+	}
+}
+
+.lgTemplate {
+  @extend .TemplateItem, .TemplateCornerAll, .TemplateItemFrame;
+	width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+
+	.lgTitleBackground {
+    @extend .TemplateItem, .TemplateCornerAll, .TemplateItemFrame;
+		top: 2px;
+		left: 2px;
+		right: 2px;
+    height: 18px;
+
+		.lgTitle {
+    @extend .TemplateItem, .TemplateTitle;
+		top: 2px;
+    left: 2px;
+    width: 152px;
+    height: 14px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+		}
+	}
+
+	.lgPhotoFrame {
+    @extend .TemplateItem, .TemplatePhotoFrame;
+		top: 22px;
+		left: 2px;
+		width: 50px;
+		height: 60px;
+
+		.lgPhoto {
+		height:60px;
+		width:50px;
+		}
+  }
+  
+  .lgEmail {
+    @extend .TemplateItem;
+    overflow: hidden;
+		top: 22px;
+    left: 56px;
+    width: 98px;
+		height: 13px;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+	.lgDescription {
+    @extend .TemplateItem;
+    overflow: hidden;
+		top: 37px;
+		left: 56px;
+		width: 98px;
+		font-size: 11px;
+	}
+}
+
+.mdTemplate {
+  @extend .TemplateItem, .TemplateCornerAll, .TemplateItemFrame;
+	width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+
+	.mdPhotoFrame {
+    @extend .TemplateItem, .TemplatePhotoFrame;
+		top: 2px;
+		left: 2px;
+		width: 25px;
+		height: 30px;
+
+		.mdPhoto {
+      width:25px;
+      height:30px;
+		}
+  }
+
+  .mdTitle {
+    @extend .TemplateItem;
+		top: 2px;
+    left: 31px;
+    width: 98px;
+    height: 14px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    
+	.mdDescription {
+    @extend .TemplateItem;
+    overflow: hidden;
+		top: 18px;
+		left: 31px;
+    width: 98px;
+    height: 25px;
+		font-size: 11px;
+	}
+}
+
+.smTemplate {
+  @extend .TemplateItem, .TemplateCornerAll, .TemplateItemFrame;
+	width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+
+  .smTitle {
+    @extend .TemplateItem;
+		top: 2px;
+    left: 2px;
+    width: 98px;
+    height: 14px;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    
+	.smDescription {
+    @extend .TemplateItem;
+    overflow: hidden;
+		top: 18px;
+		left: 2px;
+    width: 98px;
+    height: 12px;
+		font-size: 10px;
+	}
+}
+
+.xsTemplate {
+  @extend .TemplateItem, .TemplateCornerAll, .TemplateItemFrame;
+	width: 100%;
+  height: 100%;
+  left: -1px;
+  top: -1px;
+
+  .xsTitle {
+    @extend .TemplateItem;
+		top: 2px;
+    left: 2px;
+    width: 80px;
+    height: 14px;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    }
+}

@@ -28,28 +28,28 @@ class Sample extends Component {
           parent: null,
           title: "Scott Aasrud",
           description: "VP, Public Sector",
-          image: "/photos/a.png"
+          image: "photos/a.png"
         },
         {
           id: 1,
           parent: 0,
           title: "Ted Lucas",
           description: "VP, Human Resources",
-          image: "/photos/b.png"
+          image: "photos/b.png"
         },
         {
           id: 2,
           parent: 1,
           title: "Fritz Stuger",
           description: "Business Solutions, US",
-          image: "/photos/c.png"
+          image: "photos/c.png"
         },
         {
           id: 3,
           parent: 2,
           title: "Robert Canon",
           description: "Business Solutions, Canada",
-          image: "/photos/z.png"
+          image: "photos/z.png"
         }
       ]
     };
@@ -63,7 +63,7 @@ class Sample extends Component {
             name="selectionPathMode"
             type="radio"
             value="0"
-            checked={selectionPathMode == 0 ? 'checked' : ''}
+            checked={selectionPathMode === 0 ? 'checked' : ''}
           />
           None
         </label>
@@ -74,7 +74,7 @@ class Sample extends Component {
             name="selectionPathMode"
             type="radio"
             value="1"
-            checked={selectionPathMode == 1 ? 'checked' : ''}
+            checked={selectionPathMode === 1 ? 'checked' : ''}
           />
           Full Stack
         </label>

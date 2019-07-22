@@ -42,9 +42,7 @@ class App extends Component {
     return (
       <div className="container">
         <h1>Basic Primitives Diagrams for React</h1>
-        <h2>100% React Virtual DOM implementation.</h2>
         <h3>Core version: {primitives.common.version}</h3>
-
         <p>
           <select onChange={this.onChange}>
             {SamplesList.map(({ key, label, items }) => (

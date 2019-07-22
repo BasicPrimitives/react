@@ -20,7 +20,7 @@ class Sample extends Component {
           title: "Scott Aasrud",
           description: "VP, Public Sector",
           groupTitle: "Group 1",
-          image: "/photos/a.png",
+          image: "photos/a.png",
           itemTitleColor: primitives.common.Colors.Black
         }),
         new primitives.orgdiagram.ItemConfig({
@@ -28,7 +28,7 @@ class Sample extends Component {
           parent: 0,
           title: "Ted Lucas",
           description: "VP, Human Resources",
-          image: "/photos/b.png",
+          image: "photos/b.png",
           itemTitleColor: primitives.common.Colors.Green,
           groupTitle: "Group 2",
           groupTitleColor: primitives.common.Colors.Gray
@@ -38,7 +38,7 @@ class Sample extends Component {
           parent: 0,
           title: "Fritz Stuger",
           description: "Business Solutions, US",
-          image: "/photos/c.png",
+          image: "photos/c.png",
           itemTitleColor: primitives.common.Colors.Yellow,
           groupTitle: "Group 2"
         })

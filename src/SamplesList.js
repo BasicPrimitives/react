@@ -10,6 +10,7 @@ import {
   SelectedItems,
   ButtonsPanel,
   ItemAndGroupTitleColors,
+  Labels,
   ChildrenPlacementType,
   AdviserAndAssistantItemTypes,
   SubAdviserAndSubAssistantItemTypes,
@@ -23,7 +24,25 @@ import {
   CustomLayoutWithInvisibleItems,
   SkippedLevels,
   InactiveFamilyItems,
-  ItemTemplate
+  SpousesInFamilyLayout,
+  MatrixLayoutInFamilyChart,
+  LabelsCascadesInFamilyChart,
+  FamilyChartItemsOrdering,
+  MultipleFamiliesOrdering,
+  ItemTemplate,
+  DragNDrop,
+  DragToTrashBin,
+  ZoomWithItemTemplate,
+  ZoomWithCSSScaleTransform,
+  ItemTemplateLabel,
+  SelectionCheckboxInItemTemplate,
+  CursorTemplate,
+  HighlightTemplate,
+  ConnectorAnnotation,
+  ShapeAnnotation,
+  HighlightPathAnnotation,
+  PERTChart,
+  FamilyHideGrandParentsConnections
 } from './Samples';
 
 const SamplesList = [
@@ -74,6 +93,10 @@ const SamplesList = [
       {
         label: "Item and group title colors",
         component: <ItemAndGroupTitleColors />
+      },
+      {
+        label: "Labels",
+        component: <Labels />
       }
     ]
   },
@@ -139,23 +162,23 @@ const SamplesList = [
       },
       {
         label: "Spouses having no children in Family Layout",
-        // component: SpousesInFamilyLayout
+        component: <SpousesInFamilyLayout />
       },
       {
         label: "Matrix Nodes layout in Family Chart",
-        // component: MatrixLayoutInFamilyChart
+        component: <MatrixLayoutInFamilyChart />
       },
       {
         label: "Labels cascades over connection lines in family chart",
-        // component: LabelsCascadesInFamilyChart
+        component: <LabelsCascadesInFamilyChart />
       },
       {
         label: "Nodes ordering",
-        // component: ChartItemsOrdering
+        component: <FamilyChartItemsOrdering />
       },
       {
         label: "Families ordering",
-        // component: MultipleFamiliesOrdering
+        component: <MultipleFamiliesOrdering />
       }
     ]
   },
@@ -167,28 +190,36 @@ const SamplesList = [
         component: <ItemTemplate />
       },
       {
+        label: "Drag & Drop Support",
+        component: <DragNDrop />
+      },
+      {
+        label: "Drag To Trash bin",
+        component: <DragToTrashBin />
+      },
+      {
         label: "Zoom using item template",
-        // component: ZoomWithItemTemplate
+        component: <ZoomWithItemTemplate />
       },
       {
         label: "Zoom using CSS Scale Transform",
-        // component: ZoomWithCSSScaleTransform
+        component: <ZoomWithCSSScaleTransform />
       },
       {
         label: "Labels & Item Template",
-        // component: ItemTemplateLabel
+        component: <ItemTemplateLabel />
       },
       {
         label: "Selection Checkbox Inside Item Template",
-        // component: SelectionCheckboxInItemTemplate
+        component: <SelectionCheckboxInItemTemplate />
       },
       {
         label: "Cursor Template",
-        // component: CursorTemplate
+        component: <CursorTemplate />
       },
       {
         label: "Highlight template",
-        // component: HighlightTemplate
+        component: <HighlightTemplate />
       }
     ]
   },
@@ -197,23 +228,23 @@ const SamplesList = [
     items: [
       {
         label: "On-screen Connector Annotation",
-        // component: ConnectorAnnotation
+        component: <ConnectorAnnotation />
       },
       {
         label: "Shape & Background Annotations",
-        // component: ShapeAnnotation
+        component: <ShapeAnnotation />
       },
       {
         label: "Highlight Path Annotation",
-        // component: HighlightPathAnnotation
+        component: <HighlightPathAnnotation />
       },
       {
         label: "PERT chart & Critical Path Visualization",
-        // component: PERTChart
+        component: <PERTChart />
       },
       {
         label: "Routing Highlight Path Annotation for hidden grand parents connections",
-        // component: FamilyHideGrandParentsConnections
+        component: <FamilyHideGrandParentsConnections />
       }
     ]
   }
