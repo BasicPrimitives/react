@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/BasicPrimitives/react"
   },
-  "homepage": "https://www.basicprimitives.com/",
+  "homepage": "https://basicprimitives.github.io/react/",
   "license": "SEE LICENSE IN license.pdf",
   "dependencies": {
     "basicprimitives": "^5.4.0",
@@ -45,7 +45,7 @@
     "eject": "react-scripts eject",
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "deploy": "gh-pages -d build --src '*/' --repo https://github.com/BasicPrimitives/react",
+    "deploy": "gh-pages -d build --src '*/**' --repo https://github.com/BasicPrimitives/react",
     "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/Diagrams/ --out-dir dist --copy-files"
   },
   "eslintConfig": {
