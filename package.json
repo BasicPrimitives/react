@@ -1,6 +1,6 @@
 {
   "name": "basicprimitivesreact",
-  "version": "5.4.3",
+  "version": "5.4.6",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
@@ -9,13 +9,13 @@
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties"
-     ]
+    ]
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/BasicPrimitives/react"
   },
-  "homepage": "https://basicprimitives.github.io/react/",
+  "homepage": "https://www.basicprimitives.com/",
   "license": "SEE LICENSE IN license.pdf",
   "dependencies": {
     "basicprimitives": "^5.4.0",
@@ -31,13 +31,12 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "babel-loader": "^8.0.6",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
-    "react-dnd": "^9.3.2",
-    "react-dnd-html5-backend": "^9.3.2",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-dnd": "^9.3.2",
+    "react-dnd-html5-backend": "^9.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

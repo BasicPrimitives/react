@@ -333,6 +333,7 @@ class BaseDiagram extends Component {
         newSelectedItems = [...selectedItems, itemid];
       }
       else {
+        // eslint-disable-next-line
         newSelectedItems = selectedItems.filter(id => id != itemid); // User type may not mach string value in data attribute
       }
       if (onSelectionChanging != null) {

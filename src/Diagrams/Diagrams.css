@@ -64,6 +64,7 @@
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: left;
   font-size: 14px;
   line-height: 16px;
   color: white;
@@ -99,6 +100,7 @@
       width: 50px; }
   .BPDefaultTemplate .BPDescription {
     overflow: hidden;
+    text-align: left;
     top: 26px;
     left: 56px;
     right: 2px;
@@ -194,12 +196,15 @@
   left: -1px;
   top: -1px; }
 
+.BPSelectionCheckBoxContainer {
+  text-align: left; }
+
 .BPSelectionCheckBox {
   font-size: 12px;
   line-height: 12px;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 .BPSelectionText {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 12px;
   vertical-align: middle; }
