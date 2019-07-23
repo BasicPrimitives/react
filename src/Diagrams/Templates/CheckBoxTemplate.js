@@ -10,15 +10,12 @@ class CheckBoxTemplate extends AbstractTemplate {
   }
 
   render(data) {
-    return <label>
-      <nobr>
-        <input type="checkbox" name="checkbox" className="BPSelectionCheckBox" checked={data.isSelected} data-id={data.id} />
-        &nbsp;
-        <span name="selectiontext" className="BPSelectionText" data-id={data.id} >
-          {this.selectCheckBoxLabel}
-        </span>
-      </nobr>
-    </label>;
+    return <div className="BPSelectionCheckBoxContainer">
+      <input type="checkbox" name="checkbox" className="BPSelectionCheckBox" checked={data.isSelected} data-id={data.id} />
+      <span name="selectiontext" className="BPSelectionText" data-id={data.id} >
+        {this.selectCheckBoxLabel}
+      </span>
+    </div>;
   }
 };
 

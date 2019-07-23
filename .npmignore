@@ -1,0 +1,10 @@
+/build
+/node_moudles
+/public
+/src
+.gitignore
+create-react-app-readme.md
+package-lock.json
+yarn.lock
+.vscode
+*.log
