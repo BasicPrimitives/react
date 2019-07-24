@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import primitives from 'basicprimitives';
-import './Diagrams.css';
 import Graphics from './Graphics';
 import {
   AnnotationLabelTemplate,
@@ -529,24 +528,37 @@ class BaseDiagram extends Component {
     return <>
       <div
         ref={this.scrollPanelRef}
-        className="BPScrollPanel"
         onScroll={this.onScroll}
         onKeyDown={this.onKeyDown}
-        style={autoSize ? scrollPanelSize.getCSS() : {}}
+        style={{
+          position: "relative",
+          overflow: "auto",
+          WebkitOverflowScrolling: "touch",
+          width: "100%",
+          height: "100%",
+          padding: "0px",
+          marginBottom: "0px",
+          marginRight: "0px",
+          ...(autoSize ? scrollPanelSize.getCSS() : {})
+        }}
         tabIndex="0"
       >
         <div
           ref={this.mousePanelRef}
-          className="BPMousePanel"
           onMouseMove={this.onMouseMove}
           onClick={this.onClick}
           onChange={this.onCheckboxChange}
-          style={mousePanelSize.getCSS()}>
+          style={{
+            position: "absolute",
+            overflow: "hidden",
+            ...(mousePanelSize.getCSS())
+          }}>
           <div
             ref={this.placeholderRef}
-            className="BPPlaceholderPanel"
             style={{
               ...placeholderRectCSS,
+              position: "absolute",
+              overflow: "hidden",
               "transformOrigin": "0 0",
               "transform": scaletext,
               "msTransform": scaletext, /* IE 9 */
@@ -555,19 +567,28 @@ class BaseDiagram extends Component {
               "MozTransform": scaletext /* Firefox */
             }}>
             {graphics.map(this, "placeholder", (layerKey, elements) =>
-              <div key={layerKey} className="BPLayerPanel" style={{ left: "0px", top: "0px" }}>
+              <div key={layerKey} style={{
+                position: "absolute",
+                overflow: "visible",
+                left: "0px",
+                top: "0px"
+              }}>
                 {elements}
               </div>
             )}
             {calloutplaceholder &&
               <div key="Callout"
-                className="BPCalloutPlaceholderPanel"
                 style={{
+                  position: "absolute",
+                  overflow: "visible",
                   left: calloutplaceholder.rect.x + "px",
                   top: calloutplaceholder.rect.y + "px"
                 }}>
                 {graphics.map(this, "calloutplaceholder", (layerKey, elements) =>
-                  <div key={layerKey} className="BPLayerPanel">
+                  <div key={layerKey} style={{
+                    position: "absolute",
+                    overflow: "visible"
+                  }}>
                     {elements}
                   </div>
                 )}

@@ -1,10 +1,11 @@
 {
   "name": "basicprimitivesreact",
-  "version": "5.4.6",
+  "version": "5.4.12",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
     "presets": [
+      "@babel/preset-env",
       "@babel/preset-react"
     ],
     "plugins": [
@@ -33,10 +34,10 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
     "react-dnd": "^9.3.2",
-    "react-dnd-html5-backend": "^9.3.2"
+    "react-dnd-html5-backend": "^9.3.2",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -62,5 +63,46 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [
+    "data analytics",
+    "data visualization",
+    "visualization",
+    "diagrams",
+    "diagram layout",
+    "chart",
+    "charting library",
+    "diagram",
+    "diagrams visualization",
+    "diagram editor",
+    "diagram generator",
+    "tree",
+    "hierarchy",
+    "organizational chart",
+    "multiple inheritance visualization",
+    "family tree",
+    "dependency diagram",
+    "dependencies diagram",
+    "PERT",
+    "financial ownership diagram",
+    "DAG",
+    "directed acyclic graph",
+    "ui",
+    "input",
+    "multiselect",
+    "treeview",
+    "treeselect",
+    "control",
+    "widget",
+    "component",
+    "react",
+    "javascript",
+    "component library",
+    "react component",
+    "javascript control",
+    "PDF",
+    "PDFKit",
+    "pdfkit plugin",
+    "pdf generation"
+  ]
 }
