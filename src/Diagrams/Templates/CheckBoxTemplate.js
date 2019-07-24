@@ -10,9 +10,17 @@ class CheckBoxTemplate extends AbstractTemplate {
   }
 
   render(data) {
-    return <div className="BPSelectionCheckBoxContainer">
-      <input type="checkbox" name="checkbox" className="BPSelectionCheckBox" checked={data.isSelected} data-id={data.id} />
-      <span name="selectiontext" className="BPSelectionText" data-id={data.id} >
+    return <div style={{ textAlign: "left" }}>
+      <input type="checkbox" name="checkbox" style={{
+        fontSize: "12px",
+        lineHeight: "12px",
+        verticalAlign: "middle"
+      }} checked={data.isSelected} data-id={data.id} />
+      <span name="selectiontext" style={{
+        fontSize: "12px",
+        lineHeight: "12px",
+        verticalAlign: "middle"
+      }} data-id={data.id} >
         {this.selectCheckBoxLabel}
       </span>
     </div>;

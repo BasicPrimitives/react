@@ -1,7 +1,8 @@
 /build
-/node_moudles
+/node_modules
 /public
 /src
+/docs
 .gitignore
 create-react-app-readme.md
 package-lock.json

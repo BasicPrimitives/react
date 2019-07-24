@@ -146,9 +146,19 @@ class Graphics {
   text(x, y, width, height, label, orientation, horizontalAlignment, verticalAlignment, attr) {
     this.activePlaceholder.activeLayer.items.push(
       <div
-        className="BPItemPlaceholder"
         key={this.activePlaceholder.activeLayer.items.length}
         style={{
+          position: "absolute",
+          overflow: "visible",
+          fontFamily: "Trebuchet MS, Tahoma, Verdana, Arial, sans-serif",
+          WebkitTapHighlightColor: "rgba(0,0,0,0)",
+          WebkitUserSelect: "none",
+          WebkitTouchCallout: "none",
+          KhtmlUserSelect: "none",
+          MozUserSelect: "none",
+          msUserSelect: "none",
+          userSelect: "none",
+          boxSizing: "content-box",
           ...attr,
           top: y + "px",
           left: x + "px"
@@ -307,9 +317,21 @@ class Graphics {
     if (onRenderTemplate !== null) {
       this.activePlaceholder.activeLayer.items.push(
         <div
-          className="BPItemPlaceholder"
           key={this.activePlaceholder.activeLayer.items.length}
-          style={style}
+          style={{
+            position: "absolute",
+            overflow: "visible",
+            fontFamily: "Trebuchet MS, Tahoma, Verdana, Arial, sans-serif",
+            WebkitTapHighlightColor: "rgba(0,0,0,0)",
+            WebkitUserSelect: "none",
+            WebkitTouchCallout: "none",
+            KhtmlUserSelect: "none",
+            MozUserSelect: "none",
+            msUserSelect: "none",
+            userSelect: "none",
+            boxSizing: "content-box",
+            ...style
+          }}
         >
           {onRenderTemplate(uiHash)}
         </div>

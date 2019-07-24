@@ -9,6 +9,33 @@ class GroupTitleTemplate extends AbstractTemplate {
     this.render = this.render.bind(this);
 
     this.options = options;
+
+    this.style = {
+      position: "absolute",
+      fontFamily: "Trebuchet MS, Tahoma, Verdana, Arial, sans-serif",
+      WebkitTapHighlightColor: "rgba(0,0,0,0)",
+      WebkitUserSelect: "none",
+      WebkitTouchCallout: "none",
+      KhtmlUserSelect: "none",
+      MozUserSelect: "none",
+      msUserSelect: "none",
+      userSelect: "none",
+      boxSizing: "content-box",
+
+      MozBorderRadius: "4px",
+      WebkitBorderRadius: "4px",
+      KhtmlBorderRadius: "4px",
+      BorderRadius: "4px",
+
+      background: "royalblue",
+      borderWidth: 0,
+      color: "white",
+      padding: 0,
+      width: "100%",
+      height: "100%",
+      left: "-1px",
+      top: "-1px"
+    }
   }
 
   render(data) {
@@ -39,6 +66,7 @@ class GroupTitleTemplate extends AbstractTemplate {
       horizontalAlignments = ['center', 'left', 'right'],
       verticalAlignments = ['top', 'middle', 'bottom'];
     const style = {
+      ...this.style,
       backgroundColor,
       color,
       fontSize: groupTitleFontSize,
@@ -46,7 +74,7 @@ class GroupTitleTemplate extends AbstractTemplate {
       fontWeight: groupTitleFontWeight,
       fontStyle: groupTitleFontStyle
     }
-    return <div className="BPGroupTitleFrame" style={style}>
+    return <div style={style}>
       <RotatedText
         width={width}
         height={height}
