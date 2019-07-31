@@ -1,3 +1,4 @@
+[![npm package](https://img.shields.io/npm/v/basicprimitives.svg?label=basicprimitivesreact)](https://www.npmjs.com/package/basicprimitivesreact)
 # [Basic Primitives](https://www.basicprimitives.com) Diagrams for React
 
 Data visualization components library that implements organizational chart and multi-parent dependency diagrams. 
