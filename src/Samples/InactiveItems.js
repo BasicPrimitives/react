@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './InactiveItems.css';
 
 class Sample extends Component {
   constructor(props) {

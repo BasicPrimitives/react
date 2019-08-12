@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './SelectionCheckboxInItemTemplate.css';
 
 class Sample extends Component {
   constructor() {
@@ -34,22 +33,22 @@ class Sample extends Component {
           highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
           onItemRender: ({ context: itemConfig, isSelected }) => {
             const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
-            return <div className="CheckboxTemplate">
-              <div className="CheckboxTitleBackground" style={{ backgroundColor: itemTitleColor }}>
-                <div className="CheckboxTitle">{itemConfig.title}</div>
+            return <div className="ContactTemplate">
+              <div className="ContactTitleBackground" style={{ backgroundColor: itemTitleColor }}>
+                <div className="ContactTitle">{itemConfig.title}</div>
               </div>
-              <div className="CheckboxPhotoFrame">
-                <img className="CheckboxPhoto" src={itemConfig.image} alt={itemConfig.title} />
+              <div className="ContactPhotoFrame">
+                <img className="ContactPhoto" src={itemConfig.image} alt={itemConfig.title} />
               </div>
-              <div className="CheckboxPhone">{itemConfig.phone}</div>
-              <div className="CheckboxEmail">{itemConfig.email}</div>
-              <div className="CheckboxDescription">{itemConfig.description}</div>
-              <div className="CheckboxElement">
+              <div className="ContactPhone">{itemConfig.phone}</div>
+              <div className="ContactEmail">{itemConfig.email}</div>
+              <div className="ContactDescription">{itemConfig.description}</div>
+              <div className="ContactCheckboxElement">
                 <label onChange={(event) => update(event, itemConfig.id)}>
                   <nobr>
                     <input type="checkbox" name="checkbox" style={{ marginTop: "2px" }} checked={isSelected} />
                     &nbsp;
-                  <span className="CheckboxCaption">
+                  <span className="ContactCheckboxCaption">
                       Selected
                   </span>
                   </nobr>

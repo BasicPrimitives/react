@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './ItemTemplateLabel.css';
 
 class Sample extends Component {
   render() {
@@ -28,17 +27,17 @@ class Sample extends Component {
         highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
         onItemRender: ({ context: itemConfig }) => {
           const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
-          return <div className="LabelTemplate">
-            <div className="LabelTitleBackground" style={{ backgroundColor: itemTitleColor }}>
-              <div className="LabelTitle">{itemConfig.title}</div>
+          return <div className="ContactTemplate">
+            <div className="ContactTitleBackground" style={{ backgroundColor: itemTitleColor }}>
+              <div className="ContactTitle">{itemConfig.title}</div>
             </div>
-            <div className="LabelPhotoFrame">
-              <img className="LabelPhoto" src={itemConfig.image} alt={itemConfig.title} />
+            <div className="ContactPhotoFrame">
+              <img className="ContactPhoto" src={itemConfig.image} alt={itemConfig.title} />
             </div>
-            <div className="LabelPhone">{itemConfig.phone}</div>
-            <div className="LabelEmail">{itemConfig.email}</div>
-            <div className="LabelDescription">{itemConfig.description}</div>
-            <div className="LabelLabel">{itemConfig.label}</div>
+            <div className="ContactPhone">{itemConfig.phone}</div>
+            <div className="ContactEmail">{itemConfig.email}</div>
+            <div className="ContactDescription">{itemConfig.description}</div>
+            <div className="ContactLabel">{itemConfig.label}</div>
           </div>;
         }
       }

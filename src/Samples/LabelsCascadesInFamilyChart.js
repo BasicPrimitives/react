@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './LabelsCascadesInFamilyChart.css';
 
 class Sample extends Component {
   render() {
