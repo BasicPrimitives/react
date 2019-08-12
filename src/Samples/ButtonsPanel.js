@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faSitemap } from '@fortawesome/free-solid-svg-icons'
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './ButtonsPanel.css';
 
 class Sample extends Component {
   render() {

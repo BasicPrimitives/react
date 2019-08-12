@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './CursorTemplate.css';
 
 class Sample extends Component {
   render() {
@@ -19,7 +18,7 @@ class Sample extends Component {
         cursorBorderWidth: 2,
         highlightPadding: { left: 4, top: 4, right: 4, bottom: 4 },
         onCursorRender: ({ context: itemConfig }) => {
-          return <div className="BPCursorFrame" style={{ borderColor: itemConfig.badgeColor }}>
+          return <div className="CursorFrame" style={{ borderColor: itemConfig.badgeColor }}>
             <div className="CursorBadge" style={{ backgroundColor: itemConfig.badgeColor }}>{itemConfig.badge}</div>
           </div>;
         }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './MultipleFamiliesOrdering.css';
 
 class Sample extends Component {
   render() {
@@ -31,7 +30,7 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 3,
           toItem: 30,
-          label: <div className="BPBadge">3</div>,
+          label: <div className="Badge">3</div>,
           labelSize: new primitives.common.Size(40, 20),
           connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
           color: primitives.common.Colors.Red,

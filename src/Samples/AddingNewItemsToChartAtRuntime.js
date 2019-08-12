@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus, faUserSlash } from '@fortawesome/free-solid-svg-icons'
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './AddingNewItemsToChartAtRuntime.css';
 
 class Sample extends Component {
   constructor(props) {
@@ -133,14 +132,14 @@ class Sample extends Component {
       buttonsPanelSize: 40,
       onButtonsRender: (({ context: itemConfig }) => {
         return <>
-          <button key="1" className="ContactButton"
+          <button key="1" className="StyledButton"
             onClick={(event) => {
               event.stopPropagation();
               this.onAddButtonClick(itemConfig);
             }}>
             <FontAwesomeIcon icon={faUserPlus} />
           </button>
-          <button key="2" className="ContactButton"
+          <button key="2" className="StyledButton"
             onClick={(event) => {
               event.stopPropagation();
               this.onRemoveButtonClick(itemConfig);

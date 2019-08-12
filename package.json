@@ -1,6 +1,6 @@
 {
   "name": "basicprimitivesreact",
-  "version": "5.4.15",
+  "version": "5.4.16",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
@@ -46,7 +46,7 @@
     "eject": "react-scripts eject",
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "deploy": "gh-pages -d build --src '*/**' --repo https://github.com/BasicPrimitives/react",
+    "deploy": "gh-pages -d build --repo https://github.com/BasicPrimitives/react",
     "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/Diagrams/ --out-dir dist --copy-files"
   },
   "eslintConfig": {

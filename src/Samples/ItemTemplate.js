@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faComment, faCog } from '@fortawesome/free-solid-svg-icons'
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
-import './ItemTemplate.css';
 
 class Sample extends Component {
   constructor(props) {
@@ -45,15 +44,15 @@ class Sample extends Component {
         },
         onButtonsRender: (({ context: itemConfig }) => {
           return <>
-            <button key="1" className="ContactButton"
+            <button key="1" className="StyledButton"
               onClick={() => { this.onButtonClick(itemConfig, 'User'); }}>
               <FontAwesomeIcon icon={faUser} />
             </button>
-            <button key="2" className="ContactButton"
+            <button key="2" className="StyledButton"
               onClick={() => { this.onButtonClick(itemConfig, 'Comment'); }}>
               <FontAwesomeIcon icon={faComment} />
             </button>
-            <button key="3" className="ContactButton"
+            <button key="3" className="StyledButton"
               onClick={() => { this.onButtonClick(itemConfig, 'Cog'); }}>
               <FontAwesomeIcon icon={faCog} />
             </button>
