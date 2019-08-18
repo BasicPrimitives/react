@@ -14,12 +14,19 @@ class CheckBoxTemplate extends AbstractTemplate {
       <input type="checkbox" name="checkbox" style={{
         fontSize: "12px",
         lineHeight: "12px",
-        verticalAlign: "middle"
+        verticalAlign: "middle",
+        margin: "0px",
+        padding: "0px"
       }} checked={data.isSelected} data-id={data.id} />
       <span name="selectiontext" style={{
         fontSize: "12px",
         lineHeight: "12px",
-        verticalAlign: "middle"
+        verticalAlign: "middle",
+        maring: "0px",
+        paddingLeft: "2px",
+        paddingTop: "0px",
+        paddingRight: "0px",
+        paddingBottom: "0px"
       }} data-id={data.id} >
         {this.selectCheckBoxLabel}
       </span>

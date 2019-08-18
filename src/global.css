@@ -105,22 +105,22 @@
   left: -1px;
   top: -1px; }
 
-.Badge {
+.BadgeSymbol {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   -khtml-border-radius: 10px;
   border-radius: 10px;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 20px;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   font-weight: bold;
   font-family: Arial;
-  padding: 4px;
+  padding: 0px;
   float: left;
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   background-color: red;
   color: white; }
 
