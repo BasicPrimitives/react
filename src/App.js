@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import primitives from 'basicprimitives';
 import SamplesList from './SamplesList';
-import './App.css';
+import './global.css';
 
 class App extends Component {
   constructor(props, context) {

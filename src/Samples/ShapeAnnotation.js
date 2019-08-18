@@ -18,7 +18,7 @@ class Sample extends Component {
         {
           annotationType: primitives.common.AnnotationType.Shape,
           items: [0],
-          label: <><div className="Badge" style={{
+          label: <><div className="BadgeSymbol" style={{
             backgroundColor: primitives.common.Colors.Green
           }}>1</div>Oval</>,
           labelSize: new primitives.common.Size(100, 30),
@@ -34,7 +34,7 @@ class Sample extends Component {
         {
           annotationType: primitives.common.AnnotationType.Shape,
           items: [2, 3],
-          label: <><div className="Badge" style={{
+          label: <><div className="BadgeSymbol" style={{
             backgroundColor: primitives.common.Colors.Navy
           }}>2</div>Cross Out</>,
           labelSize: { width: 100, height: 30 },
@@ -49,7 +49,7 @@ class Sample extends Component {
         /* prototype based instantiation */
         new primitives.orgdiagram.ShapeAnnotationConfig({
           items: [1],
-          label: <><div className="Badge" style={{
+          label: <><div className="BadgeSymbol" style={{
             backgroundColor: primitives.common.Colors.Red
           }}>3</div>Triangle</>,
           labelSize: new primitives.common.Size(100, 30),

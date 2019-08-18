@@ -38,7 +38,7 @@ Add following changes into App.js
 
 ``` JavaScript
 import React from 'react';
-import './App.css';
+import './global.css';
 import { OrgDiagram } from 'basicprimitivesreact';
 import primitives from 'basicprimitives';
 

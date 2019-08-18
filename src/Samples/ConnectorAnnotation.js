@@ -31,7 +31,7 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 0,
           toItem: 2,
-          label: <div className="Badge" style={{
+          label: <div className="BadgeSymbol" style={{
             backgroundColor: primitives.common.Colors.Green
           }}>2</div>,
           labelSize: { width: 80, height: 30 },
@@ -48,7 +48,7 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 0,
           toItem: 1,
-          label: <div className="Badge" style={{
+          label: <div className="BadgeSymbol" style={{
             backgroundColor: primitives.common.Colors.Red
           }}>1</div>,
           labelSize: new primitives.common.Size(80, 30),
@@ -65,7 +65,7 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 0,
           toItem: 3,
-          label: <div className="Badge" style={{
+          label: <div className="BadgeSymbol" style={{
             backgroundColor: primitives.common.Colors.Blue
           }}>3</div>,
           labelSize: new primitives.common.Size(80, 30),
