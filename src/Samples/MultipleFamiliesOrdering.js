@@ -30,7 +30,7 @@ class Sample extends Component {
           annotationType: primitives.common.AnnotationType.Connector,
           fromItem: 3,
           toItem: 30,
-          label: <div className="Badge">3</div>,
+          label: <div className="BadgeSymbol">3</div>,
           labelSize: new primitives.common.Size(40, 20),
           connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
           color: primitives.common.Colors.Red,

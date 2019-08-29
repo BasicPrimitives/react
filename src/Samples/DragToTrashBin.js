@@ -4,85 +4,6 @@ import primitives from 'basicprimitives';
 import { DndProvider, DropTarget, DragSource } from 'react-dnd';
 import HTML5Backend from 'react-dnd-html5-backend';
 
-
-const ItemTypes = {
-  NODE: 'node'
-}
-
-const TrashBin = ({ canDrop, isOver, connectDropTarget }) => {
-  const isActive = canDrop && isOver
-  let backgroundColor = '#222'
-  if (isActive) {
-    backgroundColor = 'red'
-  } else if (canDrop) {
-    backgroundColor = 'darkgreen'
-  }
-  const style = {
-    height: "50px",
-    width: "100%",
-    color: 'white',
-    textAlign: 'center',
-    fontSize: "14px",
-    lineHeight: 'normal',
-    float: 'left',
-    marginBottom: "10px"
-  }
-  return (
-    <div ref={connectDropTarget} style={{ ...style, backgroundColor }}>
-      {isActive ? 'Release to delete' : 'Drag a node here to delete'}
-    </div>
-  )
-}
-const TrashBinDropTarget = DropTarget(
-  ItemTypes.NODE,
-  {
-    drop: () => ({ id: -1 }),
-  },
-  (connect, monitor) => ({
-    connectDropTarget: connect.dropTarget(),
-    isOver: monitor.isOver(),
-    canDrop: monitor.canDrop(),
-  }),
-)(TrashBin)
-
-const Node = ({ itemConfig, isDragging, connectDragSource }) => {
-  const opacity = isDragging ? 0.4 : 1
-  const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
-  return (
-    <div className="ContactTemplate" ref={connectDragSource} style={{ opacity }}>
-      <div className="ContactTitleBackground" style={{ backgroundColor: itemTitleColor }}>
-        <div className="ContactTitle">{itemConfig.title}</div>
-      </div>
-      <div className="ContactPhotoFrame">
-        <img className="ContactPhoto" src={itemConfig.image} alt={itemConfig.title} />
-      </div>
-      <div className="ContactPhone">{itemConfig.phone}</div>
-      <div className="ContactEmail">{itemConfig.email}</div>
-      <div className="ContactDescription">{itemConfig.description}</div>
-    </div>
-  )
-}
-const NodeDragSource = DragSource(
-  ItemTypes.NODE,
-  {
-    beginDrag: ({ itemConfig }) => ({ id: itemConfig.id }),
-    endDrag(props, monitor) {
-      const { onRemoveItem } = props;
-      const item = monitor.getItem()
-      const dropResult = monitor.getDropResult()
-      if (dropResult) {
-        if (dropResult.id === -1) {
-          onRemoveItem(item.id);
-        }
-      }
-    },
-  },
-  (connect, monitor) => ({
-    connectDragSource: connect.dragSource(),
-    isDragging: monitor.isDragging(),
-  }),
-)(Node);
-
 class Sample extends Component {
   constructor() {
     super();
@@ -161,6 +82,84 @@ class Sample extends Component {
   }
 
   render() {
+    const ItemTypes = {
+      NODE: 'node'
+    }
+
+    const TrashBin = ({ canDrop, isOver, connectDropTarget }) => {
+      const isActive = canDrop && isOver
+      let backgroundColor = '#222'
+      if (isActive) {
+        backgroundColor = 'red'
+      } else if (canDrop) {
+        backgroundColor = 'darkgreen'
+      }
+      const style = {
+        height: "50px",
+        width: "100%",
+        color: 'white',
+        textAlign: 'center',
+        fontSize: "14px",
+        lineHeight: 'normal',
+        float: 'left',
+        marginBottom: "10px"
+      }
+      return (
+        <div ref={connectDropTarget} style={{ ...style, backgroundColor }}>
+          {isActive ? 'Release to delete' : 'Drag a node here to delete'}
+        </div>
+      )
+    }
+    const TrashBinDropTarget = DropTarget(
+      ItemTypes.NODE,
+      {
+        drop: () => ({ id: -1 }),
+      },
+      (connect, monitor) => ({
+        connectDropTarget: connect.dropTarget(),
+        isOver: monitor.isOver(),
+        canDrop: monitor.canDrop(),
+      }),
+    )(TrashBin)
+
+    const Node = ({ itemConfig, isDragging, connectDragSource }) => {
+      const opacity = isDragging ? 0.4 : 1
+      const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
+      return (
+        <div className="ContactTemplate" ref={connectDragSource} style={{ opacity }}>
+          <div className="ContactTitleBackground" style={{ backgroundColor: itemTitleColor }}>
+            <div className="ContactTitle">{itemConfig.title}</div>
+          </div>
+          <div className="ContactPhotoFrame">
+            <img className="ContactPhoto" src={itemConfig.image} alt={itemConfig.title} />
+          </div>
+          <div className="ContactPhone">{itemConfig.phone}</div>
+          <div className="ContactEmail">{itemConfig.email}</div>
+          <div className="ContactDescription">{itemConfig.description}</div>
+        </div>
+      )
+    }
+    const NodeDragSource = DragSource(
+      ItemTypes.NODE,
+      {
+        beginDrag: ({ itemConfig }) => ({ id: itemConfig.id }),
+        endDrag(props, monitor) {
+          const { onRemoveItem } = props;
+          const item = monitor.getItem()
+          const dropResult = monitor.getDropResult()
+          if (dropResult) {
+            if (dropResult.id === -1) {
+              onRemoveItem(item.id);
+            }
+          }
+        },
+      },
+      (connect, monitor) => ({
+        connectDragSource: connect.dragSource(),
+        isDragging: monitor.isDragging(),
+      }),
+    )(Node);
+
     const config = {
       ...this.state,
       pageFitMode: primitives.common.PageFitMode.None,

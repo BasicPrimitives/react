@@ -16,13 +16,13 @@ Having scroll bars enabled for components is fine if they fit into the page view
 
 The "classic" and the most popular approach for desktop applications is to fit page and diagram 100%. In that case you have to design your web site appropriatly.
 
-![Classic desktop layout](./images/PageSizeDiagram2.png "Classic desktop layout")
+![Classic desktop layout](./images/PageSizeDiagram3.png "Classic desktop layout")
 
 The following sample control hight is sized by CSS @Media rules to be within current page view port size. Try to resize your browser window in order to see how it works. The diagraming component has minimum vertical size set to hardcoded 250px.
 
 See [CSS @Media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) for more reference
 
-[Sample of diagram size controlled by CSS @Media](../src/Samples/PageSizeDiagram.js)
+[React](../src/Samples/PageSizeDiagram.js)
 
 ## Auto Size Diagram in Article
 Another diagram integration scenario is diagram placement inside article, so component needs to auto expand its size in order to accommodate all nodes of diagram without minimization or trancation. Set `pageFitMode` to `primitives.common.PageFitMode.AutoSize` and component will size itself to show all nodes of diagram. 
