@@ -68,6 +68,8 @@ const Config = PropTypes.shape({
   calloutOpacity: PropTypes.number,
   childrenPlacementType: PropTypes.oneOf(Object.values(primitives.common.ChildrenPlacementType)),
   leavesPlacementType: PropTypes.oneOf(Object.values(primitives.common.ChildrenPlacementType)),
+  placeAssistantsAboveChildren: PropTypes.bool,
+  placeAdvisersAboveChildren: PropTypes.bool,
   maximumColumnsInMatrix: PropTypes.number,
   buttonsPanelSize: PropTypes.number,
   groupTitlePanelSize: PropTypes.number,

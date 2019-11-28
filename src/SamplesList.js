@@ -13,6 +13,8 @@ import {
   Labels,
   ChildrenPlacementType,
   AdviserAndAssistantItemTypes,
+  PlaceAdvisersAboveChildren,
+  PlaceAssistantsAboveChildren,
   SubAdviserAndSubAssistantItemTypes,
   GeneralPartnerItemType,
   LimitedPartnerItemType,
@@ -22,6 +24,7 @@ import {
   SelectionPathMode,
   InactiveItems,
   CustomLayoutWithInvisibleItems,
+  ChildrenAndAssitantsLevelOffset,
   SkippedLevels,
   InactiveFamilyItems,
   SpousesInFamilyLayout,
@@ -108,6 +111,10 @@ const SamplesList = [
         component: <ChildrenPlacementType />
       },
       {
+        label: "Children & Assistants Levels",
+        component: <ChildrenAndAssitantsLevelOffset />
+      },
+      {
         label: "Adviser and Assistant item types",
         component: <AdviserAndAssistantItemTypes />
       },
@@ -146,6 +153,14 @@ const SamplesList = [
       {
         label: "Custom layout with invisible items",
         component: <CustomLayoutWithInvisibleItems />
+      },
+      {
+        label: "Assitants Children Placement",
+        component: <PlaceAssistantsAboveChildren />
+      },
+      {
+        label: "Advisers Children Placement",
+        component: <PlaceAdvisersAboveChildren />
       },
       {
         label: "Skip levels",
