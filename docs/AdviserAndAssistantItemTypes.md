@@ -31,3 +31,15 @@ Sub Adviser & Sub Assistant item types are variations of regular Adviser & Assis
 Use `adviserPlacementType` property to place them on the left or right side of parent's hierarchy as well.
 
 [React](../src/Samples/SubAdviserAndSubAssistantItemTypes.js)
+
+## Adviser child nodes placement above parent's node children
+
+If adviser node has its own children then control adds extra levels, so advisers children are placed above level of the regular children. This behavior can be altered with `placeAdvisersAboveChildren` property. So parent's node and advisers node children would be rendered side by side at the same level.
+
+[React](../src/Samples/PlaceAdvisersAboveChildren.js)
+
+## Assitamt child nodes placement above parent's node children
+
+If assitant node has its own children then control adds extra levels, so assitants children are placed above level of the regular children. This behavior can be altered with `placeAssistantsAboveChildren` property. So parent's node and assitants node children would be rendered side by side at the same level.
+
+[React](../src/Samples/PlaceAssistantsAboveChildren.js)

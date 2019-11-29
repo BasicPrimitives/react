@@ -11,3 +11,8 @@ In general children layouts are all matrix, the only difference is that horizont
 The `maximumColumnsInMatrix` value should limit children matrix growth outside of the view port width, in order to avoid the necessety of simultanious horizontal and vertical scrolling of nodes. Keeping square shape of nodes is good for small matrixes which easely fit into view port, but large groups of children are better shaped into wide columns.
 
 [React](../src/Samples/ChildrenPlacementType.js)
+
+# Placing children into multiple horizontal levels
+Children nodes can be placed into multiple rows with `levelOffset` property. Child nodes would be grouped by that property and placed in rows. Only the last row of children is effected by `childrenPlacementType` property setting their formation.
+
+[React](../src/Samples/ChildrenAndAssitantsLevelOffset.js)
