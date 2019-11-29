@@ -38,8 +38,8 @@ If adviser node has its own children then control adds extra levels, so advisers
 
 [React](../src/Samples/PlaceAdvisersAboveChildren.js)
 
-## Assitamt child nodes placement above parent's node children
+## Assistant child nodes placement above parent's node children
 
-If assitant node has its own children then control adds extra levels, so assitants children are placed above level of the regular children. This behavior can be altered with `placeAssistantsAboveChildren` property. So parent's node and assitants node children would be rendered side by side at the same level.
+If assistant node has its own children then control adds extra levels, so assistant's children are placed one level above of the regular children. This behavior can be altered with `placeAssistantsAboveChildren` property. So parent's node and assistants node children would be rendered side by side at the same level.
 
 [React](../src/Samples/PlaceAssistantsAboveChildren.js)
