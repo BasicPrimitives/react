@@ -1,6 +1,6 @@
 {
   "name": "basicprimitivesreact",
-  "version": "5.6.2",
+  "version": "5.6.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
@@ -19,20 +19,20 @@
   "homepage": "https://basicprimitives.github.io/react/",
   "license": "SEE LICENSE IN license.pdf",
   "dependencies": {
-    "basicprimitives": "^5.6.2",
+    "basicprimitives": "^5.6.3",
     "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.5.5",
-    "@babel/node": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dnd": "^9.3.2",
     "react-dnd-html5-backend": "^9.3.2",
