@@ -32,6 +32,7 @@ import {
   LabelsCascadesInFamilyChart,
   FamilyChartItemsOrdering,
   MultipleFamiliesOrdering,
+  FamilyChartPrimaryParent,
   ItemTemplate,
   DragNDrop,
   DragToTrashBin,
@@ -194,7 +195,11 @@ const SamplesList = [
       {
         label: "Families ordering",
         component: <MultipleFamiliesOrdering />
-      }
+      },
+      {
+        label: "Primary Parent",
+        component: <FamilyChartPrimaryParent />
+      },
     ]
   },
   {

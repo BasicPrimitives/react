@@ -26,7 +26,11 @@ const ItemConfig = PropTypes.shape({
     height: PropTypes.number.isRequired
   }),
   labelOrientation: PropTypes.oneOf(Object.values(primitives.text.TextOrientationType)),
-  labelPlacement: PropTypes.oneOf(Object.values(primitives.common.PlacementType))
+  labelPlacement: PropTypes.oneOf(Object.values(primitives.common.PlacementType)),
+  primaryParent: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  relativeItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  position: PropTypes.number,
+  placementType: PropTypes.oneOf(Object.values(primitives.common.AdviserPlacementType))
 });
 
 export default ItemConfig;

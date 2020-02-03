@@ -18,3 +18,11 @@ Please, pay attention that loops in references are completely ignored, so don't 
 ## Multiple Families Ordering Sample
 
 [React](../src/Samples/MultipleFamiliesOrdering.js)
+
+## Primary Parent
+
+If node has multiple parents and they belong to distinct branches of the diagram then `primaryParent` property can give higher pritority to one of them. So child node will be placed into hierarchy of that primary parent node.
+
+`primaryParent` - control placed node to the hierarchy of the primary parent, this property is ignored if parent does not exists.
+
+[JavaScript](../src/Samples/FamilyChartPrimaryParent.js)
