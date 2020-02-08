@@ -11,9 +11,7 @@ class Sample extends Component {
     this.scales = {
       "Extra Small": 0.25,
       "Small": 0.5,
-      "Medium": {
-
-      },
+      "Medium": 1.0,
       "Large": 1.5,
       "Extra Large": 2
     }
@@ -54,7 +52,7 @@ class Sample extends Component {
 
     return <>
       <p>Select CSS scale transform:&nbsp;
-        {Object.keys(this.scales).map(key => <label key={key}><input onClick={() => this.setScale(key)} name="scale" type="radio" checked={scale === key ? 'checked' : ''} value="{key}" />{key}</label>)}
+        {Object.keys(this.scales).map(key => <label key={key}><input onChange={() => this.setScale(key)} name="scale" type="radio" checked={scale === key ? 'checked' : ''} value="{key}" />{key}</label>)}
       </p>
       <div className="placeholder">
         <OrgDiagram centerOnCursor={true} config={config} />

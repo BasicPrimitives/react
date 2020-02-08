@@ -54,7 +54,7 @@ class Sample extends Component {
           description: "Co-CEO",
           image: "photos/a.png"
         },
-        { id: 1, parents: [0, 100], hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "Finance", itemTitleColor: "Green" },
+        { id: 1, parents: [0, 100], hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Finance", itemTitleColor: "Green" },
         {
           id: 2,
           parents: [1],
@@ -62,7 +62,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "photos/b.png"
         },
-        { id: 3, parents: [0, 100], hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "Sales", itemTitleColor: "Navy" },
+        { id: 3, parents: [0, 100], hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Sales", itemTitleColor: "Navy" },
         {
           id: 4,
           parents: [3],
@@ -70,7 +70,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "photos/b.png"
         },
-        { id: 5, parents: [0, 100], hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "Operations", itemTitleColor: "Magenta" },
+        { id: 5, parents: [0, 100], hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Operations", itemTitleColor: "Magenta" },
         {
           id: 6,
           parents: [5],
@@ -78,7 +78,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "photos/b.png"
         },
-        { id: 7, parents: [0, 100], hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "IT", itemTitleColor: "Orange" },
+        { id: 7, parents: [0, 100], hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "IT", itemTitleColor: "Orange" },
         {
           id: 8,
           parents: [7],

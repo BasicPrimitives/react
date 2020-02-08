@@ -17,7 +17,7 @@ class CheckBoxTemplate extends AbstractTemplate {
         verticalAlign: "middle",
         margin: "0px",
         padding: "0px"
-      }} checked={data.isSelected} data-id={data.id} />
+      }} checked={data.isSelected} onChange={() => null} data-id={data.id} />
       <span name="selectiontext" style={{
         fontSize: "12px",
         lineHeight: "12px",

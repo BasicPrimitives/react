@@ -22,7 +22,7 @@ const ConnectorAnnotationConfig = PropTypes.shape({
   color: PropTypes.string,
   lineType: PropTypes.oneOf(Object.values(primitives.common.LineType)),
   selectItems: PropTypes.bool,
-  label: PropTypes.string,
+  label: PropTypes.any,
   size: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired

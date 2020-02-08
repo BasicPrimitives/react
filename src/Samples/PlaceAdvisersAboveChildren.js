@@ -78,7 +78,7 @@ class Sample extends Component {
       <br />
         <label>
           <input
-            onClick={() => this.onplaceAdvisersAboveChildrenChanged(true)}
+            onChange={() => this.onplaceAdvisersAboveChildrenChanged(true)}
             name="placeAdvisersAboveChildren"
             type="radio"
             value="1"
@@ -89,7 +89,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onplaceAdvisersAboveChildrenChanged(false)}
+            onChange={() => this.onplaceAdvisersAboveChildrenChanged(false)}
             name="placeAdvisersAboveChildren"
             type="radio"
             value="0"

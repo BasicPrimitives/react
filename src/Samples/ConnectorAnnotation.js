@@ -89,7 +89,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Offbeat)}
+            onChange={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Offbeat)}
             name="connectorPlacementType"
             type="radio"
             value="0"
@@ -100,7 +100,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Straight)}
+            onChange={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Straight)}
             name="connectorPlacementType"
             type="radio"
             value="1"

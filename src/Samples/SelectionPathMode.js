@@ -59,7 +59,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onSelectionPathModeChanged(0)}
+            onChange={() => this.onSelectionPathModeChanged(0)}
             name="selectionPathMode"
             type="radio"
             value="0"
@@ -70,7 +70,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onSelectionPathModeChanged(1)}
+            onChange={() => this.onSelectionPathModeChanged(1)}
             name="selectionPathMode"
             type="radio"
             value="1"

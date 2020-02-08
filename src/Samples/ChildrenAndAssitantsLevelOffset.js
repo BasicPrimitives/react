@@ -95,7 +95,7 @@ class Sample extends Component {
       levelOffset: 1
     });
 
-    for (var index = 100; index <= 107; index += 1) {
+    for (index = 100; index <= 107; index += 1) {
       items.push({
         id: index,
         parent: 0,
@@ -108,7 +108,7 @@ class Sample extends Component {
       });
     }
 
-    for (var index = 15; index <= 20; index += 1) {
+    for (index = 15; index <= 20; index += 1) {
       items.push({
         id: index,
         parent: 0,
@@ -120,7 +120,7 @@ class Sample extends Component {
       });
     }
 
-    for (var index = 21; index <= 32; index += 1) {
+    for (index = 21; index <= 32; index += 1) {
       items.push({
         id: index,
         parent: 0,
