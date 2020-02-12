@@ -4,9 +4,6 @@ import primitives from 'basicprimitives';
 
 class Sample extends Component {
   render() {
-    var photos = {
-      a: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA8CAIAAACrV36WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGnSURBVGhD7dnBbQJBDAVQk1o2QjlQwKYGzpSwKQfq4IxICRTB9jLZHCJFwWv7/7EiDt6zmX2yPYMHNq01eb7n5flI36JiIXWpbFW2kAwgsdVblS0kA0hs9db/ZWs+vW/Wno9PxPE3dhls6Od+HI1XT1d64Sb8R5utEulwdbA8VY+LZ/kqkfF456pBHxDz5Xxze/p2vsxukBbAshTVOE0PO4B2cUlWKrgUTKsrV0eut3RVU/cm5aKKqPXVbjuIDPtDUh2JImq1+jmjkupIFNFStXadHncWXkecpb3393me4oJZnionXyjLV6W4QFZEleHCWNG+0eKggQJiRVV6vhAXwoqrul0AC1H1uuIsTLUyukYH1jBL7WJ8lgq6oqwkVXSQDrLSVEFXjJWoirlCrFRVyBVhJasirgCr65tEv7a5A5jL0tcN7vNl9OVcHqtXRbocVr+Kc9k3H/3qPL69Ise7dh0SsS+2JmtFddgvdy/gGbY7Jdp2GRcyrlu1BfUjxtiPRm/lqVbGHOMHnU39zQm0I/UbBLA+GVosJHGVrcoWkgEktnoLydYXkF/LiXG21MwAAAAASUVORK5CYII='
-    }
     const config = {
       pageFitMode: primitives.common.PageFitMode.None,
       cursorItem: 2,
@@ -17,8 +14,8 @@ class Sample extends Component {
       dotLevelShift: 20,
       lineLevelShift: 20,
       normalItemsInterval: 10,
-      dotItemsInterval: 10,
-      lineItemsInterval: 10,
+      dotItemsInterval: 30,
+      lineItemsInterval: 30,
       arrowsDirection: primitives.common.GroupByType.Parents,
       showExtraArrows: false,
       items: [
@@ -31,8 +28,14 @@ class Sample extends Component {
           image: "photos/t.png"
         },
         {
-          id: 2, spouses: [], title: "Mary Spencer", label: "Mary Spencer",
-          description: "2, The Mary", image: "photos/m.png"
+          id: 2,
+          title: "Mary Spencer",
+          label: "Mary Spencer",
+          description: "2, The Mary",
+          image: "photos/m.png",
+          relativeItem: 1,
+          placementType: primitives.common.AdviserPlacementType.Right,
+          position: 1
         },
         {
           id: 3,
@@ -40,7 +43,10 @@ class Sample extends Component {
           title: "David Kirby",
           label: "David Kirby",
           description: "3, 2nd Husband",
-          image: "photos/d.png"
+          image: "photos/d.png",
+          relativeItem: 2,
+          placementType: primitives.common.AdviserPlacementType.Right,
+          position: 1
         },
         {
           id: 4,
@@ -63,22 +69,28 @@ class Sample extends Component {
           id: 6,
           title: "Lynette Maloney",
           label: "Lynette Maloney",
-          description: "5, Spouse I",
-          image: "photos/m.png"
+          description: "5, Spouse 1",
+          image: "photos/m.png",
+          relativeItem: 5,
+          placementType: primitives.common.AdviserPlacementType.Right,
+          position: 1
         },
         {
           id: 7,
           title: "Sara Kemp",
           label: "Sara Kemp",
-          description: "5, Spouse II :-)",
-          image: "photos/s.png"
+          description: "5, Spouse 2",
+          image: "photos/s.png",
+          relativeItem: 5,
+          placementType: primitives.common.AdviserPlacementType.Left,
+          position: 1
         },
         {
           id: 8,
-          parents: [7],
+          parents: [5, 7],
           title: "Leon Kemp",
           label: "Leon Kemp",
-          description: "5, Orphant",
+          description: "5, First Child",
           image: "photos/l.png"
         }
       ]

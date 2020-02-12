@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
 
@@ -44,9 +44,9 @@ class Sample extends Component {
               <div className="ContactEmail">{itemConfig.email}</div>
               <div className="ContactDescription">{itemConfig.description}</div>
               <div className="ContactCheckboxElement">
-                <label onChange={(event) => update(event, itemConfig.id)}>
+                <label>
                   <nobr>
-                    <input type="checkbox" name="checkbox" style={{ marginTop: "2px" }} checked={isSelected} />
+                    <input onChange={(event) => update(event, itemConfig.id)} type="checkbox" name="checkbox" style={{ marginTop: "2px" }} checked={isSelected} />
                     &nbsp;
                   <span className="ContactCheckboxCaption">
                       Selected
@@ -94,11 +94,11 @@ class Sample extends Component {
     return <>
       <p>Select following items: &nbsp;
         {
-          items.map(item => <>
-            <input key={item.id} onChange={(event) => this.update(event, item.id)} type="checkbox" checked={selectedItemsHash[item.id] ? 'checked' : ''} />
+          items.map(item => <Fragment key={item.id}>
+            <input onChange={(event) => this.update(event, item.id)} type="checkbox" checked={selectedItemsHash[item.id] ? 'checked' : ''} />
             {item.title}
             &nbsp;
-          </>
+          </Fragment>
           )
         }
       </p>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
 
@@ -11,27 +11,27 @@ class Sample extends Component {
     this.state = {
       config: {
         pageFitMode: primitives.common.PageFitMode.FitToPage,
-        cursorItem: 0,
+        cursorItem: 1,
         hasSelectorCheckbox: primitives.common.Enabled.True,
-        selectedItems: [0, 2],
+        selectedItems: [1, 3],
         items: [
           {
-            id: 0,
+            id: 1,
             parent: null,
             title: 'Scott Aasrud',
             description: 'VP, Public Sector',
             image: 'photos/a.png'
           },
           {
-            id: 1,
-            parent: 0,
+            id: 2,
+            parent: 1,
             title: 'Ted Lucas',
             description: 'VP, Human Resources',
             image: 'photos/b.png'
           },
           {
-            id: 2,
-            parent: 0,
+            id: 3,
+            parent: 1,
             title: 'Fritz Stuger',
             description: 'Business Solutions, US',
             image: 'photos/c.png'
@@ -68,7 +68,7 @@ class Sample extends Component {
       this.setState({
         config: {
           ...config,
-          selectedItems: (selectedItems.filter(id => id !== itemid))
+          selectedItems: (selectedItems.filter(id => id != itemid))
         }
       })
     }
@@ -85,11 +85,11 @@ class Sample extends Component {
     return <>
       <p>Select following items: &nbsp;
         {
-          items.map(item => <>
-            <input key={item.id} onChange={(event) => this.update(event, item.id)} type="checkbox" checked={selectedItemsHash[item.id] ? 'checked' : ''} />
+          items.map(item => <Fragment key={item.id}>
+            <input onChange={(event) => this.update(event, item.id)} type="checkbox" checked={selectedItemsHash[item.id] ? 'checked' : ''} />
             {item.title}
             &nbsp;
-          </>
+          </Fragment>
           )
         }
       </p>

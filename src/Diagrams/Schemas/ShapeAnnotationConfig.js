@@ -19,7 +19,7 @@ const ShapeAnnotationConfig = PropTypes.shape({
   fillColor: PropTypes.string,
   lineType: PropTypes.oneOf(Object.values(primitives.common.LineType)),
   selectItems: PropTypes.bool,
-  label: PropTypes.string,
+  label: PropTypes.any,
   labelSize: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired

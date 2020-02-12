@@ -62,7 +62,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onChanged(false)}
+            onChange={() => this.onChanged(false)}
             name="hideGrandParentsConnectors"
             type="radio"
             value="0"
@@ -73,7 +73,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onClick={() => this.onChanged(true)}
+            onChange={() => this.onChanged(true)}
             name="connectorPlacementType"
             type="radio"
             value="1"

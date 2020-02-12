@@ -46,7 +46,7 @@ class Sample extends Component {
           description: "VP, Public Sector",
           image: "photos/a.png"
         },
-        { id: 1, parent: 0, hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "Finance", itemTitleColor: "Green" },
+        { id: 1, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Finance", itemTitleColor: "Green" },
         {
           id: 2,
           parent: 1,
@@ -54,7 +54,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "photos/b.png"
         },
-        { id: 3, parent: 0, hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "Sales", itemTitleColor: "Navy" },
+        { id: 3, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Sales", itemTitleColor: "Navy" },
         {
           id: 4,
           parent: 3,
@@ -62,7 +62,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "photos/b.png"
         },
-        { id: 5, parent: 0, hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "Operations", itemTitleColor: "Magenta" },
+        { id: 5, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Operations", itemTitleColor: "Magenta" },
         {
           id: 6,
           parent: 5,
@@ -70,7 +70,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "photos/b.png"
         },
-        { id: 7, parent: 0, hasSelectorCheckbox: false, templateName: "DepartmentTitleTemplate", title: "IT", itemTitleColor: "Orange" },
+        { id: 7, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "IT", itemTitleColor: "Orange" },
         {
           id: 8,
           parent: 7,

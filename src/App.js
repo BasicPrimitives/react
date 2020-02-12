@@ -9,7 +9,7 @@ class App extends Component {
 
     this.onChange = this.onChange.bind(this);
 
-    let key = 0;
+    let key = 1;
     this.hash = SamplesList.reduce((agg, group) => {
       group.key = key;
       key += 1;

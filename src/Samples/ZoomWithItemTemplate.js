@@ -168,7 +168,7 @@ class Sample extends Component {
         {Object.keys(this.scales).map(key => {
         const { caption } = this.scales[key];
         return <label key={key}><input
-          onClick={() => this.setTemplate(key)}
+          onChange={() => this.setTemplate(key)}
           name="scale"
           type="radio"
           checked={scale === key ? 'checked' : ''}
