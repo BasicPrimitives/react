@@ -25,6 +25,7 @@ const Config = PropTypes.shape({
   minimumMatrixSize: PropTypes.number,
   maximumColumnsInMatrix: PropTypes.number,
   hideGrandParentsConnectors: PropTypes.bool,
+  loopsLayoutMode: PropTypes.oneOf(Object.values(primitives.common.LoopsLayoutMode)),
   bevelSize: PropTypes.number,
   elbowType: PropTypes.oneOf(Object.values(primitives.common.ElbowType)),
   elbowDotSize: PropTypes.number,
