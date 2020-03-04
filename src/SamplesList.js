@@ -33,6 +33,7 @@ import {
   FamilyChartItemsOrdering,
   MultipleFamiliesOrdering,
   FamilyChartPrimaryParent,
+  LoopsInFamilyChart,
   ItemTemplate,
   DragNDrop,
   DragToTrashBin,
@@ -199,6 +200,10 @@ const SamplesList = [
       {
         label: "Primary Parent",
         component: <FamilyChartPrimaryParent />
+      },
+      {
+        label: "Loops Layout Mode",
+        component: <LoopsInFamilyChart />
       },
     ]
   },
