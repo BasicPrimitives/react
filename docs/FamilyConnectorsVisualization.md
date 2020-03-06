@@ -20,7 +20,3 @@ As you may see component already eliminated a lot of connections via making bund
 [React](../src/Samples/FamilyHideGrandParentsConnections.js)
 
 So we got quite clean relations diagram between nodes. We still have all relations in place, the only difference is that grand parents connections go through actual parents, so we need to visualize them dynamically, as we navigate around our diagram we can highlight all current node immediate parents and children with Connector Path Annotations and set custom Item Template for them.
-
-Another major problem is loops in family relations. If we have looped relations between nodes, then there is no difference between them in terms of which of them should be placed on top of the diagram, any item can be on the tom and it is equaly true for all of them. The difference is that we want to have as less backward relations as possible, so we don't need to visualy trace them.
-
-[React](../src/Samples/LoopsInFamilyChart.js)

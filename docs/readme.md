@@ -30,6 +30,8 @@
 * [Inactive family items](InactiveFamilyItems.md)
 * [Spouses Without Children](SpousesInFamilyLayout.md)
 * [Family Items Ordering](FamilyChartItemsOrdering.md)
+* [Loops Layout Optimization](LoopsInFamily.md)
+
 
 ## Item Template Use Cases
 * [Item Template](ItemTemplates.md)
