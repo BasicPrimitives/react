@@ -34,6 +34,7 @@ import {
   MultipleFamiliesOrdering,
   FamilyChartPrimaryParent,
   LoopsInFamilyChart,
+  SelectionPathModeInFamilyChart,
   ItemTemplate,
   DragNDrop,
   DragToTrashBin,
@@ -205,6 +206,10 @@ const SamplesList = [
         label: "Loops Layout Mode",
         component: <LoopsInFamilyChart />
       },
+      {
+        label: "Selection path mode",
+        component: <SelectionPathModeInFamilyChart />
+      }
     ]
   },
   {
