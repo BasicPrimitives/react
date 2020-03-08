@@ -5,6 +5,4 @@ Selection path is items between root item and selected item. Selected item defin
 
 When we need to compare two or three selected items location in Organizational chart it is important to show selection path items for them. In case of large number of selected items it is better to hide selection paths in order to save as much space as possible and fit chart into screen.
 
-Pay attention that org chart always shows selection path for cursor item. So in case when selected item is cursor item  the setting `selectionPathMode` to `primitives.orgdiagram.SelectionPathMode.None` is ignored.
-
 [React](../src/Samples/SelectionPathMode.js)
