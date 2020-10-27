@@ -108,6 +108,19 @@ const Config = PropTypes.shape({
   autoSizeMaximum: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired
+  }),
+  showFrame: PropTypes.bool,
+  frameInnerPadding: PropTypes.shape({
+    left: PropTypes.number.isRequired,
+    top: PropTypes.number.isRequired,
+    right: PropTypes.number.isRequired,
+    bottom: PropTypes.number.isRequired
+  }),
+  frameOuterPadding: PropTypes.shape({
+    left: PropTypes.number.isRequired,
+    top: PropTypes.number.isRequired,
+    right: PropTypes.number.isRequired,
+    bottom: PropTypes.number.isRequired
   })
 });
 

@@ -69,6 +69,9 @@ class BaseDiagram extends Component {
     this.onCheckboxChange = this.onCheckboxChange.bind(this);
     this.onKeyDown = this.onKeyDown.bind(this);
 
+    this.onFrameClick = this.onFrameClick.bind(this);
+    this.onFrameMouseMove = this.onFrameMouseMove.bind(this);
+
     this.getOptions = this.getOptions.bind(this);
     this.getGraphics = this.getGraphics.bind(this);
     this.getLayout = this.getLayout.bind(this);
@@ -81,6 +84,9 @@ class BaseDiagram extends Component {
     this.onCursorRender = this.onCursorRender.bind(this);
 
 
+    this.controlPanelRef = React.createRef();
+    this.frameMousePanelRef = React.createRef();
+    this.framePlaceholderRef = React.createRef();
     this.scrollPanelRef = React.createRef();
     this.mousePanelRef = React.createRef();
     this.placeholderRef = React.createRef();
@@ -124,7 +130,7 @@ class BaseDiagram extends Component {
     // npm install resize-observer-polyfill --save-dev
     require('resize-observer-polyfill/dist/ResizeObserver.global');
     this.observer = new ResizeObserver(this.onSizeChanged);
-    this.observer.observe(this.scrollPanelRef.current);
+    this.observer.observe(this.controlPanelRef.current);
 
     this.centerOnCursor();
     this.fixPixelAlignment();
@@ -155,14 +161,14 @@ class BaseDiagram extends Component {
   }
 
   fixPixelAlignment() {
-    const { current } = this.scrollPanelRef;
+    const { current } = this.controlPanelRef;
     var pixelAlignmentFix = primitives.common.getFixOfPixelALignment(current);
     current.style.marginLeft = pixelAlignmentFix.width + "px";
     current.style.marginTop = pixelAlignmentFix.height + "px";
   }
 
   onSizeChanged() {
-    const { width, height } = primitives.common.getInnerSize(this.scrollPanelRef.current)
+    const { width, height } = primitives.common.getInnerSize(this.controlPanelRef.current)
     this.setState({
       viewportSize: {
         width,
@@ -187,6 +193,35 @@ class BaseDiagram extends Component {
       contentPosition: { x: Math.floor(scrollLeft), y: Math.floor(scrollTop) },
       centerOnCursor: false
     });
+  }
+
+  onFrameMouseMove(event) {
+    const placeholderOffset = primitives.common.getElementOffset(this.frameMousePanelRef.current),
+      x = event.pageX - placeholderOffset.left,
+      y = event.pageY - placeholderOffset.top,
+      projectItemsToFrameTask = this.tasks.getTask("ProjectItemsToFrameTask"),
+      highlightItemOptionTask = this.tasks.getTask("HighlightItemOptionTask");
+
+    if (highlightItemOptionTask.hasHighlightEnabled()) {
+      const itemId = projectItemsToFrameTask.getTreeItemForMousePosition(x, y, highlightItemOptionTask.getGravityRadius());
+      this.setHighlightItem(event, itemId);
+    }
+  }
+
+  onFrameClick(event) {
+    const placeholderOffset = primitives.common.getElementOffset(this.frameMousePanelRef.current),
+      x = event.pageX - placeholderOffset.left,
+      y = event.pageY - placeholderOffset.top,
+      projectItemsToFrameTask = this.tasks.getTask("ProjectItemsToFrameTask"),
+      cursorItemOptionTask = this.tasks.getTask("CursorItemOptionTask"),
+      highlightItemOptionTask = this.tasks.getTask("HighlightItemOptionTask"),
+      newCursorItemId = projectItemsToFrameTask.getTreeItemForMousePosition(x, y, highlightItemOptionTask.getGravityRadius());
+    if (newCursorItemId !== null) {
+      if (cursorItemOptionTask.hasCursorEnabled()) {
+        this.setCursorItem(event, newCursorItemId);
+        this.controlPanelRef.current.focus();
+      }
+    }
   }
 
   onMouseMove(event) {
@@ -313,7 +348,7 @@ class BaseDiagram extends Component {
       else {
         if (cursorItemOptionTask.hasCursorEnabled()) {
           this.setCursorItem(event, newCursorItemId);
-          this.scrollPanelRef.current.focus();
+          this.controlPanelRef.current.focus();
         }
       }
     }
@@ -381,7 +416,7 @@ class BaseDiagram extends Component {
           if (cursorItemOptionTask.hasCursorEnabled()) {
             this.setCursorItem(event, navigationItem);
             event.preventDefault();
-            this.scrollPanelRef.current.focus();
+            this.controlPanelRef.current.focus();
           }
           break;
         case 40: /*Down*/
@@ -420,7 +455,7 @@ class BaseDiagram extends Component {
 
           }
         }
-        this.scrollPanelRef.current.focus();
+        this.controlPanelRef.current.focus();
       }
     }
   }
@@ -484,116 +519,153 @@ class BaseDiagram extends Component {
     const { centerOnCursor, viewportSize, contentPosition } = this.state;
     return {
       forceCenterOnCursor: centerOnCursor,
-      scrollPanelSize: viewportSize,
-      placeholderOffset: contentPosition
+      scrollPanelSize: new primitives.common.Size(viewportSize),
+      placeholderOffset: new primitives.common.Point(contentPosition)
     }
   }
 
   setLayout(layoutOptions) {
-    const { autoSize, scale, contentSize, scrollPanelSize, autoSizeMinimum, autoSizeMaximum } = layoutOptions;
-    /* set size of panel with content */
-    let mousePanelSize = new primitives.common.Size(contentSize);
-    mousePanelSize.scale(1 * scale);
-
-    let scrollPanelAutoSize = new primitives.common.Size(scrollPanelSize);
-    if (autoSize) {
-      /* resize element to fit placeholder if control in autosize mode */
-      scrollPanelAutoSize = new primitives.common.Size(mousePanelSize.width + 25, mousePanelSize.height + 25);
-      scrollPanelAutoSize.cropBySize(autoSizeMaximum);
-      scrollPanelAutoSize.addSize(autoSizeMinimum);//ignore jslint
-    }
-
+    const {autoSize, scale, scaledContentSize, viewportSize, frameThickness, controlSize} = layoutOptions;
     this.layoutOptions = {
       autoSize,
-      scrollPanelSize: scrollPanelAutoSize,
-      mousePanelSize,
-      scale
+      scale,
+      scaledContentSize: new primitives.common.Size(scaledContentSize),
+      viewportSize: new primitives.common.Size(viewportSize),
+      frameThickness: new primitives.common.Thickness(frameThickness),
+      controlSize: new primitives.common.Size(controlSize)
     }
-
-    return scrollPanelAutoSize;
   }
 
   render() {
     const graphics = this.graphics;
     this.tasks.process('OptionsTask', null, false);
 
-    const { placeholder, calloutplaceholder } = this.graphics.placeholders;
+    const { placeholder, calloutplaceholder, frameplaceholder } = this.graphics.placeholders;
     const placeholderRectCSS = placeholder.rect.getCSS();
 
-    const { autoSize, scale, scrollPanelSize, mousePanelSize } = this.layoutOptions;
+    const { autoSize, scale, scaledContentSize, viewportSize, frameThickness, controlSize } = this.layoutOptions;
 
     /* set CSS scale of content */
     var scaletext = "scale(" + scale + "," + scale + ")";
 
     return <>
-      <div
-        ref={this.scrollPanelRef}
-        onScroll={this.onScroll}
+      <div /* root control panel */
+        ref={this.controlPanelRef}
         onKeyDown={this.onKeyDown}
         style={{
           position: "relative",
-          overflow: "auto",
-          WebkitOverflowScrolling: "touch",
+          overflow: "hidden",
+          top: "0px",
+          left: "0px",
           width: "100%",
           height: "100%",
           padding: "0px",
           marginBottom: "0px",
           marginRight: "0px",
-          ...(autoSize ? scrollPanelSize.getCSS() : {})
+          ...(autoSize ? controlSize.getCSS() : {})
         }}
         tabIndex="0"
       >
-        <div
-          ref={this.mousePanelRef}
-          onMouseMove={this.onMouseMove}
-          onClick={this.onClick}
-          onChange={this.onCheckboxChange}
-          style={{
-            position: "absolute",
-            overflow: "hidden",
-            ...(mousePanelSize.getCSS())
-          }}>
+        {!frameThickness.isEmpty() &&
           <div
-            ref={this.placeholderRef}
+            ref={this.frameMousePanelRef}
+            onMouseMove={this.onFrameMouseMove}
+            onClick={this.onFrameClick}
             style={{
-              ...placeholderRectCSS,
               position: "absolute",
               overflow: "hidden",
-              "transformOrigin": "0 0",
-              "transform": scaletext,
-              "msTransform": scaletext, /* IE 9 */
-              "WebkitTransform": scaletext, /* Safari and Chrome */
-              "OTransform": scaletext, /* Opera */
-              "MozTransform": scaletext /* Firefox */
+              ...(controlSize.getCSS())
             }}>
-            {graphics.map(this, "placeholder", (layerKey, elements) =>
-              <div key={layerKey} style={{
+            <div
+              ref={this.framePlaceholderRef}
+              style={{
+                ...(frameplaceholder.rect.getCSS()),
                 position: "absolute",
-                overflow: "visible",
-                left: "0px",
-                top: "0px"
+                overflow: "hidden",
+                "transformOrigin": "0 0",
+                "transform": scaletext,
+                "msTransform": scaletext, /* IE 9 */
+                "WebkitTransform": scaletext, /* Safari and Chrome */
+                "OTransform": scaletext, /* Opera */
+                "MozTransform": scaletext /* Firefox */
               }}>
-                {elements}
-              </div>
-            )}
-            {calloutplaceholder &&
-              <div key="Callout"
-                style={{
+              {graphics.map(this, "frameplaceholder", (layerKey, elements) =>
+                <div key={layerKey} style={{
                   position: "absolute",
                   overflow: "visible",
-                  left: calloutplaceholder.rect.x + "px",
-                  top: calloutplaceholder.rect.y + "px"
+                  left: "0px",
+                  top: "0px"
                 }}>
-                {graphics.map(this, "calloutplaceholder", (layerKey, elements) =>
-                  <div key={layerKey} style={{
+                  {elements}
+                </div>
+              )}
+            </div>
+          </div>
+        }
+        <div
+          ref={this.scrollPanelRef}
+          onScroll={this.onScroll}
+          style={{
+            position: "absolute",
+            overflow: "auto",
+            WebkitOverflowScrolling: "touch",
+            left: frameThickness.left + "px",
+            top: frameThickness.top + "px",
+            ...(viewportSize.getCSS())
+          }}
+        >
+          <div
+            ref={this.mousePanelRef}
+            onMouseMove={this.onMouseMove}
+            onClick={this.onClick}
+            onChange={this.onCheckboxChange}
+            style={{
+              position: "absolute",
+              overflow: "hidden",
+              ...(scaledContentSize.getCSS())
+            }}>
+            <div
+              ref={this.placeholderRef}
+              style={{
+                ...placeholderRectCSS,
+                position: "absolute",
+                overflow: "hidden",
+                "transformOrigin": "0 0",
+                "transform": scaletext,
+                "msTransform": scaletext, /* IE 9 */
+                "WebkitTransform": scaletext, /* Safari and Chrome */
+                "OTransform": scaletext, /* Opera */
+                "MozTransform": scaletext /* Firefox */
+              }}>
+              {graphics.map(this, "placeholder", (layerKey, elements) =>
+                <div key={layerKey} style={{
+                  position: "absolute",
+                  overflow: "visible",
+                  left: "0px",
+                  top: "0px"
+                }}>
+                  {elements}
+                </div>
+              )}
+              {calloutplaceholder &&
+                <div key="Callout"
+                  style={{
                     position: "absolute",
-                    overflow: "visible"
+                    overflow: "visible",
+                    left: calloutplaceholder.rect.x + "px",
+                    top: calloutplaceholder.rect.y + "px"
                   }}>
-                    {elements}
-                  </div>
-                )}
-              </div>
-            }
+                  {graphics.map(this, "calloutplaceholder", (layerKey, elements) =>
+                    <div key={layerKey} style={{
+                      position: "absolute",
+                      overflow: "visible"
+                    }}>
+                      {elements}
+                    </div>
+                  )}
+                </div>
+              }
+            </div>
           </div>
         </div>
       </div>
