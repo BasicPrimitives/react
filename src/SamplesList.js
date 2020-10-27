@@ -5,6 +5,7 @@ import {
   AddingNewItemsToChartAtRuntime,
   PageSizeDiagram,
   AutoSize,
+  ShowFrame,
   SelectingCursorItem,
   SelectingHighlightItem,
   SelectedItems,
@@ -91,6 +92,10 @@ const SamplesList = [
       {
         label: "Selected items & Check boxes",
         component: <SelectedItems />
+      },
+      {
+        label: "Show Frame",
+        component: <ShowFrame />
       },
       {
         label: "Buttons panel",
