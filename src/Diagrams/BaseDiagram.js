@@ -195,8 +195,7 @@ class BaseDiagram extends Component {
     });
   }
 
-  onFrameMouseMove(event) {
-    const placeholderOffset = primitives.common.getElementOffset(this.frameMousePanelRef.current),
+  onFrameMouseMove(event) {const placeholderOffset = primitives.common.getElementOffset(this.frameMousePanelRef.current),
       x = event.pageX - placeholderOffset.left,
       y = event.pageY - placeholderOffset.top,
       projectItemsToFrameTask = this.tasks.getTask("ProjectItemsToFrameTask"),
@@ -611,7 +610,8 @@ class BaseDiagram extends Component {
             WebkitOverflowScrolling: "touch",
             left: frameThickness.left + "px",
             top: frameThickness.top + "px",
-            ...(viewportSize.getCSS())
+            ...(viewportSize.getCSS()),
+            border: (!frameThickness.isEmpty() ? "1px dotted #dddddd" : "")
           }}
         >
           <div
