@@ -29,7 +29,7 @@ class Sample extends Component {
           parent: null,
           title: "Scott Aasrud",
           description: "VP, Public Sector",
-          image: "photos/a.png",
+          image: "/react/photos/a.png",
           phone: "(123) 456-78-90",
           email: "itema@org.com",
           badge: "1",
@@ -40,7 +40,7 @@ class Sample extends Component {
           parent: 0,
           title: "Ted Lucas",
           description: "VP, Human Resources",
-          image: "photos/b.png",
+          image: "/react/photos/b.png",
           badge: "2",
           badgeColor: "red"
         },
@@ -51,7 +51,7 @@ class Sample extends Component {
           phone: "(123) 654-78-90",
           email: "itemc@org.com",
           description: "Business Solutions, US",
-          image: "photos/c.png",
+          image: "/react/photos/c.png",
           badge: "3",
           badgeColor: "green"
         }

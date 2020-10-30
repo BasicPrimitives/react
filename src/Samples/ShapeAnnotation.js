@@ -7,11 +7,11 @@ class Sample extends Component {
     const config = {
       items: [
         /* JSON noname objects equivalent to primitives.orgdiagram.ItemConfig */
-        { id: 0, parent: null, title: "Scott Aasrud", description: "VP, Public Sector", image: "photos/a.png" },
-        { id: 1, parent: 0, title: "Ted Lucas", description: "VP, Human Resources", image: "photos/b.png" },
-        { id: 2, parent: 0, title: "Fritz Stuger", description: "Business Solutions, US", image: "photos/c.png" },
-        { id: 3, parent: 0, title: "Mike Wazowski", description: "Business Analyst, Canada", image: "photos/o.png" },
-        { id: 4, parent: 3, title: "Best Friend", description: "Business Analyst, Mexico", image: "photos/f.png" }
+        { id: 0, parent: null, title: "Scott Aasrud", description: "VP, Public Sector", image: "/react/photos/a.png" },
+        { id: 1, parent: 0, title: "Ted Lucas", description: "VP, Human Resources", image: "/react/photos/b.png" },
+        { id: 2, parent: 0, title: "Fritz Stuger", description: "Business Solutions, US", image: "/react/photos/c.png" },
+        { id: 3, parent: 0, title: "Mike Wazowski", description: "Business Analyst, Canada", image: "/react/photos/o.png" },
+        { id: 4, parent: 3, title: "Best Friend", description: "Business Analyst, Mexico", image: "/react/photos/f.png" }
       ],
       annotations: [
         /* JSON noname object equivalent to primitives.orgdiagram.ConnectorAnnotationConfig */

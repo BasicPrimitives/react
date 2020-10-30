@@ -28,28 +28,28 @@ class Sample extends Component {
           parent: null,
           title: "Scott Aasrud",
           description: "VP, Public Sector",
-          image: "photos/a.png"
+          image: "/react/photos/a.png"
         },
         {
           id: 1,
           parent: 0,
           title: "Ted Lucas",
           description: "VP, Human Resources",
-          image: "photos/b.png"
+          image: "/react/photos/b.png"
         },
         {
           id: 2,
           parent: 1,
           title: "Fritz Stuger",
           description: "Business Solutions, US",
-          image: "photos/c.png"
+          image: "/react/photos/c.png"
         },
         {
           id: 3,
           parent: 2,
           title: "Robert Canon",
           description: "Business Solutions, Canada",
-          image: "photos/z.png"
+          image: "/react/photos/z.png"
         }
       ]
     };

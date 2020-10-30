@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
 import primitives from 'basicprimitives';
 import { DndProvider, DropTarget, DragSource } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 class Container extends Component {
   render() {
@@ -82,12 +82,12 @@ class Container extends Component {
           cursorItem: 0,
           highlightItem: 0,
           items: [
-            { id: 0, parent: null, description: "Chief Executive Officer (CEO)", email: "davidalt@name.com", image: "photos/q.png", itemTitleColor: "#4169e1", phone: "352-206-7599", title: "David Dalton", label: "David Dalton" },
-            { id: 1, parent: 0, description: "Co-Presidents, Platform Products & Services Division", email: "jeanwhit@name.com", image: "photos/w.png", phone: "505-791-1689", title: "Jeanna White", label: "Jeanna White" },
-            { id: 2, parent: 0, description: "Sr. VP, Server & Tools Division", email: "jameholt@name.com", image: "photos/e.png", phone: "262-215-7998", title: "James Holt", label: "James Holt" },
-            { id: 3, parent: null, description: "VP, Server & Tools Marketing and Solutions", email: "thomwill@name.com", image: "photos/r.png", phone: "904-547-5342", title: "Thomas Williams", label: "Thomas Williams" },
-            { id: 4, parent: 3, description: "VP, Software & Enterprise Management Division", email: "sarakemp@name.com", image: "photos/g.png", phone: "918-257-4218", title: "Sara Kemp", label: "Sara Kemp" },
-            { id: 5, parent: 3, description: "Sr. VP, Software Server System", email: "georduon@name.com", image: "photos/x.png", phone: "434-406-2189", title: "George Duong", label: "George Duong" }
+            { id: 0, parent: null, description: "Chief Executive Officer (CEO)", email: "davidalt@name.com", image: "/react/photos/q.png", itemTitleColor: "#4169e1", phone: "352-206-7599", title: "David Dalton", label: "David Dalton" },
+            { id: 1, parent: 0, description: "Co-Presidents, Platform Products & Services Division", email: "jeanwhit@name.com", image: "/react/photos/w.png", phone: "505-791-1689", title: "Jeanna White", label: "Jeanna White" },
+            { id: 2, parent: 0, description: "Sr. VP, Server & Tools Division", email: "jameholt@name.com", image: "/react/photos/e.png", phone: "262-215-7998", title: "James Holt", label: "James Holt" },
+            { id: 3, parent: null, description: "VP, Server & Tools Marketing and Solutions", email: "thomwill@name.com", image: "/react/photos/r.png", phone: "904-547-5342", title: "Thomas Williams", label: "Thomas Williams" },
+            { id: 4, parent: 3, description: "VP, Software & Enterprise Management Division", email: "sarakemp@name.com", image: "/react/photos/g.png", phone: "918-257-4218", title: "Sara Kemp", label: "Sara Kemp" },
+            { id: 5, parent: 3, description: "Sr. VP, Software Server System", email: "georduon@name.com", image: "/react/photos/x.png", phone: "434-406-2189", title: "George Duong", label: "George Duong" }
           ]
         }
       }

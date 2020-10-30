@@ -29,13 +29,13 @@ class Sample extends Component {
         { annotationType: primitives.common.AnnotationType.Label, fromItem: 2, toItems: [1], title: <div className="InLayoutLabel">100%</div> }
       ],
       items: [
-        { id: 1, parents: [3, 5, 6, 7], title: "James", label: "James", description: "James is First and he is child of Brad, Sara & Lynette", image: "photos/j.png" },
-        { id: 2, parents: [1], title: "Brad", label: "Brad", description: "", image: "photos/b.png" },
-        { id: 3, parents: [2], title: "Thomas", label: "Thomas", description: "", image: "photos/t.png" },
-        { id: 4, parents: [3], title: "David", label: "David", description: "", image: "photos/d.png" },
-        { id: 5, parents: [4], title: "Lynette", label: "Lynette", description: "", image: "photos/l.png" },
-        { id: 6, parents: [4], title: "Sara", label: "Sara", description: "", image: "photos/s.png" },
-        { id: 7, title: "Parent", label: "Parent", description: "Parent node of James", image: "photos/j.png" }
+        { id: 1, parents: [3, 5, 6, 7], title: "James", label: "James", description: "James is First and he is child of Brad, Sara & Lynette", image: "/react/photos/j.png" },
+        { id: 2, parents: [1], title: "Brad", label: "Brad", description: "", image: "/react/photos/b.png" },
+        { id: 3, parents: [2], title: "Thomas", label: "Thomas", description: "", image: "/react/photos/t.png" },
+        { id: 4, parents: [3], title: "David", label: "David", description: "", image: "/react/photos/d.png" },
+        { id: 5, parents: [4], title: "Lynette", label: "Lynette", description: "", image: "/react/photos/l.png" },
+        { id: 6, parents: [4], title: "Sara", label: "Sara", description: "", image: "/react/photos/s.png" },
+        { id: 7, title: "Parent", label: "Parent", description: "Parent node of James", image: "/react/photos/j.png" }
       ],
       arrowsDirection: primitives.common.GroupByType.Parents,
       showExtraArrows: true,

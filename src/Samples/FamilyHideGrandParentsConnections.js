@@ -24,12 +24,12 @@ class Sample extends Component {
       groupTitleColor: "green",
       fontFamily: "Areal",
       items: [
-        { id: 1, title: "Thomas Williams", label: "Thomas Williams", groupTitle: "Great Grand Parent", description: "Great Grand Parent", image: "photos/g.png" },
-        { id: 2, parents: [1], title: "Mary Spencer", label: "Mary Spencer", description: "Spouse", image: "photos/s.png" },
-        { id: 3, parents: [1], title: "David Kirby", label: "David Kirby", groupTitle: "Grand Parent", description: "Grand Parent", image: "photos/g.png" },
-        { id: 4, parents: [1, 3], title: "Brad Williams", label: "Brad Williams", groupTitle: "Parent", description: "Parent", image: "photos/p.png" },
-        { id: 5, parents: [1, 4], title: "Mike Kirby", groupTitle: "The node", label: "Mike Kirby", description: "Item connected to grand parents", image: "photos/c.png" },
-        { id: 6, parents: [2, 5], title: "Lynette Maloney", label: "Lynette Maloney", description: "Grand Child", image: "photos/c.png" }
+        { id: 1, title: "Thomas Williams", label: "Thomas Williams", groupTitle: "Great Grand Parent", description: "Great Grand Parent", image: "/react/photos/g.png" },
+        { id: 2, parents: [1], title: "Mary Spencer", label: "Mary Spencer", description: "Spouse", image: "/react/photos/s.png" },
+        { id: 3, parents: [1], title: "David Kirby", label: "David Kirby", groupTitle: "Grand Parent", description: "Grand Parent", image: "/react/photos/g.png" },
+        { id: 4, parents: [1, 3], title: "Brad Williams", label: "Brad Williams", groupTitle: "Parent", description: "Parent", image: "/react/photos/p.png" },
+        { id: 5, parents: [1, 4], title: "Mike Kirby", groupTitle: "The node", label: "Mike Kirby", description: "Item connected to grand parents", image: "/react/photos/c.png" },
+        { id: 6, parents: [2, 5], title: "Lynette Maloney", label: "Lynette Maloney", description: "Grand Child", image: "/react/photos/c.png" }
 
       ],
       annotations: [

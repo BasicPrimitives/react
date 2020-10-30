@@ -25,14 +25,14 @@ class Sample extends Component {
           title: "Thomas Williams",
           label: "Thomas Williams",
           description: "1, 1st husband",
-          image: "photos/t.png"
+          image: "/react/photos/t.png"
         },
         {
           id: 2,
           title: "Mary Spencer",
           label: "Mary Spencer",
           description: "2, The Mary",
-          image: "photos/m.png",
+          image: "/react/photos/m.png",
           relativeItem: 1,
           placementType: primitives.common.AdviserPlacementType.Right,
           position: 1
@@ -43,7 +43,7 @@ class Sample extends Component {
           title: "David Kirby",
           label: "David Kirby",
           description: "3, 2nd Husband",
-          image: "photos/d.png",
+          image: "/react/photos/d.png",
           relativeItem: 2,
           placementType: primitives.common.AdviserPlacementType.Right,
           position: 1
@@ -54,7 +54,7 @@ class Sample extends Component {
           title: "Brad Williams",
           label: "Brad Williams",
           description: "4, 1st son",
-          image: "photos/b.png"
+          image: "/react/photos/b.png"
         },
         {
           id: 5,
@@ -63,14 +63,14 @@ class Sample extends Component {
           title: "Mike Kirby",
           label: "Mike Kirby",
           description: "5, 2nd son, having 2 spouses",
-          image: "photos/m.png"
+          image: "/react/photos/m.png"
         },
         {
           id: 6,
           title: "Lynette Maloney",
           label: "Lynette Maloney",
           description: "5, Spouse 1",
-          image: "photos/m.png",
+          image: "/react/photos/m.png",
           relativeItem: 5,
           placementType: primitives.common.AdviserPlacementType.Right,
           position: 1
@@ -80,7 +80,7 @@ class Sample extends Component {
           title: "Sara Kemp",
           label: "Sara Kemp",
           description: "5, Spouse 2",
-          image: "photos/s.png",
+          image: "/react/photos/s.png",
           relativeItem: 5,
           placementType: primitives.common.AdviserPlacementType.Left,
           position: 1
@@ -91,7 +91,7 @@ class Sample extends Component {
           title: "Leon Kemp",
           label: "Leon Kemp",
           description: "5, First Child",
-          image: "photos/l.png"
+          image: "/react/photos/l.png"
         }
       ]
     };

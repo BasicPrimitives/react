@@ -12,7 +12,7 @@ class Sample extends Component {
       parent: null,
       title: "Title A",
       description: "Description A",
-      image: "photos/a.png"
+      image: "/react/photos/a.png"
     }
     items.push(rootItem);
 
@@ -21,7 +21,7 @@ class Sample extends Component {
       parent: 0,
       title: "Assistant 1",
       description: "Assistant Description",
-      image: "photos/a.png",
+      image: "/react/photos/a.png",
       itemType: primitives.orgdiagram.ItemType.Assistant,
       adviserPlacementType: primitives.common.AdviserPlacementType.Right,
       groupTitle: "Audit",
@@ -33,7 +33,7 @@ class Sample extends Component {
       parent: 0,
       title: "Assistant 2",
       description: "Assistant Description",
-      image: "photos/b.png",
+      image: "/react/photos/b.png",
       itemType: primitives.orgdiagram.ItemType.Assistant,
       adviserPlacementType: primitives.common.AdviserPlacementType.Left,
       groupTitle: "Audit",
@@ -46,7 +46,7 @@ class Sample extends Component {
         parent: 1,
         title: "Sub Adviser",
         description: "Sub Adviser Description",
-        image: "photos/s.png",
+        image: "/react/photos/s.png",
         itemType: primitives.orgdiagram.ItemType.SubAdviser,
         adviserPlacementType: primitives.common.AdviserPlacementType.Left,
         groupTitle: "Sub Adviser",
@@ -57,7 +57,7 @@ class Sample extends Component {
         parent: 2,
         title: "Sub Adviser",
         description: "Sub Adviser Description",
-        image: "photos/s.png",
+        image: "/react/photos/s.png",
         itemType: primitives.orgdiagram.ItemType.SubAdviser,
         adviserPlacementType: primitives.common.AdviserPlacementType.Right,
         groupTitle: "Sub Adviser",
@@ -80,7 +80,7 @@ class Sample extends Component {
       parent: 12,
       title: "Assistant 3",
       description: "Assistant Description",
-      image: "photos/c.png",
+      image: "/react/photos/c.png",
       itemType: primitives.orgdiagram.ItemType.Assistant,
       adviserPlacementType: primitives.common.AdviserPlacementType.Right,
       groupTitle: "Audit",
@@ -93,7 +93,7 @@ class Sample extends Component {
       parent: 12,
       title: "Assistant 4",
       description: "Assistant Description",
-      image: "photos/d.png",
+      image: "/react/photos/d.png",
       itemType: primitives.orgdiagram.ItemType.Assistant,
       adviserPlacementType: primitives.common.AdviserPlacementType.Left,
       groupTitle: "Audit",
@@ -117,7 +117,7 @@ class Sample extends Component {
           parent: 12,
           title: index.toString() + " Full Time",
           description: index.toString() + " Description",
-          image: "photos/f.png",
+          image: "/react/photos/f.png",
           groupTitle: "Full Time"
         });
       }
@@ -129,7 +129,7 @@ class Sample extends Component {
         parent: 18,
         title: index.toString() + " Part Time",
         description: index.toString() + " Description",
-        image: "photos/p.png",
+        image: "/react/photos/p.png",
         groupTitle: "Part Time",
         groupTitleColor: primitives.common.Colors.Green
       });

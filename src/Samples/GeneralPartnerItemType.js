@@ -16,14 +16,14 @@ class Sample extends Component {
           parent: null,
           title: "Scott Aasrud",
           description: "VP, Public Sector",
-          image: "photos/a.png"
+          image: "/react/photos/a.png"
         },
         {
           id: 1,
           parent: 0,
           title: "Robert Canon",
           description: "General Partner",
-          image: "photos/z.png",
+          image: "/react/photos/z.png",
           itemType: primitives.orgdiagram.ItemType.GeneralPartner,
           adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Right,
           groupTitle: "Partner"
@@ -33,7 +33,7 @@ class Sample extends Component {
           parent: 0,
           title: "Fritz Stuger",
           description: "General Partner item",
-          image: "photos/y.png",
+          image: "/react/photos/y.png",
           itemType: primitives.orgdiagram.ItemType.GeneralPartner,
           adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Left,
           groupTitle: "Partner"
@@ -43,14 +43,14 @@ class Sample extends Component {
           parent: 0,
           title: "Ted Lucas",
           description: "VP, Human Resources",
-          image: "photos/b.png"
+          image: "/react/photos/b.png"
         },
         {
           id: 4,
           parent: 3,
           title: "Robert Canon 2",
           description: "General Partner item",
-          image: "photos/z.png",
+          image: "/react/photos/z.png",
           itemType: primitives.orgdiagram.ItemType.GeneralPartner,
           adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Right,
           groupTitle: "Partner"
@@ -60,7 +60,7 @@ class Sample extends Component {
           parent: 3,
           title: "Ted Lucas 2",
           description: "VP, Human Resources",
-          image: "photos/b.png"
+          image: "/react/photos/b.png"
         }
       ]
     };

@@ -40,7 +40,7 @@ class Sample extends Component {
       parent: null,
       title: "Title 0",
       description: "Description",
-      image: "photos/a.png",
+      image: "/react/photos/a.png",
       minimizedItemShapeType: (this.getNextShapeType()),
       itemTitleColor: (this.getNextColor())
     };
@@ -57,7 +57,7 @@ class Sample extends Component {
             parent: parent.id,
             title: id.toString() + " Title",
             description: id.toString() + " Description",
-            image: "photos/b.png",
+            image: "/react/photos/b.png",
             minimizedItemShapeType: (this.getNextShapeType()),
             itemTitleColor: (this.getNextColor())
           };

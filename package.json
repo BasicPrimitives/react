@@ -1,6 +1,6 @@
 {
   "name": "basicprimitivesreact",
-  "version": "5.9.2",
+  "version": "5.9.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "babel": {
@@ -33,11 +33,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "node-sass": "^4.13.1",
-    "react": "^16.8.6",
-    "react-dnd": "^9.3.2",
-    "react-dnd-html5-backend": "^9.3.2",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react": "^17.0.1",
+    "react-dnd": "^11.1.3",
+    "react-dnd-html5-backend": "^11.1.3",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,7 +47,7 @@
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "deploy": "gh-pages -d build --repo https://github.com/BasicPrimitives/react",
-    "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/Diagrams/ --out-dir dist --copy-files"
+    "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/Diagrams --out-dir dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"

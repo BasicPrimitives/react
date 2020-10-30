@@ -45,6 +45,7 @@ class BaseDiagram extends Component {
     const { highlightItem, cursorItem, selectedItems } = config;
 
     this.state = {
+      config,
       viewportSize: {
         width: 0,
         height: 0
@@ -110,18 +111,20 @@ class BaseDiagram extends Component {
     this.tasks = namespace.TaskManagerFactory(this.getOptions, this.getGraphics, this.getLayout, this.setLayout, this.templates);
   }
 
-  componentWillReceiveProps(nextProps) {
+  static getDerivedStateFromProps(nextProps, state) {
     const { config: nextConfig, centerOnCursor } = nextProps;
-    const { config } = this.props;
+    const { config } = state;
     if (config !== nextConfig) {
       const { highlightItem, cursorItem, selectedItems } = nextConfig;
-      this.setState({
+      return {
+        config: nextConfig,
         highlightItem,
         cursorItem,
         selectedItems: (selectedItems || []).slice(),
         centerOnCursor
-      });
+      };
     }
+    return null;
   }
 
   componentDidMount() {

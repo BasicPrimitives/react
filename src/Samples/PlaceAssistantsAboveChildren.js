@@ -28,7 +28,7 @@ class Sample extends Component {
           parent: null,
           title: "Scott Aasrud",
           description: "Parent Item",
-          image: "photos/a.png"
+          image: "/react/photos/a.png"
         }),
         new primitives.orgdiagram.ItemConfig({
           id: 5,
@@ -36,7 +36,7 @@ class Sample extends Component {
           title: "Harry Harter",
           description: "Regular Item",
           groupTitle: "Regular",
-          image: "photos/d.png"
+          image: "/react/photos/d.png"
         }),
         new primitives.orgdiagram.ItemConfig({
           id: 6,
@@ -44,7 +44,7 @@ class Sample extends Component {
           title: "Fritz Stuger",
           description: "Regular Item",
           groupTitle: "Regular",
-          image: "photos/d.png"
+          image: "/react/photos/d.png"
         }),
         new primitives.orgdiagram.ItemConfig({
           id: 8,
@@ -54,21 +54,21 @@ class Sample extends Component {
           title: "Ted Lucas",
           description: "Assitant Item",
           groupTitle: "Assistant",
-          image: "photos/c.png"
+          image: "/react/photos/c.png"
         }),
         new primitives.orgdiagram.ItemConfig({
           id: 10,
           parent: 8,
           title: "James Nunnally",
           description: "Regular Item",
-          image: "photos/d.png"
+          image: "/react/photos/d.png"
         }),
         new primitives.orgdiagram.ItemConfig({
           id: 11,
           parent: 8,
           title: "Robert Canon",
           description: "Regular Item",
-          image: "photos/d.png"
+          image: "/react/photos/d.png"
         })
       ]
     };

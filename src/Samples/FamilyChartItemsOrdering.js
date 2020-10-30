@@ -10,15 +10,15 @@ class Sample extends Component {
 
     this.state = {
       items: [
-        { id: 10, relativeItem: 2, placementType: primitives.common.AdviserPlacementType.Left, position: 1, title: "Roger Dalton", label: "Roger Dalton", description: "Id: 10", image: "photos/a.png", itemTitleColor: "#4169e1" },
-        { id: 2, title: "Steven Lacombe", label: "Steven Lacombe", description: "Id: 2", image: "photos/b.png", itemTitleColor: "#4b0082" },
-        { id: 11, relativeItem: 2, placementType: primitives.common.AdviserPlacementType.Right, position: 1, title: "Bill Dalton", label: "Bill Dalton", description: "Id: 11", image: "photos/c.png", itemTitleColor: "#4b0082" },
-        { id: 1, parents: [11], title: "David Dalton", label: "David Dalton", description: "Id: 1", image: "photos/c.png", itemTitleColor: "#4b0082" },
-        { id: 3, parents: [10], title: "Ann Smith", label: "Ann Smith", description: "Id: 3", image: "photos/a.png", itemTitleColor: "#4169e1" },
-        { id: 4, parents: [2], title: "Nancy Smith", label: "Nancy Smith", description: "Id: 4", image: "photos/c.png", itemTitleColor: "#4b0082" },
-        { id: 5, parents: [2], title: "Helly Smith", label: "Helly Smith", description: "Id: 5", image: "photos/a.png", itemTitleColor: "#4169e1" },
-        { id: 6, parents: [1, 4], title: "Kelly Smith", label: "Kelly Smith", description: "Id: 6", image: "photos/c.png", itemTitleColor: "#4b0082" },
-        { id: 7, parents: [5, 3], title: "Sally Smith", label: "Sally Smith", description: "Id: 7", image: "photos/a.png", itemTitleColor: "#4169e1" }
+        { id: 10, relativeItem: 2, placementType: primitives.common.AdviserPlacementType.Left, position: 1, title: "Roger Dalton", label: "Roger Dalton", description: "Id: 10", image: "/react/photos/a.png", itemTitleColor: "#4169e1" },
+        { id: 2, title: "Steven Lacombe", label: "Steven Lacombe", description: "Id: 2", image: "/react/photos/b.png", itemTitleColor: "#4b0082" },
+        { id: 11, relativeItem: 2, placementType: primitives.common.AdviserPlacementType.Right, position: 1, title: "Bill Dalton", label: "Bill Dalton", description: "Id: 11", image: "/react/photos/c.png", itemTitleColor: "#4b0082" },
+        { id: 1, parents: [11], title: "David Dalton", label: "David Dalton", description: "Id: 1", image: "/react/photos/c.png", itemTitleColor: "#4b0082" },
+        { id: 3, parents: [10], title: "Ann Smith", label: "Ann Smith", description: "Id: 3", image: "/react/photos/a.png", itemTitleColor: "#4169e1" },
+        { id: 4, parents: [2], title: "Nancy Smith", label: "Nancy Smith", description: "Id: 4", image: "/react/photos/c.png", itemTitleColor: "#4b0082" },
+        { id: 5, parents: [2], title: "Helly Smith", label: "Helly Smith", description: "Id: 5", image: "/react/photos/a.png", itemTitleColor: "#4169e1" },
+        { id: 6, parents: [1, 4], title: "Kelly Smith", label: "Kelly Smith", description: "Id: 6", image: "/react/photos/c.png", itemTitleColor: "#4b0082" },
+        { id: 7, parents: [5, 3], title: "Sally Smith", label: "Sally Smith", description: "Id: 7", image: "/react/photos/a.png", itemTitleColor: "#4169e1" }
       ]
     }
   }

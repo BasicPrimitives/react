@@ -11,9 +11,9 @@ class Sample extends Component {
       arrowsDirection: primitives.common.GroupByType.Children,
       pageFitMode: primitives.common.PageFitMode.None,
       items: [
-        { id: 1, parents: [], spouses: ["2", "3"], title: "Odelia Locker", label: "Odelia Locker", description: "Has 2 marriages", image: "photos/a.png" },
-        { id: 2, parents: [], title: "John Smith", label: "John Smith", description: "1st marriage", image: "photos/b.png" },
-        { id: 3, parents: [], title: "Brad Whitt", label: "Brad Whitt", description: "2nd marriage", image: "photos/c.png" }
+        { id: 1, parents: [], spouses: ["2", "3"], title: "Odelia Locker", label: "Odelia Locker", description: "Has 2 marriages", image: "/react/photos/a.png" },
+        { id: 2, parents: [], title: "John Smith", label: "John Smith", description: "1st marriage", image: "/react/photos/b.png" },
+        { id: 3, parents: [], title: "Brad Whitt", label: "Brad Whitt", description: "2nd marriage", image: "/react/photos/c.png" }
       ]
     };
 
