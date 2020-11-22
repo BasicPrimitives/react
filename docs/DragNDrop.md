@@ -38,5 +38,6 @@ export default Sample;
 
 
 ## Drag & Drop diagram nodes to application
+The following example shows Drag & Drop functionality between diagram items and application componenents. We made it possible by implementing virtual DOM rendering in our components. If a regualar JavaScript control is integrated via warapping it into React component, so it performs direct DOM manupulations then its nodes are not going to see react context objects, so control is not going to support Drag & Drop between Diagram Nodes and other Application components.
 
 [React](../src/Samples/DragToTrashBin.js)
