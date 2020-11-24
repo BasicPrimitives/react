@@ -18,7 +18,7 @@ The "classic" and the most popular approach for desktop applications is to fit p
 
 ![Classic desktop layout](./images/PageSizeDiagram3.png "Classic desktop layout")
 
-The following sample control hight is sized by CSS @Media rules to be within current page view port size. Try to resize your browser window in order to see how it works. The diagraming component has minimum vertical size set to hardcoded 250px.
+The following sample control height is sized by CSS @Media rules to be within current page view port size. Try to resize your browser window in order to see how it works. The diagraming component has minimum vertical size set to hardcoded 250px.
 
 See [CSS @Media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) for more reference
 
