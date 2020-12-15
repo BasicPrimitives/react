@@ -38,7 +38,9 @@ import {
   SelectionPathModeInFamilyChart,
   ItemTemplate,
   DragNDrop,
+  DragNDropHooks,
   DragToTrashBin,
+  DragToTrashBinHooks,
   ZoomWithItemTemplate,
   ZoomWithCSSScaleTransform,
   ItemTemplateLabel,
@@ -229,8 +231,16 @@ const SamplesList = [
         component: <DragNDrop />
       },
       {
+        label: "Drag & Drop Support with Hooks",
+        component: <DragNDropHooks />
+      },
+      {
         label: "Drag To Trash bin",
         component: <DragToTrashBin />
+      },
+      {
+        label: "Drag To Trash bin with Hooks",
+        component: <DragToTrashBinHooks />
       },
       {
         label: "Zoom using item template",
