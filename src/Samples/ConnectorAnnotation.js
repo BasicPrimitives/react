@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import { PageFitMode, ConnectorPlacementType, AnnotationType, Colors, ConnectorShapeType, 
-  LineType, Size, Enabled, GroupByType } from 'basicprimitives';
+import { PageFitMode, ConnectorPlacementType, AnnotationType, Colors, ConnectorShapeType, LineType, Size, Enabled, GroupByType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {

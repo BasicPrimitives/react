@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import { Size, Thickness, ShapeAnnotationConfig, BackgroundAnnotationConfig, AnnotationType, Colors,
-PlacementType, ShapeType, LineType, GroupByType, PageFitMode, Enabled } from 'basicprimitives';
+import { Size, Thickness, ShapeAnnotationConfig, BackgroundAnnotationConfig, AnnotationType, Colors, PlacementType, ShapeType, LineType, GroupByType, PageFitMode, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   render() {

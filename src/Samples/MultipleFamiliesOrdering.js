@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import { PageFitMode, Enabled, GroupByType, AdviserPlacementType, 
-  AnnotationType, Size, ConnectorShapeType, Colors, LineType, ConnectorPlacementType } from 'basicprimitives';
+import { PageFitMode, Enabled, GroupByType, AdviserPlacementType, AnnotationType, Size, ConnectorShapeType, Colors, LineType, ConnectorPlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {

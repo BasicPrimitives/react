@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import { PageFitMode, OrientationType, VerticalAlignmentType, HorizontalAlignmentType,
-ChildrenPlacementType, Visibility, SelectionPathMode, GroupByType, ConnectorType,
-ElbowType, LineType, Colors, Enabled, Size, TextOrientationType, PlacementType } from 'basicprimitives';
+import { PageFitMode, OrientationType, VerticalAlignmentType, HorizontalAlignmentType } from 'basicprimitives';
+import { ChildrenPlacementType, Visibility, SelectionPathMode, GroupByType, ConnectorType } from 'basicprimitives';
+import { ElbowType, LineType, Colors, Enabled, Size, TextOrientationType, PlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {

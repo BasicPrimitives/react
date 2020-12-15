@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import { Colors, ChildrenPlacementType, AdviserPlacementType, 
-  ItemType, PageFitMode, Enabled, GroupByType } from 'basicprimitives';
+import { Colors, ChildrenPlacementType, AdviserPlacementType, ItemType, PageFitMode, Enabled, GroupByType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {

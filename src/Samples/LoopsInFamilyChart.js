@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import { LoopsLayoutMode, AnnotationType, GroupByType, ConnectorType, 
-  ElbowType, LineType, Colors, PageFitMode, Enabled } from 'basicprimitives';
+import { LoopsLayoutMode, AnnotationType, GroupByType, ConnectorType, ElbowType, LineType, Colors, PageFitMode, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
