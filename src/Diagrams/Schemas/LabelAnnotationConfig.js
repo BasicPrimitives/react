@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import primitives from 'basicprimitives';
+import { AnnotationType } from 'basicprimitives';
 
 const LabelAnnotationConfig = PropTypes.shape({
-  annotationType: PropTypes.oneOf([primitives.common.AnnotationType.Label]),
+  annotationType: PropTypes.oneOf([AnnotationType.Label]),
   fromItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   toItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
   title: PropTypes.any,

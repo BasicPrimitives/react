@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { AnnotationType, Colors, PageFitMode, Enabled, GroupByType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -34,26 +34,26 @@ class Sample extends Component {
       ],
       annotations: [
         {
-          annotationType: primitives.common.AnnotationType.HighlightPath,
+          annotationType: AnnotationType.HighlightPath,
           items: [5, 1],
-          color: primitives.common.Colors.Red,
+          color: Colors.Red,
           lineWidth: 2,
           opacity: 1,
           showArrows: true
         }
       ],
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 5,
       linesWidth: 1,
       linesColor: "black",
-      hasSelectorCheckbox: primitives.common.Enabled.False,
+      hasSelectorCheckbox: Enabled.False,
       normalLevelShift: 20,
       dotLevelShift: 20,
       lineLevelShift: 20,
       normalItemsInterval: 10,
       dotItemsInterval: 20,
       lineItemsInterval: 20,
-      arrowsDirection: primitives.common.GroupByType.Parents,
+      arrowsDirection: GroupByType.Parents,
       showExtraArrows: false
     };
 

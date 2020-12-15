@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { LCA, Tree, Colors, PageFitMode, Enabled, OrientationType } from 'basicprimitives';
 import { DndProvider, DropTarget, DragSource } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
@@ -12,7 +12,7 @@ class Container extends Component {
 
     const Node = ({ itemConfig, isDragging, connectDragSource, canDrop, isOver, connectDropTarget }) => {
       const opacity = isDragging ? 0.4 : 1
-      let itemTitleColor = primitives.common.Colors.RoyalBlue;
+      let itemTitleColor = Colors.RoyalBlue;
       if (isOver) {
         if (canDrop) {
           itemTitleColor = "green";
@@ -151,7 +151,7 @@ class Container extends Component {
 
       getDeletedItemsParent(tree, deletedItems, deletedHash) {
         let result = null;
-        const lca = primitives.common.LCA(tree);
+        const lca = LCA(tree);
         result = deletedItems.reduce((agg, itemid) => {
           if (agg == null) {
             agg = itemid;
@@ -168,7 +168,7 @@ class Container extends Component {
       }
 
       getTree(items = []) {
-        const tree = primitives.common.tree();
+        const tree = Tree();
 
         for (let index = 0; index < items.length; index += 1) {
           const item = items[index];
@@ -181,10 +181,10 @@ class Container extends Component {
       render() {
         const config = {
           ...this.state,
-          pageFitMode: primitives.common.PageFitMode.None,
+          pageFitMode: PageFitMode.None,
 
-          hasSelectorCheckbox: primitives.common.Enabled.True,
-          orientationType: primitives.common.OrientationType.Top,
+          hasSelectorCheckbox: Enabled.True,
+          orientationType: OrientationType.Top,
           defaultTemplateName: "contactTemplate",
           templates: [{
             name: "contactTemplate",

@@ -5,11 +5,12 @@ Component configuration `config` property contains collection of `templates`. Ev
 
 See template configuration properties in the following classes:
 
-* `primitives.orgdiagram.ItemConfig`
-* `primitives.famdiagram.Config`
-* `primitives.orgdiagram.Config`
-* `primitives.famdiagram.TemplateConfig`
-* `primitives.orgdiagramTemplateConfig`
+* `OrgItemConfig`
+* `FamItemConfig`
+* `FamConfig`
+* `OrgConfig`
+* `TemplateConfig`
+* `TemplateConfig`
 
 ## Size
 Component deals with fixed size layout, it makes no guesses about content and size of nodes. So we don't support in any form nodes auto sizing. In order to support such feature control should measure content of every node before rendering cycle. Taking into account that nodes visibility depends on available space it is going to be infinite loop of diagram layout and nodes measure iterations. The more space we provide to nodes the less number of diagram nodes is going to be visible. So control expect that node size is hard valued in template configuration. 
@@ -20,7 +21,7 @@ Component deals with fixed size layout, it makes no guesses about content and si
 * `onHighlightRender` - highlight frame rendering method
 * `onButtonsRender` - item buttons panel rendering method
 
-Every rendering method receives `primitives.common.RenderEventArgs` object as first argument, it provides rendering context to your method:
+Every rendering method receives `RenderEventArgs` object as first argument, it provides rendering context to your method:
 * `id` - item id
 * `context` - reference to `ItemConfig`
 * `isCursor` - `true` if rendered item is cursor

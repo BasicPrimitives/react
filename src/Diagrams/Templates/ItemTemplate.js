@@ -1,5 +1,5 @@
 import React from 'react';
-import primitives from 'basicprimitives';
+import { Colors, highestContrast } from 'basicprimitives';
 import AbstractTemplate from './AbstractTemplate';
 
 class ItemTemplate extends AbstractTemplate {
@@ -121,8 +121,8 @@ class ItemTemplate extends AbstractTemplate {
     const { context: itemConfig } = data;
     const { defaultTemplate, title, background, photoFrame, photo, description } = this.styles;
 
-    const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue,
-      color = primitives.common.highestContrast(itemTitleColor, this.options.itemTitleSecondFontColor, this.options.itemTitleFirstFontColor);
+    const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : Colors.RoyalBlue,
+      color = highestContrast(itemTitleColor, this.options.itemTitleSecondFontColor, this.options.itemTitleFirstFontColor);
     return <div style={defaultTemplate}>
       <div style={{ ...background, backgroundColor: itemTitleColor }}>
         <div style={{ ...title, color }}>{itemConfig.title}</div>

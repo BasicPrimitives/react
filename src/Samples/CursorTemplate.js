@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.FitToPage,
+      pageFitMode: PageFitMode.FitToPage,
       cursorItem: 0,
       highlightItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       defaultTemplateName: "contactTemplate",
       templates: [{
         name: "contactTemplate",

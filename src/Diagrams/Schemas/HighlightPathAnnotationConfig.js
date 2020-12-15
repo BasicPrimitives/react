@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import primitives from 'basicprimitives';
+import { AnnotationType, ZOrderType, LineType } from 'basicprimitives';
 
 const HighlightPathAnnotationConfig = PropTypes.shape({
-  annotationType: PropTypes.oneOf([primitives.common.AnnotationType.HighlightPath]),
-  zOrderType: PropTypes.oneOf(Object.values(primitives.common.ZOrderType)),
+  annotationType: PropTypes.oneOf([AnnotationType.HighlightPath]),
+  zOrderType: PropTypes.oneOf(Object.values(ZOrderType)),
   items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
   lineWidth: PropTypes.number,
   color: PropTypes.string,
-  lineType: PropTypes.oneOf(Object.values(primitives.common.LineType)),
+  lineType: PropTypes.oneOf(Object.values(LineType)),
   opacity: PropTypes.number,
   showArrows: PropTypes.bool,
   selectItems: PropTypes.bool

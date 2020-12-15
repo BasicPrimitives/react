@@ -29,7 +29,7 @@ Component has special property `centerOnCursor` this property needed to force co
 If you need to disable mouse click for some item set `isActive` property of item config or template config to 'false'. See "Inactive items" use case.  
 
 ## Disabling component interactivity
-If you need to disable completly mouse interactivity in Widget you have to set `cursorItem` and `highlightItem` properties into `null` and set `navigationMode` option to `primitives.common.NavigationMode.Inactive`
+If you need to disable completly mouse interactivity in Widget you have to set `cursorItem` and `highlightItem` properties into `null` and set `navigationMode` option to `NavigationMode.Inactive`
 
 ## Keyboard navigation
 The component is keyboard focusable. So when it gets focus with TAB or mouse click there is blue "outline" around it indicating keyboard focus. The component supports keyboard arrows to select highlighted item and keyboard "Enter" to set cursor. So when control gets focus user has to use arrows to highlight item and then press enter to set cursor to it.

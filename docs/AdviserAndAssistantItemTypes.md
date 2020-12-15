@@ -7,20 +7,20 @@ In the reality pure hierarchical relations are rare, so organizational chart pro
 
 Chart supports following `itemType`s:
 
-* `primitives.orgdiagram.ItemType.Regular`
-* `primitives.orgdiagram.ItemType.Adviser`
-* `primitives.orgdiagram.ItemType.Assistant`
-* `primitives.orgdiagram.ItemType.SubAdviser`
-* `primitives.orgdiagram.ItemType.SubAssistant`
-* `primitives.orgdiagram.ItemType.GeneralPartner`
-* `primitives.orgdiagram.ItemType.LimitedPartner`
-* `primitives.orgdiagram.ItemType.AdviserPartner`
+* `ItemType.Regular`
+* `ItemType.Adviser`
+* `ItemType.Assistant`
+* `ItemType.SubAdviser`
+* `ItemType.SubAssistant`
+* `ItemType.GeneralPartner`
+* `ItemType.LimitedPartner`
+* `ItemType.AdviserPartner`
 
 All of them control child placement relative to its logial parent in the hierarchy. The following example demonstrates  `Adviser` and `Assistant` types. `Adviser` item placed on the side of its logical parent and connected to it horizontally. `Assistant` item is placed at level in between its parent and remaining `Regular` children and horizontally connected to connection line connecting parent and its `Regular` children.
 
 Use `adviserPlacementType` property of `ItemConfig` to place `Adviser` or `Assistant` on the left or right side of the hierarchy
-* `primitives.common.AdviserPlacementType.Left`
-* `primitives.common.AdviserPlacementType.Right`
+* `AdviserPlacementType.Left`
+* `AdviserPlacementType.Right`
 
 [React](../src/Samples/AdviserAndAssistantItemTypes.js)
 

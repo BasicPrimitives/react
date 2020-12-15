@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, Enabled, ChildrenPlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       maximumColumnsInMatrix: 2,
       cursorItem: 1,
       highlightItem: 0,
@@ -21,14 +21,14 @@ class Sample extends Component {
           return <div className="InfoTemplate">{itemConfig.title}</div>;
         }
       }],
-      hasSelectorCheckbox: primitives.common.Enabled.False,
+      hasSelectorCheckbox: Enabled.False,
       items: [
         /* matrix layout example */
         {
           id: 1,
           parent: null,
           title: "Matrix Layout",
-          childrenPlacementType: primitives.common.ChildrenPlacementType.Matrix
+          childrenPlacementType: ChildrenPlacementType.Matrix
         },
         { id: 2, parent: 1, title: "Child 1" },
         { id: 3, parent: 1, title: "Child 2" },
@@ -44,10 +44,10 @@ class Sample extends Component {
           id: 101,
           parent: null,
           title: "Vertical Layout",
-          childrenPlacementType: primitives.common.ChildrenPlacementType.Vertical
+          childrenPlacementType: ChildrenPlacementType.Vertical
         },
         { id: 102, parent: 101, title: "Child 1" },
-        { id: 103, parent: 101, title: "Child 2", childrenPlacementType: primitives.common.ChildrenPlacementType.Vertical },
+        { id: 103, parent: 101, title: "Child 2", childrenPlacementType: ChildrenPlacementType.Vertical },
         { id: 104, parent: 103, title: "Sub Child 3" },
         { id: 105, parent: 103, title: "Sub Child 4" },
         { id: 106, parent: 101, title: "Child 5" },
@@ -58,7 +58,7 @@ class Sample extends Component {
           id: 201,
           parent: null,
           title: "Horizontal Layout",
-          childrenPlacementType: primitives.common.ChildrenPlacementType.Horizontal
+          childrenPlacementType: ChildrenPlacementType.Horizontal
         },
         { id: 202, parent: 201, title: "Child 1" },
         { id: 203, parent: 201, title: "Child 2" },

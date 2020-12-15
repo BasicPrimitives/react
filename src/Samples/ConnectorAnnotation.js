@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, ConnectorPlacementType, AnnotationType, Colors, ConnectorShapeType, 
+  LineType, Size, Enabled, GroupByType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      connectorPlacementType: (primitives.common.ConnectorPlacementType.Offbeat)
+      connectorPlacementType: (ConnectorPlacementType.Offbeat)
     }
   }
 
@@ -19,69 +20,69 @@ class Sample extends Component {
     const { connectorPlacementType } = this.state;
     const config = {
       items: [
-        /* JSON noname objects equivalent to primitives.orgdiagram.ItemConfig */
+        /* JSON noname objects equivalent to OrgItemConfig */
         { id: 0, parent: null, title: "Scott Aasrud", description: "VP, Public Sector", image: "/react/photos/a.png" },
         { id: 1, parent: 0, title: "Ted Lucas", description: "VP, Human Resources", image: "/react/photos/b.png" },
         { id: 2, parent: 0, title: "Fritz Stuger", description: "Business Solutions, US", image: "/react/photos/c.png" },
         { id: 3, parent: 0, title: "Joseph Gipson", description: "President, Entertainment & Devices Devision", image: "/react/photos/d.png" }
       ],
       annotations: [
-        /* JSON noname object equivalent to primitives.orgdiagram.ConnectorAnnotationConfig */
+        /* JSON noname object equivalent to ConnectorAnnotationConfig */
         {
-          annotationType: primitives.common.AnnotationType.Connector,
+          annotationType: AnnotationType.Connector,
           fromItem: 0,
           toItem: 2,
           label: <div className="BadgeSymbol" style={{
-            backgroundColor: primitives.common.Colors.Green
+            backgroundColor: Colors.Green
           }}>2</div>,
           labelSize: { width: 80, height: 30 },
-          connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
-          color: primitives.common.Colors.Green,
+          connectorShapeType: ConnectorShapeType.OneWay,
+          color: Colors.Green,
           offset: 0,
           lineWidth: 2,
-          lineType: primitives.common.LineType.Dashed,
+          lineType: LineType.Dashed,
           connectorPlacementType,
           selectItems: false
         },
         /* prototype based instantiation */
         {
-          annotationType: primitives.common.AnnotationType.Connector,
+          annotationType: AnnotationType.Connector,
           fromItem: 0,
           toItem: 1,
           label: <div className="BadgeSymbol" style={{
-            backgroundColor: primitives.common.Colors.Red
+            backgroundColor: Colors.Red
           }}>1</div>,
-          labelSize: new primitives.common.Size(80, 30),
-          connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
-          color: primitives.common.Colors.Red,
+          labelSize: new Size(80, 30),
+          connectorShapeType: ConnectorShapeType.OneWay,
+          color: Colors.Red,
           offset: 0,
           lineWidth: 2,
-          lineType: primitives.common.LineType.Dashed,
+          lineType: LineType.Dashed,
           connectorPlacementType,
           selectItems: false
         },
         /* prototype based instantiation */
         {
-          annotationType: primitives.common.AnnotationType.Connector,
+          annotationType: AnnotationType.Connector,
           fromItem: 0,
           toItem: 3,
           label: <div className="BadgeSymbol" style={{
-            backgroundColor: primitives.common.Colors.Blue
+            backgroundColor: Colors.Blue
           }}>3</div>,
-          labelSize: new primitives.common.Size(80, 30),
-          connectorShapeType: primitives.common.ConnectorShapeType.OneWay,
-          color: primitives.common.Colors.Blue,
+          labelSize: new Size(80, 30),
+          connectorShapeType: ConnectorShapeType.OneWay,
+          color: Colors.Blue,
           offset: 0,
           lineWidth: 2,
-          lineType: primitives.common.LineType.Dashed,
+          lineType: LineType.Dashed,
           connectorPlacementType,
           selectItems: false
         }
       ],
       cursorItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
-      arrowsDirection: primitives.common.GroupByType.Parents,
-      pageFitMode: primitives.orgdiagram.PageFitMode.None
+      hasSelectorCheckbox: Enabled.True,
+      arrowsDirection: GroupByType.Parents,
+      pageFitMode: PageFitMode.None
     };
 
     return <>
@@ -89,7 +90,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onChange={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Offbeat)}
+            onChange={() => this.onConnectorPlacementTypeChanged(ConnectorPlacementType.Offbeat)}
             name="connectorPlacementType"
             type="radio"
             value="0"
@@ -100,7 +101,7 @@ class Sample extends Component {
         <br />
         <label>
           <input
-            onChange={() => this.onConnectorPlacementTypeChanged(primitives.common.ConnectorPlacementType.Straight)}
+            onChange={() => this.onConnectorPlacementTypeChanged(ConnectorPlacementType.Straight)}
             name="connectorPlacementType"
             type="radio"
             value="1"

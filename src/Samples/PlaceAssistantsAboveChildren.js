@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Enabled, PageFitMode, GroupByType, OrgItemConfig, ItemType, AdviserPlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -19,18 +19,18 @@ class Sample extends Component {
     const { placeAssistantsAboveChildren } = this.state;
     const config = {
       placeAssistantsAboveChildren,
-      hasSelectorCheckbox: primitives.common.Enabled.False,
-      pageFitMode: primitives.orgdiagram.PageFitMode.None,
-      arrowsDirection: primitives.common.GroupByType.Children,
+      hasSelectorCheckbox: Enabled.False,
+      pageFitMode: PageFitMode.None,
+      arrowsDirection: GroupByType.Children,
       items: [
-        new primitives.orgdiagram.ItemConfig({
+        new OrgItemConfig({
           id: 0,
           parent: null,
           title: "Scott Aasrud",
           description: "Parent Item",
           image: "/react/photos/a.png"
         }),
-        new primitives.orgdiagram.ItemConfig({
+        new OrgItemConfig({
           id: 5,
           parent: 0,
           title: "Harry Harter",
@@ -38,7 +38,7 @@ class Sample extends Component {
           groupTitle: "Regular",
           image: "/react/photos/d.png"
         }),
-        new primitives.orgdiagram.ItemConfig({
+        new OrgItemConfig({
           id: 6,
           parent: 0,
           title: "Fritz Stuger",
@@ -46,24 +46,24 @@ class Sample extends Component {
           groupTitle: "Regular",
           image: "/react/photos/d.png"
         }),
-        new primitives.orgdiagram.ItemConfig({
+        new OrgItemConfig({
           id: 8,
           parent: 0,
-          itemType: primitives.orgdiagram.ItemType.Assistant,
-          adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+          itemType: ItemType.Assistant,
+          adviserPlacementType: AdviserPlacementType.Right,
           title: "Ted Lucas",
           description: "Assitant Item",
           groupTitle: "Assistant",
           image: "/react/photos/c.png"
         }),
-        new primitives.orgdiagram.ItemConfig({
+        new OrgItemConfig({
           id: 10,
           parent: 8,
           title: "James Nunnally",
           description: "Regular Item",
           image: "/react/photos/d.png"
         }),
-        new primitives.orgdiagram.ItemConfig({
+        new OrgItemConfig({
           id: 11,
           parent: 8,
           title: "Robert Canon",

@@ -5,8 +5,8 @@ Chart's API provides two ways to set inactive items. The first one is `isActive`
 
 See following configuration classes:
 
-* `primitives.orgdiagram.ItemConfig`
-* `primitives.orgdiagram.TemplateConfig`
+* `OrgItemConfig`
+* `TemplateConfig`
 
 They have following option:
 

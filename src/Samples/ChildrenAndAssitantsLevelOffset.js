@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Colors, ChildrenPlacementType, AdviserPlacementType, 
+  ItemType, PageFitMode, Enabled, GroupByType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class Sample extends Component {
       title: "Title A",
       description: "Description A",
       image: "/react/photos/a.png",
-      childrenPlacementType: primitives.common.ChildrenPlacementType.Matrix
+      childrenPlacementType: ChildrenPlacementType.Matrix
     }
     items.push(rootItem);
 
@@ -23,10 +24,10 @@ class Sample extends Component {
       title: "Assistant 1",
       description: "Assistant Description",
       image: "/react/photos/a.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Right,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive,
+      groupTitleColor: Colors.Olive,
       levelOffset: 0
     });
 
@@ -36,10 +37,10 @@ class Sample extends Component {
       title: "Assistant 2",
       description: "Assistant Description",
       image: "/react/photos/b.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Left,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Left,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive,
+      groupTitleColor: Colors.Olive,
       levelOffset: 0
     });
 
@@ -50,10 +51,10 @@ class Sample extends Component {
         title: "Sub Adviser",
         description: "Sub Adviser Description",
         image: "/react/photos/s.png",
-        itemType: primitives.orgdiagram.ItemType.SubAdviser,
-        adviserPlacementType: primitives.common.AdviserPlacementType.Left,
+        itemType: ItemType.SubAdviser,
+        adviserPlacementType: AdviserPlacementType.Left,
         groupTitle: "Sub Adviser",
-        groupTitleColor: primitives.common.Colors.Red
+        groupTitleColor: Colors.Red
       });
       items.push({
         id: (index + 1),
@@ -61,10 +62,10 @@ class Sample extends Component {
         title: "Sub Adviser",
         description: "Sub Adviser Description",
         image: "/react/photos/s.png",
-        itemType: primitives.orgdiagram.ItemType.SubAdviser,
-        adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+        itemType: ItemType.SubAdviser,
+        adviserPlacementType: AdviserPlacementType.Right,
         groupTitle: "Sub Adviser",
-        groupTitleColor: primitives.common.Colors.Red
+        groupTitleColor: Colors.Red
       });
     }
 
@@ -74,10 +75,10 @@ class Sample extends Component {
       title: "Assistant 3",
       description: "Assistant Description",
       image: "/react/photos/c.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Right,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive,
+      groupTitleColor: Colors.Olive,
       levelOffset: 1
     });
 
@@ -88,10 +89,10 @@ class Sample extends Component {
       title: "Assistant 4",
       description: "Assistant Description",
       image: "/react/photos/d.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Left,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Left,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive,
+      groupTitleColor: Colors.Olive,
       levelOffset: 1
     });
 
@@ -102,7 +103,7 @@ class Sample extends Component {
         title: index.toString() + " Contract",
         description: index.toString() + " Description",
         image: "/react/photos/f.png",
-        groupTitleColor: primitives.common.Colors.Red,
+        groupTitleColor: Colors.Red,
         groupTitle: "Contract",
         levelOffset: 0
       });
@@ -128,7 +129,7 @@ class Sample extends Component {
         description: index.toString() + " Description",
         image: "/react/photos/p.png",
         groupTitle: "Part Time",
-        groupTitleColor: primitives.common.Colors.Green,
+        groupTitleColor: Colors.Green,
         levelOffset: 2
       });
     };
@@ -139,10 +140,10 @@ class Sample extends Component {
       title: "Assistant",
       description: "Assistant Description",
       image: "/react/photos/b.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Left,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Left,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive,
+      groupTitleColor: Colors.Olive,
       levelOffset: 0
     });
 
@@ -152,10 +153,10 @@ class Sample extends Component {
       title: "Assistant",
       description: "Assistant Description",
       image: "/react/photos/b.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Right,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive,
+      groupTitleColor: Colors.Olive,
       levelOffset: 0
     });
 
@@ -165,10 +166,10 @@ class Sample extends Component {
       title: "Assistant",
       description: "Assistant Description",
       image: "/react/photos/b.png",
-      itemType: primitives.orgdiagram.ItemType.Adviser,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+      itemType: ItemType.Adviser,
+      adviserPlacementType: AdviserPlacementType.Right,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive,
+      groupTitleColor: Colors.Olive,
       levelOffset: 0
     });
 
@@ -179,10 +180,10 @@ class Sample extends Component {
   render() {
     const config = {
       ...this.state,
-      pageFitMode: primitives.common.PageFitMode.Auto,
+      pageFitMode: PageFitMode.Auto,
       cursorItem: 0,
       highlightItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       normalLevelShift: 20,
       dotLevelShift: 10,
       lineLevelShift: 10,
@@ -190,9 +191,9 @@ class Sample extends Component {
       dotItemsInterval: 10,
       lineItemsInterval: 5,
       buttonsPanelSize: 48,
-      itemTitleSecondFontColor: primitives.common.Colors.White,
-      leavesPlacementType: primitives.common.ChildrenPlacementType.Matrix,
-      arrowsDirection: primitives.common.GroupByType.Children
+      itemTitleSecondFontColor: Colors.White,
+      leavesPlacementType: ChildrenPlacementType.Matrix,
+      arrowsDirection: GroupByType.Children
     };
 
     return <div className="placeholder">

@@ -25,7 +25,7 @@ See [CSS @Media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) for mo
 [React](../src/Samples/PageSizeDiagram.js)
 
 ## Auto Size Diagram in Article
-Another diagram integration scenario is diagram placement inside article, so component needs to auto expand its size in order to accommodate all nodes of diagram without minimization or trancation. Set `pageFitMode` to `primitives.common.PageFitMode.AutoSize` and component will size itself to show all nodes of diagram. 
+Another diagram integration scenario is diagram placement inside article, so component needs to auto expand its size in order to accommodate all nodes of diagram without minimization or trancation. Set `pageFitMode` to `PageFitMode.AutoSize` and component will size itself to show all nodes of diagram. 
 
 Use following options to constrain component auto size:
 
@@ -36,8 +36,8 @@ for example in order to set widget minimal size:
 
 ```JavaScript
 <OrgDiagram centerOnCursor={true} config={{
-  autoSizeMinimum: new primitives.common.Size(800, 600),
-  autoSizeMaximum: new primitives.common.Size(1024, 768)
+  autoSizeMinimum: new Size(800, 600),
+  autoSizeMaximum: new Size(1024, 768)
   // other properties
 }} />
 ```

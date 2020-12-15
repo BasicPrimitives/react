@@ -1,4 +1,4 @@
-import primitives from 'basicprimitives';
+import { FamTaskManagerFactory, FamEventArgs } from 'basicprimitives';
 import BaseDiagram from './BaseDiagram';
 import FamDiagramConfig from './Schemas/FamDiagramConfig';
 
@@ -8,7 +8,7 @@ class FamDiagram extends BaseDiagram {
   };
 
   constructor(props) {
-    super(props, primitives.famdiagram);
+    super(props, FamTaskManagerFactory, FamEventArgs);
   }
 }
 

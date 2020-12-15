@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Enabled, GroupByType, PageFitMode } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
@@ -8,9 +8,9 @@ class Sample extends Component {
       cursorItem: 1,
       enableMatrixLayout: true,
       minimumMatrixSize: 3,
-      hasSelectorCheckbox: primitives.common.Enabled.False,
-      arrowsDirection: primitives.common.GroupByType.Children,
-      pageFitMode: primitives.common.PageFitMode.None,
+      hasSelectorCheckbox: Enabled.False,
+      arrowsDirection: GroupByType.Children,
+      pageFitMode: PageFitMode.None,
       items: [
         { id: 1, parents: [], title: "Corp 1", label: "Corp 1", description: "Parent 1", image: "/react/photos/p.png" },
         { id: 2, parents: [], title: "Corp 2", label: "Corp 2", description: "Parent 2", image: "/react/photos/p.png" },

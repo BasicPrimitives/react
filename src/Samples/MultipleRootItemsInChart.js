@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams'; 
-import primitives from 'basicprimitives';
+import { PageFitMode, Enabled, OrientationType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor() {
@@ -8,11 +8,11 @@ class Sample extends Component {
 
     this.state = {
       config: {
-        pageFitMode: primitives.common.PageFitMode.None,
+        pageFitMode: PageFitMode.None,
         cursorItem: 0,
         highlightItem: 0,
-        hasSelectorCheckbox: primitives.common.Enabled.True,
-        orientationType: primitives.common.OrientationType.Top,
+        hasSelectorCheckbox: Enabled.True,
+        orientationType: OrientationType.Top,
         items: [
           {
             id: 0,
@@ -77,10 +77,10 @@ class Sample extends Component {
 
     return <>
       <p>Set chart orientation to: &nbsp;
-        <button onClick={() => this.update(primitives.common.OrientationType.Top)}>Top</button>&nbsp;
-        <button onClick={() => this.update(primitives.common.OrientationType.Left)}>Left</button>&nbsp;
-        <button onClick={() => this.update(primitives.common.OrientationType.Right)}>Right</button>&nbsp;
-        <button onClick={() => this.update(primitives.common.OrientationType.Bottom)}>Bottom</button>
+        <button onClick={() => this.update(OrientationType.Top)}>Top</button>&nbsp;
+        <button onClick={() => this.update(OrientationType.Left)}>Left</button>&nbsp;
+        <button onClick={() => this.update(OrientationType.Right)}>Right</button>&nbsp;
+        <button onClick={() => this.update(OrientationType.Bottom)}>Bottom</button>
       </p>
       <div className="placeholder">
         <OrgDiagram centerOnCursor={true} config={config} />

@@ -5,8 +5,8 @@ Component provides two ways to set inactive items, via direct per item setting o
 
 See following configuration classes:
 
-* `primitives.famdiagram.ItemConfig`
-* `primitives.famdiagram.TemplateConfig`
+* `FamItemConfig`
+* `TemplateConfig`
 
 They have following option:
 

@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams'; 
-import primitives from 'basicprimitives';
+import { PageFitMode, ChildrenPlacementType, OrientationType, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 1,
       highlightItem: null,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
-      orientationType: primitives.common.OrientationType.Top,
+      hasSelectorCheckbox: Enabled.True,
+      orientationType: OrientationType.Top,
       items: [
         {
           id: 0,
           title: "invisible",
           parent: null,
           isVisible: false,
-          childrenPlacementType: primitives.common.ChildrenPlacementType.Matrix
+          childrenPlacementType: ChildrenPlacementType.Matrix
         },
         {
           id: 1,

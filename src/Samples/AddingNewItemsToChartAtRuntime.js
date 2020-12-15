@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserPlus, faUserSlash } from '@fortawesome/free-solid-svg-icons'
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { LCA, Tree, PageFitMode, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -95,7 +95,7 @@ class Sample extends Component {
 
   getDeletedItemsParent(tree, deletedItems, deletedHash) {
     let result = null;
-    const lca = primitives.common.LCA(tree);
+    const lca = LCA(tree);
     result = deletedItems.reduce((agg, itemid) => {
       if (agg == null) {
         agg = itemid;
@@ -112,7 +112,7 @@ class Sample extends Component {
   }
 
   getTree(items = []) {
-    const tree = primitives.common.tree();
+    const tree = Tree();
 
     // rebuild tree
     for (let index = 0; index < items.length; index += 1) {
@@ -126,9 +126,9 @@ class Sample extends Component {
   render() {
     const config = {
       ...this.state,
-      pageFitMode: primitives.common.PageFitMode.None,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
-      hasButtons: primitives.common.Enabled.True,
+      pageFitMode: PageFitMode.None,
+      hasSelectorCheckbox: Enabled.True,
+      hasButtons: Enabled.True,
       buttonsPanelSize: 40,
       onButtonsRender: (({ context: itemConfig }) => {
         return <>

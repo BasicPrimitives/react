@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams'; 
-import primitives from 'basicprimitives';
+import { PageFitMode, GroupByType, Enabled, ItemType, AdviserPlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 0,
       highlightItem: 0,
-      arrowsDirection: primitives.common.GroupByType.Parents,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      arrowsDirection: GroupByType.Parents,
+      hasSelectorCheckbox: Enabled.True,
       items: [
         {
           id: 0,
@@ -24,8 +24,8 @@ class Sample extends Component {
           title: "Robert Canon",
           description: "General Partner",
           image: "/react/photos/z.png",
-          itemType: primitives.orgdiagram.ItemType.LimitedPartner,
-          adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Right,
+          itemType: ItemType.LimitedPartner,
+          adviserPlacementType: AdviserPlacementType.Right,
           groupTitle: "Partner"
         },
         {
@@ -41,8 +41,8 @@ class Sample extends Component {
           title: "Fritz Stuger",
           description: "General Partner item",
           image: "/react/photos/z.png",
-          itemType: primitives.orgdiagram.ItemType.LimitedPartner,
-          adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Right,
+          itemType: ItemType.LimitedPartner,
+          adviserPlacementType: AdviserPlacementType.Right,
           groupTitle: "Partner"
         },
         {

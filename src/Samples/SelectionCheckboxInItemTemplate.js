@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, Enabled, Colors } from 'basicprimitives';
 
 class Sample extends Component {
   constructor() {
@@ -12,9 +12,9 @@ class Sample extends Component {
 
     this.state = {
       config: {
-        pageFitMode: primitives.common.PageFitMode.None,
+        pageFitMode: PageFitMode.None,
         cursorItem: 0,
-        hasSelectorCheckbox: primitives.common.Enabled.False,
+        hasSelectorCheckbox: Enabled.False,
         selectedItems: [0, 2],
         items: [
           { id: 0, parent: null, isVisible: true, description: "Chief Executive Officer (CEO)", email: "davidalt@name.com", image: "/react/photos/q.png", itemTitleColor: "#4169e1", phone: "(352) 206-7599", title: "David Dalton" },
@@ -32,7 +32,7 @@ class Sample extends Component {
           minimizedItemSize: { width: 3, height: 3 },
           highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
           onItemRender: ({ context: itemConfig, isSelected }) => {
-            const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
+            const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : Colors.RoyalBlue;
             return <div className="ContactTemplate">
               <div className="ContactTitleBackground" style={{ backgroundColor: itemTitleColor }}>
                 <div className="ContactTitle">{itemConfig.title}</div>

@@ -1,5 +1,7 @@
 import React from 'react';
-import primitives from 'basicprimitives';
+import { LineType, Layers, SegmentType,
+  Rect, Size
+} from 'basicprimitives';
 import RotatedText from './Templates/RotatedText';
 
 class Placeholder {
@@ -38,8 +40,8 @@ class Graphics {
     this.size = size;
     this.hasGraphics = true;
 
-    this.names = Object.keys(primitives.common.Layers).reduce((agg, key) => {
-      agg[primitives.common.Layers[key]] = key;
+    this.names = Object.keys(Layers).reduce((agg, key) => {
+      agg[Layers[key]] = key;
       return agg;
     }, []);
 
@@ -78,8 +80,8 @@ class Graphics {
   };
 
   resizePlaceholder(placeholder, left, top, width, height) {
-    placeholder.size = new primitives.common.Size(width, height);
-    placeholder.rect = new primitives.common.Rect(left, top, width, height);
+    placeholder.size = new Size(width, height);
+    placeholder.rect = new Rect(left, top, width, height);
   };
 
   reset(placeholderName, layerKey) {
@@ -105,7 +107,7 @@ class Graphics {
     if (placeholder === undefined) {
       placeholder = new Placeholder(name);
       placeholder.size = this.size;
-      placeholder.rect = new primitives.common.Rect(0, 0, placeholder.size.width, placeholder.size.height);
+      placeholder.rect = new Rect(0, 0, placeholder.size.width, placeholder.size.height);
       this.placeholders[name] = placeholder;
     }
 
@@ -192,7 +194,6 @@ class Graphics {
       style = {};
 
 
-    //polyline = new primitives.common.Element(this._svgxmlns, "path");
     if (attr.fillColor !== undefined) {
       style.fill = attr.fillColor;
       style.fillOpacity = attr.opacity;
@@ -218,13 +219,13 @@ class Graphics {
     if (attr.lineType != null) {
       step = Math.round(attr.lineWidth) || 1;
       switch (attr.lineType) {
-        case primitives.common.LineType.Dotted:
+        case LineType.Dotted:
           style.strokeDasharray = step + "," + step;
           break;
-        case primitives.common.LineType.Dashed:
+        case LineType.Dashed:
           style.strokeDasharray = (step * 5) + "," + (step * 3);
           break;
-        case primitives.common.LineType.Solid:
+        case LineType.Solid:
         default:
           style.strokeDasharray = "";
           break;
@@ -234,16 +235,16 @@ class Graphics {
     data = "";
     polylineData.loop(this, function (segment) {
       switch (segment.segmentType) {
-        case primitives.common.SegmentType.Move:
+        case SegmentType.Move:
           data += "M" + (Math.round(segment.x) + 0.5) + " " + (Math.round(segment.y) + 0.5);
           break;
-        case primitives.common.SegmentType.Line:
+        case SegmentType.Line:
           data += "L" + (Math.round(segment.x) + 0.5) + " " + (Math.round(segment.y) + 0.5);
           break;
-        case primitives.common.SegmentType.QuadraticArc:
+        case SegmentType.QuadraticArc:
           data += "Q" + (Math.round(segment.cpX) + 0.5) + " " + (Math.round(segment.cpY) + 0.5) + " " + (Math.round(segment.x) + 0.5) + " " + (Math.round(segment.y) + 0.5);
           break;
-        case primitives.common.SegmentType.Dot:
+        case SegmentType.Dot:
           // A rx, ry, x-axis-rotation, large-arc-flag, sweep-flag, x, y
           if (segment.width === segment.height && segment.width / 2.0 <= segment.cornerRadius) {
             // dot
@@ -271,7 +272,7 @@ class Graphics {
             data += "L" + (Math.round(segment.x) + 0.5) + " " + (Math.round(segment.y + cornerRadius) + 0.5);
           }
           break;
-        case primitives.common.SegmentType.CubicArc:
+        case SegmentType.CubicArc:
           data += "C" + (Math.round(segment.cpX1) + 0.5) + " " + (Math.round(segment.cpY1) + 0.5) +
             " " + (Math.round(segment.cpX2) + 0.5) + " " + (Math.round(segment.cpY2) + 0.5) +
             " " + (Math.round(segment.x) + 0.5) + " " + (Math.round(segment.y) + 0.5);

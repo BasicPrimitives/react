@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faSitemap } from '@fortawesome/free-solid-svg-icons'
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
@@ -32,8 +32,8 @@ class Sample extends Component {
           image: "/react/photos/c.png"
         }
       ],
-      hasSelectorCheckbox: primitives.common.Enabled.True,
-      hasButtons: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
+      hasButtons: Enabled.True,
       buttonsPanelSize: 40,
       onButtonsRender: (({ context: itemConfig }) => {
         return <>

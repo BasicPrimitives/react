@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams'; 
-import primitives from 'basicprimitives';
+import { AdviserPlacementType, ItemType, Enabled, GroupByType, PageFitMode } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 0,
       highlightItem: 0,
-      arrowsDirection: primitives.common.GroupByType.Parents,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      arrowsDirection: GroupByType.Parents,
+      hasSelectorCheckbox: Enabled.True,
       items: [
         {
           id: 0,
@@ -24,8 +24,8 @@ class Sample extends Component {
           title: "Robert Canon",
           description: "Adviser Partner",
           image: "/react/photos/z.png",
-          itemType: primitives.orgdiagram.ItemType.AdviserPartner,
-          adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Right,
+          itemType: ItemType.AdviserPartner,
+          adviserPlacementType: AdviserPlacementType.Right,
           groupTitle: "Partner"
         },
         {
@@ -34,8 +34,8 @@ class Sample extends Component {
           title: "Fritz Stuger",
           description: "Adviser Partner item",
           image: "/react/photos/y.png",
-          itemType: primitives.orgdiagram.ItemType.AdviserPartner,
-          adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Left,
+          itemType: ItemType.AdviserPartner,
+          adviserPlacementType: AdviserPlacementType.Left,
           groupTitle: "Partner"
         },
         {
@@ -51,8 +51,8 @@ class Sample extends Component {
           title: "Robert Canon 2",
           description: "Adviser Partner item",
           image: "/react/photos/z.png",
-          itemType: primitives.orgdiagram.ItemType.AdviserPartner,
-          adviserPlacementType: primitives.orgdiagram.AdviserPlacementType.Right,
+          itemType: ItemType.AdviserPartner,
+          adviserPlacementType: AdviserPlacementType.Right,
           groupTitle: "Partner"
         },
         {

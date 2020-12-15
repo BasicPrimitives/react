@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import primitives from 'basicprimitives';
+import { getFixOfPixelALignment, getInnerSize, getElementOffset,
+  OrientationType,
+  Rect, Size, Point, Thickness
+} from 'basicprimitives';
 import Graphics from './Graphics';
 import {
   AnnotationLabelTemplate,
@@ -36,10 +39,11 @@ class BaseDiagram extends Component {
     onSelectionChanged: null
   };
 
-  constructor(props, namespace) {
+  constructor(props, TaskManagerFactory, EventArgs) {
     super(props);
 
-    this.namespace = namespace;
+    this.TaskManagerFactory = TaskManagerFactory;
+    this.EventArgs = EventArgs;
 
     const { config, centerOnCursor } = props;
     const { highlightItem, cursorItem, selectedItems } = config;
@@ -108,7 +112,7 @@ class BaseDiagram extends Component {
       UserTemplate,
       LabelAnnotationTemplate
     }
-    this.tasks = namespace.TaskManagerFactory(this.getOptions, this.getGraphics, this.getLayout, this.setLayout, this.templates);
+    this.tasks = TaskManagerFactory(this.getOptions, this.getGraphics, this.getLayout, this.setLayout, this.templates);
   }
 
   static getDerivedStateFromProps(nextProps, state) {
@@ -165,13 +169,13 @@ class BaseDiagram extends Component {
 
   fixPixelAlignment() {
     const { current } = this.controlPanelRef;
-    var pixelAlignmentFix = primitives.common.getFixOfPixelALignment(current);
+    var pixelAlignmentFix = getFixOfPixelALignment(current);
     current.style.marginLeft = pixelAlignmentFix.width + "px";
     current.style.marginTop = pixelAlignmentFix.height + "px";
   }
 
   onSizeChanged() {
-    const { width, height } = primitives.common.getInnerSize(this.controlPanelRef.current)
+    const { width, height } = getInnerSize(this.controlPanelRef.current)
     this.setState({
       viewportSize: {
         width,
@@ -198,7 +202,7 @@ class BaseDiagram extends Component {
     });
   }
 
-  onFrameMouseMove(event) {const placeholderOffset = primitives.common.getElementOffset(this.frameMousePanelRef.current),
+  onFrameMouseMove(event) {const placeholderOffset = getElementOffset(this.frameMousePanelRef.current),
       x = event.pageX - placeholderOffset.left,
       y = event.pageY - placeholderOffset.top,
       projectItemsToFrameTask = this.tasks.getTask("ProjectItemsToFrameTask"),
@@ -211,7 +215,7 @@ class BaseDiagram extends Component {
   }
 
   onFrameClick(event) {
-    const placeholderOffset = primitives.common.getElementOffset(this.frameMousePanelRef.current),
+    const placeholderOffset = getElementOffset(this.frameMousePanelRef.current),
       x = event.pageX - placeholderOffset.left,
       y = event.pageY - placeholderOffset.top,
       projectItemsToFrameTask = this.tasks.getTask("ProjectItemsToFrameTask"),
@@ -227,7 +231,7 @@ class BaseDiagram extends Component {
   }
 
   onMouseMove(event) {
-    const placeholderOffset = primitives.common.getElementOffset(this.mousePanelRef.current),
+    const placeholderOffset = getElementOffset(this.mousePanelRef.current),
       x = event.pageX - placeholderOffset.left,
       y = event.pageY - placeholderOffset.top,
       createTransformTask = this.tasks.getTask("CreateTransformTask"),
@@ -240,7 +244,7 @@ class BaseDiagram extends Component {
   }
 
   getEventArgs(oldTreeItemId, newTreeItemId, name) {
-    var result = new this.namespace.EventArgs(),
+    var result = new this.EventArgs(),
       combinedContextsTask = this.tasks.getTask("CombinedContextsTask"),
       alignDiagramTask = this.tasks.getTask("AlignDiagramTask"),
       oldItemConfig = combinedContextsTask.getConfig(oldTreeItemId),
@@ -260,10 +264,10 @@ class BaseDiagram extends Component {
         result.parentItem = combinedContextsTask.getConfig(newItemConfig.parent);
       }
 
-      panelOffset = primitives.common.getElementOffset(this.mousePanelRef.current);
-      offset = primitives.common.getElementOffset(this.scrollPanelRef.current);
+      panelOffset = getElementOffset(this.mousePanelRef.current);
+      offset = getElementOffset(this.scrollPanelRef.current);
       itemPosition = alignDiagramTask.getItemPosition(newTreeItemId);
-      result.position = new primitives.common.Rect(itemPosition.actualPosition)
+      result.position = new Rect(itemPosition.actualPosition)
         .translate(panelOffset.left, panelOffset.top)
         .translate(-offset.left, -offset.top);
     }
@@ -334,7 +338,7 @@ class BaseDiagram extends Component {
   }
 
   onClick(event) {
-    var placeholderOffset = primitives.common.getElementOffset(this.mousePanelRef.current),
+    var placeholderOffset = getElementOffset(this.mousePanelRef.current),
       x = event.pageX - placeholderOffset.left,
       y = event.pageY - placeholderOffset.top,
       createTransformTask = this.tasks.getTask("CreateTransformTask"),
@@ -422,16 +426,16 @@ class BaseDiagram extends Component {
           }
           break;
         case 40: /*Down*/
-          direction = primitives.common.OrientationType.Bottom;
+          direction = OrientationType.Bottom;
           break;
         case 38: /*Up*/
-          direction = primitives.common.OrientationType.Top;
+          direction = OrientationType.Top;
           break;
         case 37: /*Left*/
-          direction = primitives.common.OrientationType.Left;
+          direction = OrientationType.Left;
           break;
         case 39: /*Right*/
-          direction = primitives.common.OrientationType.Right;
+          direction = OrientationType.Right;
           break;
         default:
           break;
@@ -521,8 +525,8 @@ class BaseDiagram extends Component {
     const { centerOnCursor, viewportSize, contentPosition } = this.state;
     return {
       forceCenterOnCursor: centerOnCursor,
-      scrollPanelSize: new primitives.common.Size(viewportSize),
-      placeholderOffset: new primitives.common.Point(contentPosition)
+      scrollPanelSize: new Size(viewportSize),
+      placeholderOffset: new Point(contentPosition)
     }
   }
 
@@ -531,10 +535,10 @@ class BaseDiagram extends Component {
     this.layoutOptions = {
       autoSize,
       scale,
-      scaledContentSize: new primitives.common.Size(scaledContentSize),
-      viewportSize: new primitives.common.Size(viewportSize),
-      frameThickness: new primitives.common.Thickness(frameThickness),
-      controlSize: new primitives.common.Size(controlSize)
+      scaledContentSize: new Size(scaledContentSize),
+      viewportSize: new Size(viewportSize),
+      frameThickness: new Thickness(frameThickness),
+      controlSize: new Size(controlSize)
     }
   }
 

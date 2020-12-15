@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import primitives from 'basicprimitives';
+import {AnnotationType, ZOrderType, LineType} from 'basicprimitives';
 
 const BackgroundAnnotationConfig = PropTypes.shape({
-  annotationType: PropTypes.oneOf([primitives.common.AnnotationType.Background]),
+  annotationType: PropTypes.oneOf([AnnotationType.Background]),
   items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
   includeChildren: PropTypes.bool,
-  zOrderType: PropTypes.oneOf(Object.values(primitives.common.ZOrderType)),
+  zOrderType: PropTypes.oneOf(Object.values(ZOrderType)),
   offset: PropTypes.shape({
     left: PropTypes.number.isRequired,
     top: PropTypes.number.isRequired,
@@ -16,7 +16,7 @@ const BackgroundAnnotationConfig = PropTypes.shape({
   opacity: PropTypes.number,
   borderColor: PropTypes.string,
   fillColor: PropTypes.string,
-  lineType: PropTypes.oneOf(Object.values(primitives.common.LineType)),
+  lineType: PropTypes.oneOf(Object.values(LineType)),
   selectItems: PropTypes.bool
 });
 

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Enabled, GroupByType, PageFitMode } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
       lineItemsInterval: 20,
       cursorItem: 1,
-      hasSelectorCheckbox: primitives.common.Enabled.False,
-      arrowsDirection: primitives.common.GroupByType.Children,
-      pageFitMode: primitives.common.PageFitMode.None,
+      hasSelectorCheckbox: Enabled.False,
+      arrowsDirection: GroupByType.Children,
+      pageFitMode: PageFitMode.None,
       items: [
         { id: 1, parents: [], spouses: ["2", "3"], title: "Odelia Locker", label: "Odelia Locker", description: "Has 2 marriages", image: "/react/photos/a.png" },
         { id: 2, parents: [], title: "John Smith", label: "John Smith", description: "1st marriage", image: "/react/photos/b.png" },

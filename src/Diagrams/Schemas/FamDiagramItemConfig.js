@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import primitives from 'basicprimitives';
+import { ShapeType, Enabled, TextOrientationType, PlacementType, AdviserPlacementType } from 'basicprimitives';
 
 const ItemConfig = PropTypes.shape({
   id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
@@ -10,27 +10,27 @@ const ItemConfig = PropTypes.shape({
   image: PropTypes.string,
   context: PropTypes.any,
   itemTitleColor: PropTypes.string,
-  minimizedItemShapeType: PropTypes.oneOf(Object.values(primitives.common.ShapeType)),
+  minimizedItemShapeType: PropTypes.oneOf(Object.values(ShapeType)),
   groupTitle: PropTypes.string,
   groupTitleColor: PropTypes.string,
   isActive: PropTypes.bool,
-  hasSelectorCheckbox: PropTypes.oneOf(Object.values(primitives.common.Enabled)),
-  hasButtons: PropTypes.oneOf(Object.values(primitives.common.Enabled)),
+  hasSelectorCheckbox: PropTypes.oneOf(Object.values(Enabled)),
+  hasButtons: PropTypes.oneOf(Object.values(Enabled)),
   templateName: PropTypes.string,
-  showCallout: PropTypes.oneOf(Object.values(primitives.common.Enabled)),
+  showCallout: PropTypes.oneOf(Object.values(Enabled)),
   calloutTemplateName: PropTypes.string,
   label: PropTypes.string,
-  showLabel: PropTypes.oneOf(Object.values(primitives.common.Enabled)),
+  showLabel: PropTypes.oneOf(Object.values(Enabled)),
   labelSize: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired
   }),
-  labelOrientation: PropTypes.oneOf(Object.values(primitives.text.TextOrientationType)),
-  labelPlacement: PropTypes.oneOf(Object.values(primitives.common.PlacementType)),
+  labelOrientation: PropTypes.oneOf(Object.values(TextOrientationType)),
+  labelPlacement: PropTypes.oneOf(Object.values(PlacementType)),
   primaryParent: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   relativeItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   position: PropTypes.number,
-  placementType: PropTypes.oneOf(Object.values(primitives.common.AdviserPlacementType))
+  placementType: PropTypes.oneOf(Object.values(AdviserPlacementType))
 });
 
 export default ItemConfig;
