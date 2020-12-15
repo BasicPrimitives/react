@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, Colors } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class Sample extends Component {
     } = this.scales[scale];
 
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cousinsIntervalMultiplier: 1,
       highlightItem: 0,
       cursorItem: 0,
@@ -74,7 +74,7 @@ class Sample extends Component {
         minimizedItemSize: { width: 3, height: 3 },
         highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
         onItemRender: ({ context: itemConfig }) => {
-          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
+          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : Colors.RoyalBlue;
           return <div className="xlTemplate">
             <div className="xlTitleBackground" style={{ backgroundColor: itemTitleColor }}>
               <div className="xlTitle">{itemConfig.title}</div>
@@ -94,7 +94,7 @@ class Sample extends Component {
         minimizedItemSize: { width: 3, height: 3 },
         highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
         onItemRender: ({ context: itemConfig }) => {
-          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
+          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : Colors.RoyalBlue;
           return <div className="lgTemplate">
             <div className="lgTitleBackground" style={{ backgroundColor: itemTitleColor }}>
               <div className="lgTitle">{itemConfig.title}</div>

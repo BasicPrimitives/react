@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams'; 
-import primitives from 'basicprimitives';
+import { PageFitMode, GroupByType, Enabled, ItemType, AdviserPlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 0,
       highlightItem: 0,
-      arrowsDirection: primitives.common.GroupByType.Children,
-      hasSelectorCheckbox: primitives.common.Enabled.False,
+      arrowsDirection: GroupByType.Children,
+      hasSelectorCheckbox: Enabled.False,
       items: [
         {
           id: 0,
@@ -21,8 +21,8 @@ class Sample extends Component {
         {
           id: 1,
           parent: 0,
-          itemType: primitives.orgdiagram.ItemType.Adviser,
-          adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+          itemType: ItemType.Adviser,
+          adviserPlacementType: AdviserPlacementType.Right,
           title: "Robert Canon",
           description: "Adviser item",
           groupTitle: "Adviser",
@@ -31,8 +31,8 @@ class Sample extends Component {
         {
           id: 2,
           parent: 0,
-          itemType: primitives.orgdiagram.ItemType.Assistant,
-          adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+          itemType: ItemType.Assistant,
+          adviserPlacementType: AdviserPlacementType.Right,
           title: "Ted Lucas",
           description: "Assitant Item",
           groupTitle: "Assistant",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { AdviserPlacementType, PageFitMode, Enabled, GroupByType } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -12,10 +12,10 @@ class Sample extends Component {
       items: [
         { id: 1, title: "Roger Dalton", label: "Roger Dalton", description: "Id: 1", image: "/react/photos/a.png", itemTitleColor: "navy" },
         { id: 2, parents: [1], title: "Steven Lacombe", label: "Steven Lacombe", description: "Id: 2", image: "/react/photos/b.png", itemTitleColor: "navy" },
-        { id: 3, parents: [1], title: "Bill Dalton", label: "Bill Dalton", description: "Id: 3", image: "/react/photos/c.png", itemTitleColor: "navy", relativeItem: 2, placementType: primitives.common.AdviserPlacementType.Right, position: 1 },
+        { id: 3, parents: [1], title: "Bill Dalton", label: "Bill Dalton", description: "Id: 3", image: "/react/photos/c.png", itemTitleColor: "navy", relativeItem: 2, placementType: AdviserPlacementType.Right, position: 1 },
         { id: 4, title: "Ann Smith", label: "Ann Smith", description: "Id: 4", image: "/react/photos/a.png", itemTitleColor: "navy" },
         { id: 5, parents: [4], title: "Nancy Smith", label: "Nancy Smith", description: "Id: 5", image: "/react/photos/c.png", itemTitleColor: "navy" },
-        { id: 6, parents: [4], title: "Helly Smith", label: "Helly Smith", description: "Id: 6", image: "/react/photos/a.png", itemTitleColor: "navy", relativeItem: 5, placementType: primitives.common.AdviserPlacementType.Right, position: 1 },
+        { id: 6, parents: [4], title: "Helly Smith", label: "Helly Smith", description: "Id: 6", image: "/react/photos/a.png", itemTitleColor: "navy", relativeItem: 5, placementType: AdviserPlacementType.Right, position: 1 },
         { id: 7, parents: [2, 6], title: "Kelly Smith", label: "Kelly Smith", description: "Id: 7", image: "/react/photos/c.png", itemTitleColor: "navy" },
         { id: 8, parents: [3, 5], primaryParent: 5, title: "Sally Smith", label: "Sally Smith", description: "Id: 8", image: "/react/photos/a.png" }
       ]
@@ -45,12 +45,12 @@ class Sample extends Component {
     const { items } = this.state;
     const config = {
       items,
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 2,
       linesWidth: 1,
       linesColor: "black",
-      hasSelectorCheckbox: primitives.common.Enabled.False,
-      arrowsDirection: primitives.common.GroupByType.Parents,
+      hasSelectorCheckbox: Enabled.False,
+      arrowsDirection: GroupByType.Parents,
       showExtraArrows: false
     };
 

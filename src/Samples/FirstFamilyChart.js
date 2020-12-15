@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, Enabled, GroupByType, AdviserPlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 2,
       linesWidth: 1,
       linesColor: "black",
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       normalLevelShift: 20,
       dotLevelShift: 20,
       lineLevelShift: 20,
       normalItemsInterval: 10,
       dotItemsInterval: 30,
       lineItemsInterval: 30,
-      arrowsDirection: primitives.common.GroupByType.Parents,
+      arrowsDirection: GroupByType.Parents,
       showExtraArrows: false,
       items: [
         {
@@ -34,7 +34,7 @@ class Sample extends Component {
           description: "2, The Mary",
           image: "/react/photos/m.png",
           relativeItem: 1,
-          placementType: primitives.common.AdviserPlacementType.Right,
+          placementType: AdviserPlacementType.Right,
           position: 1
         },
         {
@@ -45,7 +45,7 @@ class Sample extends Component {
           description: "3, 2nd Husband",
           image: "/react/photos/d.png",
           relativeItem: 2,
-          placementType: primitives.common.AdviserPlacementType.Right,
+          placementType: AdviserPlacementType.Right,
           position: 1
         },
         {
@@ -72,7 +72,7 @@ class Sample extends Component {
           description: "5, Spouse 1",
           image: "/react/photos/m.png",
           relativeItem: 5,
-          placementType: primitives.common.AdviserPlacementType.Right,
+          placementType: AdviserPlacementType.Right,
           position: 1
         },
         {
@@ -82,7 +82,7 @@ class Sample extends Component {
           description: "5, Spouse 2",
           image: "/react/photos/s.png",
           relativeItem: 5,
-          placementType: primitives.common.AdviserPlacementType.Left,
+          placementType: AdviserPlacementType.Left,
           position: 1
         },
         {

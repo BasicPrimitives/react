@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Colors, ItemType, AdviserPlacementType, ChildrenPlacementType,
+  GroupByType, PageFitMode, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -22,10 +23,10 @@ class Sample extends Component {
       title: "Assistant 1",
       description: "Assistant Description",
       image: "/react/photos/a.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Right,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive
+      groupTitleColor: Colors.Olive
     });
 
     items.push({
@@ -34,10 +35,10 @@ class Sample extends Component {
       title: "Assistant 2",
       description: "Assistant Description",
       image: "/react/photos/b.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Left,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Left,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive
+      groupTitleColor: Colors.Olive
     });
 
     for (var index = 3; index <= 10; index += 2) {
@@ -47,10 +48,10 @@ class Sample extends Component {
         title: "Sub Adviser",
         description: "Sub Adviser Description",
         image: "/react/photos/s.png",
-        itemType: primitives.orgdiagram.ItemType.SubAdviser,
-        adviserPlacementType: primitives.common.AdviserPlacementType.Left,
+        itemType: ItemType.SubAdviser,
+        adviserPlacementType: AdviserPlacementType.Left,
         groupTitle: "Sub Adviser",
-        groupTitleColor: primitives.common.Colors.Red
+        groupTitleColor: Colors.Red
       });
       items.push({
         id: (index + 1),
@@ -58,10 +59,10 @@ class Sample extends Component {
         title: "Sub Adviser",
         description: "Sub Adviser Description",
         image: "/react/photos/s.png",
-        itemType: primitives.orgdiagram.ItemType.SubAdviser,
-        adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+        itemType: ItemType.SubAdviser,
+        adviserPlacementType: AdviserPlacementType.Right,
         groupTitle: "Sub Adviser",
-        groupTitleColor: primitives.common.Colors.Red
+        groupTitleColor: Colors.Red
       });
     }
 
@@ -71,7 +72,7 @@ class Sample extends Component {
       isVisible: false,
       title: "Aggregator",
       description: "Invisible aggregator",
-      childrenPlacementType: primitives.common.ChildrenPlacementType.Horizontal
+      childrenPlacementType: ChildrenPlacementType.Horizontal
     });
 
 
@@ -81,10 +82,10 @@ class Sample extends Component {
       title: "Assistant 3",
       description: "Assistant Description",
       image: "/react/photos/c.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Right,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Right,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive
+      groupTitleColor: Colors.Olive
     });
 
 
@@ -94,10 +95,10 @@ class Sample extends Component {
       title: "Assistant 4",
       description: "Assistant Description",
       image: "/react/photos/d.png",
-      itemType: primitives.orgdiagram.ItemType.Assistant,
-      adviserPlacementType: primitives.common.AdviserPlacementType.Left,
+      itemType: ItemType.Assistant,
+      adviserPlacementType: AdviserPlacementType.Left,
       groupTitle: "Audit",
-      groupTitleColor: primitives.common.Colors.Olive
+      groupTitleColor: Colors.Olive
     });
 
     for (index = 15; index <= 21; index += 1) {
@@ -109,7 +110,7 @@ class Sample extends Component {
           isVisible: false,
           title: "Aggregator 2",
           description: "Invisible aggregator 2",
-          childrenPlacementType: primitives.common.ChildrenPlacementType.Matrix
+          childrenPlacementType: ChildrenPlacementType.Matrix
         });
       } else {
         items.push({
@@ -131,7 +132,7 @@ class Sample extends Component {
         description: index.toString() + " Description",
         image: "/react/photos/p.png",
         groupTitle: "Part Time",
-        groupTitleColor: primitives.common.Colors.Green
+        groupTitleColor: Colors.Green
       });
     };
 
@@ -142,10 +143,10 @@ class Sample extends Component {
   render() {
     const config = {
       ...this.state,
-      pageFitMode: primitives.common.PageFitMode.Auto,
+      pageFitMode: PageFitMode.Auto,
       cursorItem: 0,
       highlightItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       normalLevelShift: 20,
       dotLevelShift: 10,
       lineLevelShift: 10,
@@ -153,9 +154,9 @@ class Sample extends Component {
       dotItemsInterval: 10,
       lineItemsInterval: 5,
       buttonsPanelSize: 48,
-      itemTitleSecondFontColor: primitives.common.Colors.White,
-      leavesPlacementType: primitives.common.ChildrenPlacementType.Matrix,
-      arrowsDirection: primitives.common.GroupByType.Children
+      itemTitleSecondFontColor: Colors.White,
+      leavesPlacementType: ChildrenPlacementType.Matrix,
+      arrowsDirection: GroupByType.Children
     };
 
     return <div className="placeholder">

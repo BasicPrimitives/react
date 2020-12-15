@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { ShapeType, Colors, Enabled, PageFitMode } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -10,26 +10,26 @@ class Sample extends Component {
     this.getNextColor = this.getNextColor.bind(this);
 
     this.minimizedItemShapeTypes = [
-      primitives.common.ShapeType.Rectangle,
-      primitives.common.ShapeType.Oval,
-      primitives.common.ShapeType.Triangle,
-      primitives.common.ShapeType.CrossOut,
-      primitives.common.ShapeType.Circle,
-      primitives.common.ShapeType.Rhombus,
-      primitives.common.ShapeType.Wedge,
-      primitives.common.ShapeType.FramedOval,
-      primitives.common.ShapeType.FramedTriangle,
-      primitives.common.ShapeType.FramedWedge,
-      primitives.common.ShapeType.FramedRhombus
+      ShapeType.Rectangle,
+      ShapeType.Oval,
+      ShapeType.Triangle,
+      ShapeType.CrossOut,
+      ShapeType.Circle,
+      ShapeType.Rhombus,
+      ShapeType.Wedge,
+      ShapeType.FramedOval,
+      ShapeType.FramedTriangle,
+      ShapeType.FramedWedge,
+      ShapeType.FramedRhombus
     ];
 
     this.shapeIndex = 0;
 
     this.itemTitleColors = [
-      primitives.common.Colors.Red,
-      primitives.common.Colors.Green,
-      primitives.common.Colors.Navy,
-      primitives.common.Colors.Cyan
+      Colors.Red,
+      Colors.Green,
+      Colors.Navy,
+      Colors.Cyan
     ];
     
     this.colorIndex = 0;
@@ -114,8 +114,8 @@ class Sample extends Component {
         }
       ],
 			defaultTemplateName: "MarkerTemplate",
-			hasSelectorCheckbox: primitives.common.Enabled.True,
-      pageFitMode: primitives.common.PageFitMode.None,
+			hasSelectorCheckbox: Enabled.True,
+      pageFitMode: PageFitMode.None,
       cursorItem: 0,
       highlightItem: 0
     };

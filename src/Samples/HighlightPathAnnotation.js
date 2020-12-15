@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { AnnotationType, Colors, Enabled, LineType, GroupByType, PageFitMode } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
@@ -15,29 +15,29 @@ class Sample extends Component {
       ],
       annotations: [
         {
-          annotationType: primitives.common.AnnotationType.HighlightPath,
+          annotationType: AnnotationType.HighlightPath,
           items: [5, 0],
-          color: primitives.common.Colors.Navy,
+          color: Colors.Navy,
           lineWidth: 12,
           opacity: 0.3,
           showArrows: false
         },
         {
-          annotationType: primitives.common.AnnotationType.HighlightPath,
+          annotationType: AnnotationType.HighlightPath,
           items: [4, 0],
-          color: primitives.common.Colors.Red,
+          color: Colors.Red,
           lineWidth: 2,
           opacity: 1,
           showArrows: true
         }
       ],
       cursorItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
-      highlightLinesColor: primitives.common.Colors.Red,
+      hasSelectorCheckbox: Enabled.True,
+      highlightLinesColor: Colors.Red,
       highlightLinesWidth: 1.5,
-      highlightLinesType: primitives.common.LineType.Dashed,
-      arrowsDirection: primitives.common.GroupByType.Parents,
-      pageFitMode: primitives.orgdiagram.PageFitMode.None
+      highlightLinesType: LineType.Dashed,
+      arrowsDirection: GroupByType.Parents,
+      pageFitMode: PageFitMode.None
     };
 
     return <div className="placeholder">

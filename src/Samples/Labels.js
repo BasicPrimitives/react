@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, OrientationType, VerticalAlignmentType, HorizontalAlignmentType,
+ChildrenPlacementType, Visibility, SelectionPathMode, GroupByType, ConnectorType,
+ElbowType, LineType, Colors, Enabled, Size, TextOrientationType, PlacementType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.FitToPage,
-      orientationType: primitives.common.OrientationType.Left,
-      verticalAlignment: primitives.common.VerticalAlignmentType.Middle,
-      horizontalAlignment: primitives.common.HorizontalAlignmentType.Left,
-      childrenPlacementType: primitives.common.ChildrenPlacementType.Horizontal,
-      leavesPlacementType: primitives.common.ChildrenPlacementType.Horizontal,
+      pageFitMode: PageFitMode.FitToPage,
+      orientationType: OrientationType.Left,
+      verticalAlignment: VerticalAlignmentType.Middle,
+      horizontalAlignment: HorizontalAlignmentType.Left,
+      childrenPlacementType: ChildrenPlacementType.Horizontal,
+      leavesPlacementType: ChildrenPlacementType.Horizontal,
       maximumColumnsInMatrix: 6,
-      minimalVisibility: primitives.common.Visibility.Dot,
-      selectionPathMode: primitives.common.SelectionPathMode.FullStack,
+      minimalVisibility: Visibility.Dot,
+      selectionPathMode: SelectionPathMode.FullStack,
 
       /* Intervals */
       normalLevelShift: 30,
@@ -25,32 +27,32 @@ class Sample extends Component {
       cousinsIntervalMultiplier: 0,
 
       /* Connectors */
-      arrowsDirection: primitives.common.GroupByType.Children,
+      arrowsDirection: GroupByType.Children,
       showExtraArrows: false,
       extraArrowsMinimumSpace: 30,
-      connectorType: primitives.common.ConnectorType.Curved,
-      elbowType: primitives.common.ElbowType.None,
+      connectorType: ConnectorType.Curved,
+      elbowType: ElbowType.None,
       bevelSize: 4,
       elbowDotSize: 4,
-      linesType: primitives.common.LineType.Solid,
-      linesColor: primitives.common.Colors.Silver,
+      linesType: LineType.Solid,
+      linesColor: Colors.Silver,
       linesWidth: 1,
 
       /* Labels */
-      showLabels: primitives.common.Enabled.True,
-      labelSize: new primitives.common.Size(100, 10),
-      labelOrientation: primitives.text.TextOrientationType.Horizontal,
-      labelPlacement: primitives.common.PlacementType.Right,
+      showLabels: Enabled.True,
+      labelSize: new Size(100, 10),
+      labelOrientation: TextOrientationType.Horizontal,
+      labelPlacement: PlacementType.Right,
       labelOffset: 4,
       labelFontSize: "10px",
       labelFontFamily: "Arial",
-      labelColor: primitives.common.Colors.Black,
+      labelColor: Colors.Black,
       labelFontWeight: "normal",
       labelFontStyle: "normal",
 
       cursorItem: 0,
       highlightItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       items: [
         { id: 0, parent: null, description: "Chief Executive Officer (CEO)", email: "davidalt@name.com", image: "/react/photos/q.png", itemTitleColor: "#4169e1", phone: "352-206-7599", title: "David Dalton", label: "David Dalton" },
         { id: 1, parent: 0, description: "Co-Presidents, Platform Products & Services Division", email: "jeanwhit@name.com", image: "/react/photos/w.png", phone: "505-791-1689", title: "Jeanna White", label: "Jeanna White" },

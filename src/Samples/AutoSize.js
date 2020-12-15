@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Size, PageFitMode } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -10,10 +10,10 @@ class Sample extends Component {
     this.setMaximumSize = this.setMaximumSize.bind(this);
 
     this.sizes = {
-      "640*480": new primitives.common.Size(640, 480),
-      "800*600": new primitives.common.Size(800, 600),
-      "1024*768": new primitives.common.Size(1024, 768),
-      "1280*1024": new primitives.common.Size(1280, 1024)
+      "640*480": new Size(640, 480),
+      "800*600": new Size(800, 600),
+      "1024*768": new Size(1024, 768),
+      "1280*1024": new Size(1280, 1024)
     }
 
     this.state = {
@@ -37,7 +37,7 @@ class Sample extends Component {
   render() {
     const { autoSizeMinimum, autoSizeMaximum } = this.state;
     const config = {
-      pageFitMode: primitives.common.PageFitMode.AutoSize,
+      pageFitMode: PageFitMode.AutoSize,
       highlightItem: 0,
       cursorItem: 0,
       autoSizeMinimum: this.sizes[autoSizeMinimum],

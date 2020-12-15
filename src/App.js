@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import primitives from 'basicprimitives';
 import SamplesList from './SamplesList';
 import './global.css';
 
+
 class App extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
 
     this.onChange = this.onChange.bind(this);
 
@@ -42,7 +42,6 @@ class App extends Component {
     return (
       <div className="container">
         <h1>Basic Primitives Diagrams for React</h1>
-        <h3>Core version: {primitives.common.version}</h3>
         <p>
           <select onChange={this.onChange}>
             {SamplesList.map(({ key, label, items }) => (

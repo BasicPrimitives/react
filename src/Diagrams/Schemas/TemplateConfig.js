@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import primitives from 'basicprimitives';
+import { ShapeType, LineType } from 'basicprimitives';
 
 const TemplateConfig = PropTypes.shape({
   name: PropTypes.string,
@@ -10,7 +10,7 @@ const TemplateConfig = PropTypes.shape({
   }),
   itemBorderWidth: PropTypes.number,
   onItemRender: PropTypes.func,
-  minimizedItemShapeType: PropTypes.oneOf(Object.values(primitives.common.ShapeType)),
+  minimizedItemShapeType: PropTypes.oneOf(Object.values(ShapeType)),
   minimizedItemSize: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired
@@ -18,7 +18,7 @@ const TemplateConfig = PropTypes.shape({
   minimizedItemCornerRadius: PropTypes.number,
   minimizedItemLineWidth: PropTypes.number,
   minimizedItemBorderColor: PropTypes.string,
-  minimizedItemLineType: PropTypes.oneOf(Object.values(primitives.common.LineType)),
+  minimizedItemLineType: PropTypes.oneOf(Object.values(LineType)),
   minimizedItemFillColor: PropTypes.string,
   minimizedItemOpacity: PropTypes.number,
   highlightPadding: PropTypes.shape({

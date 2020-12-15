@@ -21,7 +21,7 @@ If you want to avoid internal component state update and following rendering cyc
 ```
 
 ## Disabling highlight in diagram
-If you need to disable highlight you have to set `highlightItem` option to `null` and `navigationMode` to `primitives.common.NavigationMode.CursorOnly`
+If you need to disable highlight you have to set `highlightItem` option to `null` and `navigationMode` to `NavigationMode.CursorOnly`
 
 ## Keyboard navigation
 The component is keyboard focusable. So when it gets focus with TAB or mouse click there is blue "outline" around it indicating keyboard focus. The component supports keyboard arrows to select highlighted item and "enter" to set cursor. So when component gets focus user has to use arrows to highlight item and then press enter to set cursor to it.

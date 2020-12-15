@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode, Enabled, Colors } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       normalItemsInterval: 10,
       normalLevelShift: 44,
       items: [
@@ -26,7 +26,7 @@ class Sample extends Component {
         minimizedItemSize: { width: 3, height: 3 },
         highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
         onItemRender: ({ context: itemConfig }) => {
-          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
+          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : Colors.RoyalBlue;
           return <div className="ContactTemplate">
             <div className="ContactTitleBackground" style={{ backgroundColor: itemTitleColor }}>
               <div className="ContactTitle">{itemConfig.title}</div>

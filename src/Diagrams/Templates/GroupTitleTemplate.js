@@ -1,7 +1,7 @@
 import React from 'react';
 import AbstractTemplate from './AbstractTemplate';
 import RotatedText from './RotatedText';
-import primitives from 'basicprimitives';
+import { highestContrast } from 'basicprimitives';
 
 class GroupTitleTemplate extends AbstractTemplate {
   constructor(options) {
@@ -60,7 +60,7 @@ class GroupTitleTemplate extends AbstractTemplate {
 
     const backgroundColor = itemConfig.groupTitleColor || groupTitleColor;
     const label = (itemConfig.groupTitle || "").replace("\n", "<br/>");
-    const color = primitives.common.highestContrast(backgroundColor, itemTitleSecondFontColor, itemTitleFirstFontColor);
+    const color = highestContrast(backgroundColor, itemTitleSecondFontColor, itemTitleFirstFontColor);
 
     const orientations = ['Horizontal', 'RotateLeft', 'RotateRight', 'Horizontal'],
       horizontalAlignments = ['center', 'left', 'right'],

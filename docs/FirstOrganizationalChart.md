@@ -18,7 +18,7 @@ Add following changes into App.js
 ```JavaScript
 import React from 'react';
 import { OrgDiagram } from 'basicprimitivesreact';
-import primitives from 'basicprimitives';
+import { PageFitMode, Enabled } from 'basicprimitives';
  
 var photos = {
   a: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA8CAIAAACrV36WAAAAAXNSR0IArs4c6QAAAARn' + 
@@ -51,11 +51,11 @@ var photos = {
  
 function App() {
   const config = {
-    pageFitMode: primitives.common.PageFitMode.AutoSize,
+    pageFitMode: PageFitMode.AutoSize,
     autoSizeMinimum: { width: 100, height: 100 },
     cursorItem: 0,
     highlightItem: 0,
-    hasSelectorCheckbox: primitives.common.Enabled.True,
+    hasSelectorCheckbox: Enabled.True,
     items: [
       {
         id: 0,

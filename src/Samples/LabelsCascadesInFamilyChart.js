@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Enabled, AnnotationType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
@@ -8,7 +8,7 @@ class Sample extends Component {
       cursorItem: 2,
       linesWidth: 1,
       linesColor: "black",
-      hasSelectorCheckbox: primitives.common.Enabled.False,
+      hasSelectorCheckbox: Enabled.False,
       normalLevelShift: 20,
       dotLevelShift: 20,
       lineLevelShift: 20,
@@ -24,43 +24,43 @@ class Sample extends Component {
       ],
       annotations: [
         {
-          annotationType: primitives.common.AnnotationType.Label,
+          annotationType: AnnotationType.Label,
           fromItem: 2,
           toItems: [1, 3, 4, 5],
           title: <div className="InLayoutLabel">100%</div>
         },
         {
-          annotationType: primitives.common.AnnotationType.Label,
+          annotationType: AnnotationType.Label,
           fromItem: 2,
           toItems: [1, 3, 4],
           title: <div className="InLayoutLabel">60%</div>
         },
         {
-          annotationType: primitives.common.AnnotationType.Label,
+          annotationType: AnnotationType.Label,
           fromItem: 2,
           toItems: [5],
           title: <div className="InLayoutLabel">40%</div>
         },
         {
-          annotationType: primitives.common.AnnotationType.Label,
+          annotationType: AnnotationType.Label,
           fromItem: 2,
           toItems: [1, 3],
           title: <div className="InLayoutLabel">20%</div>
         },
         {
-          annotationType: primitives.common.AnnotationType.Label,
+          annotationType: AnnotationType.Label,
           fromItem: 2,
           toItems: [4],
           title: <div className="InLayoutLabel">80%</div>
         },
         {
-          annotationType: primitives.common.AnnotationType.Label,
+          annotationType: AnnotationType.Label,
           fromItem: 2,
           toItems: [1],
           title: <div className="InLayoutLabel">35%</div>
         },
         {
-          annotationType: primitives.common.AnnotationType.Label,
+          annotationType: AnnotationType.Label,
           fromItem: 2,
           toItems: [3],
           title: <div className="InLayoutLabel">65%</div>

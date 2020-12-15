@@ -9,7 +9,7 @@ See custom item types, children layout and inactive items samples as well.
 
 ## Skipped Levels
 
-Invisible items can be used to skip levels in organizational chart. This is actually workaround, invisible items occupy space, so they can be used to shift children items down one level relative to their parents. See `primitives.orgdiagram.ItemConfig.isVisible` property.
+Invisible items can be used to skip levels in organizational chart. This is actually workaround, invisible items occupy space, so they can be used to shift children items down one level relative to their parents. See `OrgItemConfig.isVisible` property.
 
 [React](../src/Samples/SkippedLevels.js)
 

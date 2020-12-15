@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { Enabled, Colors } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Sample extends Component {
   render() {
     const config = {
       cursorItem: 0,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       normalLevelShift: 20,
       dotLevelShift: 20,
       lineLevelShift: 10,
@@ -30,7 +30,7 @@ class Sample extends Component {
         minimizedItemSize: { width: 3, height: 3 },
         highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
         onItemRender: ({ context: itemConfig }) => {
-          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : primitives.common.Colors.RoyalBlue;
+          const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : Colors.RoyalBlue;
           return <div className="DepartmentTemplate">
             <div className="DepartmentTitleBackground" style={{ backgroundColor: itemTitleColor }}>
               <div className="DepartmentTitle">{itemConfig.title}</div>
@@ -46,7 +46,7 @@ class Sample extends Component {
           description: "VP, Public Sector",
           image: "/react/photos/a.png"
         },
-        { id: 1, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Finance", itemTitleColor: "Green" },
+        { id: 1, parent: 0, hasSelectorCheckbox: Enabled.False, templateName: "DepartmentTitleTemplate", title: "Finance", itemTitleColor: "Green" },
         {
           id: 2,
           parent: 1,
@@ -54,7 +54,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "/react/photos/b.png"
         },
-        { id: 3, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Sales", itemTitleColor: "Navy" },
+        { id: 3, parent: 0, hasSelectorCheckbox: Enabled.False, templateName: "DepartmentTitleTemplate", title: "Sales", itemTitleColor: "Navy" },
         {
           id: 4,
           parent: 3,
@@ -62,7 +62,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "/react/photos/b.png"
         },
-        { id: 5, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "Operations", itemTitleColor: "Magenta" },
+        { id: 5, parent: 0, hasSelectorCheckbox: Enabled.False, templateName: "DepartmentTitleTemplate", title: "Operations", itemTitleColor: "Magenta" },
         {
           id: 6,
           parent: 5,
@@ -70,7 +70,7 @@ class Sample extends Component {
           description: "VP, Human Resources",
           image: "/react/photos/b.png"
         },
-        { id: 7, parent: 0, hasSelectorCheckbox: primitives.common.Enabled.False, templateName: "DepartmentTitleTemplate", title: "IT", itemTitleColor: "Orange" },
+        { id: 7, parent: 0, hasSelectorCheckbox: Enabled.False, templateName: "DepartmentTitleTemplate", title: "IT", itemTitleColor: "Orange" },
         {
           id: 8,
           parent: 7,

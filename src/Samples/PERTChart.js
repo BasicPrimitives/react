@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { AnnotationType, Colors, ZOrderType, Enabled, OrientationType, PageFitMode, GroupByType, LineType } from 'basicprimitives';
 
 class Sample extends Component {
   render() {
@@ -23,11 +23,11 @@ class Sample extends Component {
       ],
       annotations: [
         {
-          annotationType: primitives.common.AnnotationType.HighlightPath,
+          annotationType: AnnotationType.HighlightPath,
           items: [1, 3, 5, 6, 8, 9, 10, 12],
-          color: primitives.common.Colors.Red,
+          color: Colors.Red,
           lineWidth: 2,
-          zOrderType: primitives.common.ZOrderType.Foreground,
+          zOrderType: ZOrderType.Foreground,
           opacity: 0.5
         }
       ],
@@ -38,7 +38,7 @@ class Sample extends Component {
         highlightPadding: { left: 2, top: 2, right: 2, bottom: 2 },
         onItemRender: ({ context: itemConfig }) => {
           const { title, itemTitleColor, et, lt } = itemConfig;
-          const backgroundColor = itemTitleColor != null ? itemTitleColor : primitives.common.Colors.RoyalBlue;
+          const backgroundColor = itemTitleColor != null ? itemTitleColor : Colors.RoyalBlue;
           return <div className="PERTTemplate">
             <div className="PERTTitleBackground" style={{ backgroundColor }}>
               <div className="PERTTitle">{title}</div>
@@ -56,14 +56,14 @@ class Sample extends Component {
       linesWidth: 2,
       linesColor: "gray",
       lineItemsInterval: 5,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
-      orientationType: primitives.common.OrientationType.Left,
-      pageFitMode: primitives.common.PageFitMode.None,
+      hasSelectorCheckbox: Enabled.True,
+      orientationType: OrientationType.Left,
+      pageFitMode: PageFitMode.None,
       defaultTemplateName: "pertTemplate",
-      arrowsDirection: primitives.common.GroupByType.Children,
-      highlightLinesColor: primitives.common.Colors.Navy,
+      arrowsDirection: GroupByType.Children,
+      highlightLinesColor: Colors.Navy,
       highlightLinesWidth: 2,
-      highlightLinesType: primitives.common.LineType.Solid
+      highlightLinesType: LineType.Solid
     };
 
     return <div className="placeholder">

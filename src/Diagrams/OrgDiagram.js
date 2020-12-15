@@ -1,4 +1,4 @@
-import primitives from 'basicprimitives';
+import { OrgTaskManagerFactory, OrgEventArgs } from 'basicprimitives';
 import BaseDiagram from './BaseDiagram';
 import OrgDiagramConfig from './Schemas/OrgDiagramConfig';
 
@@ -8,8 +8,8 @@ class OrgDiagram extends BaseDiagram {
   };
 
   constructor(props) {
-    super(props, primitives.orgdiagram);
+    super(props, OrgTaskManagerFactory, OrgEventArgs);
   }
-}
+} 
 
 export default OrgDiagram;

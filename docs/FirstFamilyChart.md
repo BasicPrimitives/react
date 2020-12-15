@@ -18,7 +18,7 @@ Add following changes into App.js
 ```JavaScript
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { GroupByType, PageFitMode, Enabled } from 'basicprimitives';
 
 var photos = {
   a: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA8CAIAAACrV36WAAAAAXNSR0IArs4c6QAAAARn' + 
@@ -34,18 +34,18 @@ var photos = {
 class Sample extends Component {
   render() {
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       cursorItem: 2,
       linesWidth: 1,
       linesColor: "black",
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      hasSelectorCheckbox: Enabled.True,
       normalLevelShift: 20,
       dotLevelShift: 20,
       lineLevelShift: 20,
       normalItemsInterval: 10,
       dotItemsInterval: 10,
       lineItemsInterval: 10,
-      arrowsDirection: primitives.common.GroupByType.Parents,
+      arrowsDirection: GroupByType.Parents,
       showExtraArrows: false,
       items: [
         { id: 1, spouses: [2], title: "Thomas Williams", label: "Thomas Williams", description: "1, 1st husband", image: photos.a },

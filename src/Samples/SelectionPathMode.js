@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { SelectionPathMode, PageFitMode, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      selectionPathMode: (primitives.orgdiagram.SelectionPathMode.None)
+      selectionPathMode: (SelectionPathMode.None)
     }
   }
 
@@ -19,8 +19,8 @@ class Sample extends Component {
     const { selectionPathMode } = this.state;
     const config = {
       selectionPathMode,
-      pageFitMode: primitives.common.PageFitMode.Page,
-      hasSelectorCheckbox: primitives.common.Enabled.True,
+      pageFitMode: PageFitMode.Page,
+      hasSelectorCheckbox: Enabled.True,
       selectedItems: [3],
       items: [
         {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import primitives from 'basicprimitives';
+import { PageFitMode } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Sample extends Component {
   render() {
     const { scale } = this.state;
     const config = {
-      pageFitMode: primitives.common.PageFitMode.None,
+      pageFitMode: PageFitMode.None,
       highlightItem: 0,
       cursorItem: 0,
       scale: this.scales[scale],
