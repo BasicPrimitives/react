@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { AnnotationType, ZOrderType, LineType } from 'basicprimitives';
 
-const HighlightPathAnnotationConfig = PropTypes.shape({
+const HighlightPathAnnotationConfigShape = PropTypes.shape({
   annotationType: PropTypes.oneOf([AnnotationType.HighlightPath]),
   zOrderType: PropTypes.oneOf(Object.values(ZOrderType)),
   items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
@@ -13,4 +13,4 @@ const HighlightPathAnnotationConfig = PropTypes.shape({
   selectItems: PropTypes.bool
 });
 
-export default HighlightPathAnnotationConfig;
+export default HighlightPathAnnotationConfigShape;

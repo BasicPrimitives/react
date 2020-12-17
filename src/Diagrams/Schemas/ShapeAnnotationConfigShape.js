@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { AnnotationType, ZOrderType, ShapeType, LineType, PlacementType } from 'basicprimitives';
 
-const ShapeAnnotationConfig = PropTypes.shape({
+const ShapeAnnotationConfigShape = PropTypes.shape({
   annotationType: PropTypes.oneOf([AnnotationType.Shape]),
   zOrderType: PropTypes.oneOf(Object.values(ZOrderType)),
   items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
@@ -28,4 +28,4 @@ const ShapeAnnotationConfig = PropTypes.shape({
   labelOffset: PropTypes.number
 });
 
-export default ShapeAnnotationConfig;
+export default ShapeAnnotationConfigShape;

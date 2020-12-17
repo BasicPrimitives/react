@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { ConnectorLabelPlacementType, ConnectorPlacementType, 
   ConnectorShapeType, ZOrderType, AnnotationType, LineType } from 'basicprimitives';
 
-const ConnectorAnnotationConfig = PropTypes.shape({
+const ConnectorAnnotationConfigShape = PropTypes.shape({
   annotationType: PropTypes.oneOf([AnnotationType.Connector]),
   zOrderType: PropTypes.oneOf(Object.values(ZOrderType)),
   fromItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -30,4 +30,4 @@ const ConnectorAnnotationConfig = PropTypes.shape({
   })
 });
 
-export default ConnectorAnnotationConfig;
+export default ConnectorAnnotationConfigShape;

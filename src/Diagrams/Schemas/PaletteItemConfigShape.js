@@ -1,10 +1,10 @@
 import { LineType } from 'basicprimitives';
 import PropTypes from 'prop-types';
 
-const PaletteItemConfig = PropTypes.shape({
+const PaletteItemConfigShape = PropTypes.shape({
   lineColor: PropTypes.string,
   lineWidth: PropTypes.number,
   lineType: PropTypes.oneOf(Object.values(LineType))
 });
 
-export default PaletteItemConfig;
+export default PaletteItemConfigShape;

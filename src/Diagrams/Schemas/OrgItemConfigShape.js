@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import { ShapeType, Enabled, TextOrientationType, PlacementType, AdviserPlacementType } from 'basicprimitives';
+import { ShapeType, Enabled, ItemType, AdviserPlacementType, ChildrenPlacementType, TextOrientationType } from 'basicprimitives';
 
-const ItemConfig = PropTypes.shape({
+const OrgItemConfigShape = PropTypes.shape({
   id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
-  parents: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
-  spouses: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
+  parent: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -13,9 +12,16 @@ const ItemConfig = PropTypes.shape({
   minimizedItemShapeType: PropTypes.oneOf(Object.values(ShapeType)),
   groupTitle: PropTypes.string,
   groupTitleColor: PropTypes.string,
+  isVisible: PropTypes.bool,
   isActive: PropTypes.bool,
   hasSelectorCheckbox: PropTypes.oneOf(Object.values(Enabled)),
   hasButtons: PropTypes.oneOf(Object.values(Enabled)),
+  itemType: PropTypes.oneOf(Object.values(ItemType)),
+  adviserPlacementType: PropTypes.oneOf(Object.values(AdviserPlacementType)),
+  childrenPlacementType: PropTypes.oneOf(Object.values(ChildrenPlacementType)),
+  levelOffset: PropTypes.number,
+  placeAdvisersAboveChildren: PropTypes.oneOf(Object.values(Enabled)),
+  placeAssistantsAboveChildren: PropTypes.oneOf(Object.values(Enabled)),
   templateName: PropTypes.string,
   showCallout: PropTypes.oneOf(Object.values(Enabled)),
   calloutTemplateName: PropTypes.string,
@@ -25,12 +31,7 @@ const ItemConfig = PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired
   }),
-  labelOrientation: PropTypes.oneOf(Object.values(TextOrientationType)),
-  labelPlacement: PropTypes.oneOf(Object.values(PlacementType)),
-  primaryParent: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  relativeItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  position: PropTypes.number,
-  placementType: PropTypes.oneOf(Object.values(AdviserPlacementType))
+  labelOrientation: PropTypes.oneOf(Object.values(TextOrientationType))
 });
 
-export default ItemConfig;
+export default OrgItemConfigShape;

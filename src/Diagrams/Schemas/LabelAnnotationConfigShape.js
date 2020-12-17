@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { AnnotationType } from 'basicprimitives';
 
-const LabelAnnotationConfig = PropTypes.shape({
+const LabelAnnotationConfigShape = PropTypes.shape({
   annotationType: PropTypes.oneOf([AnnotationType.Label]),
   fromItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   toItems: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
@@ -10,4 +10,4 @@ const LabelAnnotationConfig = PropTypes.shape({
   templateName: PropTypes.string
 });
 
-export default LabelAnnotationConfig;
+export default LabelAnnotationConfigShape;

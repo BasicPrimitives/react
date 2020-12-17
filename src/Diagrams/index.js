@@ -1,29 +1,14 @@
-import orgDiagram from './OrgDiagram';
-import famDiagram from './FamDiagram';
+export { default as OrgDiagram } from './OrgDiagram';
+export { default as FamDiagram } from './FamDiagram';
 
-import backgroundAnnotationConfig from './Schemas/BackgroundAnnotationConfig';
-import connectorAnnotationConfig from './Schemas/ConnectorAnnotationConfig';
-import famDiagramConfig from './Schemas/FamDiagramConfig';
-import famDiagramItemConfig from './Schemas/FamDiagramItemConfig';
-import highlightPathAnnotationConfig from './Schemas/HighlightPathAnnotationConfig';
-import labelAnnotationConfig from './Schemas/LabelAnnotationConfig';
-import orgDiagramConfig from './Schemas/OrgDiagramConfig';
-import orgDiagramItemConfig from './Schemas/OrgDiagramItemConfig';
-import paletteItemConfig from './Schemas/PaletteItemConfig';
-import shapeAnnotationConfig from './Schemas/ShapeAnnotationConfig';
-import templateConfig from './Schemas/TemplateConfig';
-
-export const OrgDiagram = orgDiagram;
-export const FamDiagram = famDiagram;
-
-export const BackgroundAnnotationConfig = backgroundAnnotationConfig;
-export const ConnectorAnnotationConfig = connectorAnnotationConfig;
-export const FamDiagramConfig = famDiagramConfig;
-export const FamDiagramItemConfig = famDiagramItemConfig;
-export const HighlightPathAnnotationConfig = highlightPathAnnotationConfig;
-export const LabelAnnotationConfig = labelAnnotationConfig;
-export const OrgDiagramConfig = orgDiagramConfig;
-export const OrgDiagramItemConfig = orgDiagramItemConfig;
-export const PaletteItemConfig = paletteItemConfig;
-export const ShapeAnnotationConfig = shapeAnnotationConfig;
-export const TemplateConfig = templateConfig;
+export { default as BackgroundAnnotationConfigShape } from './Schemas/BackgroundAnnotationConfigShape';
+export { default as ConnectorAnnotationConfigShape } from './Schemas/ConnectorAnnotationConfigShape';
+export { default as FamConfigShape } from './Schemas/FamConfigShape';
+export { default as FamItemConfigShape } from './Schemas/FamItemConfigShape';
+export { default as HighlightPathAnnotationConfigShape } from './Schemas/HighlightPathAnnotationConfigShape';
+export { default as LabelAnnotationConfigShape } from './Schemas/LabelAnnotationConfigShape';
+export { default as OrgConfigShape } from './Schemas/OrgConfigShape';
+export { default as OrgItemConfigShape } from './Schemas/OrgItemConfigShape';
+export { default as PaletteItemConfigShape } from './Schemas/PaletteItemConfigShape';
+export { default as ShapeAnnotationConfigShape } from './Schemas/ShapeAnnotationConfigShape';
+export { default as TemplateConfigShape } from './Schemas/TemplateConfigShape';

@@ -1,8 +1,9 @@
 {
   "name": "basicprimitivesreact",
-  "version": "6.0.3",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "sideEffects": false,
+  "version": "6.0.5",
+  "main": "dist/umd/index.js",
+  "module": "dist/esm/index.js",
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -47,7 +48,7 @@
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "deploy": "gh-pages -d build --repo https://github.com/BasicPrimitives/react",
-    "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/Diagrams --out-dir dist --copy-files"
+    "publish:npm": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/Diagrams --presets=\"module:@babel/preset-react\" --out-dir dist/esm --copy-files && npx babel src/Diagrams --presets=\"module:@babel/preset-env\",\"module:@babel/preset-react\" --out-dir dist/umd --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"

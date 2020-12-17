@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { ShapeType, LineType } from 'basicprimitives';
 
-const TemplateConfig = PropTypes.shape({
+const TemplateConfigShape = PropTypes.shape({
   name: PropTypes.string,
   isActive: PropTypes.bool,
   itemSize: PropTypes.shape({
@@ -40,4 +40,4 @@ const TemplateConfig = PropTypes.shape({
   onButtonsRender: PropTypes.func
 });
 
-export default TemplateConfig;
+export default TemplateConfigShape;
