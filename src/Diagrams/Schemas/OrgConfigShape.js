@@ -1,42 +1,34 @@
 import PropTypes from 'prop-types';
-import { GraphicsType, Visibility, OrientationType, VerticalAlignmentType, ElbowType,
-  NeighboursSelectionMode, ShapeType, TextOrientationType, HorizontalAlignmentType, 
-  PlacementType, NavigationMode, PageFitMode, GroupByType, LoopsLayoutMode,
-  Enabled, LineType, AdviserPlacementType, SelectionPathMode } from 'basicprimitives';
-import ItemConfig from './FamDiagramItemConfig';
-import TemplateConfig from './TemplateConfig';
-import BackgroundAnnotationConfig from './BackgroundAnnotationConfig';
-import ConnectorAnnotationConfig from './ConnectorAnnotationConfig';
-import HighlightPathAnnotationConfig from './HighlightPathAnnotationConfig';
-import ShapeAnnotationConfig from './ShapeAnnotationConfig';
-import LabelAnnotationConfig from './LabelAnnotationConfig';
-import PaletteItemConfig from './PaletteItemConfig';
+import { ConnectorType, NavigationMode, GraphicsType, PageFitMode, Visibility, OrientationType,
+HorizontalAlignmentType, VerticalAlignmentType, GroupByType, ElbowType, Enabled, SelectionPathMode,
+ShapeType, LineType, ChildrenPlacementType, AdviserPlacementType, TextOrientationType,
+PlacementType } from 'basicprimitives';
+import OrgItemConfigShape from './OrgItemConfigShape';
+import TemplateConfigShape from './TemplateConfigShape';
+import BackgroundAnnotationConfigShape from './BackgroundAnnotationConfigShape';
+import ConnectorAnnotationConfigShape from './ConnectorAnnotationConfigShape';
+import HighlightPathAnnotationConfigShape from './HighlightPathAnnotationConfigShape';
+import ShapeAnnotationConfigShape from './ShapeAnnotationConfigShape';
 
-const Config = PropTypes.shape({
+const OrgConfigShape = PropTypes.shape({
   navigationMode: PropTypes.oneOf(Object.values(NavigationMode)),
   graphicsType: PropTypes.oneOf(Object.values(GraphicsType)),
   pageFitMode: PropTypes.oneOf(Object.values(PageFitMode)),
   minimalVisibility: PropTypes.oneOf(Object.values(Visibility)),
   orientationType: PropTypes.oneOf(Object.values(OrientationType)),
+  horizontalAlignment: PropTypes.oneOf(Object.values(HorizontalAlignmentType)),
   verticalAlignment: PropTypes.oneOf(Object.values(VerticalAlignmentType)),
   arrowsDirection: PropTypes.oneOf(Object.values(GroupByType)),
   showExtraArrows: PropTypes.bool,
   extraArrowsMinimumSpace: PropTypes.number,
-  groupByType: PropTypes.oneOf(Object.values(GroupByType)),
-  alignBylevels: PropTypes.bool,
-  enableMatrixLayout: PropTypes.bool,
-  minimumMatrixSize: PropTypes.number,
-  maximumColumnsInMatrix: PropTypes.number,
-  hideGrandParentsConnectors: PropTypes.bool,
-  loopsLayoutMode: PropTypes.oneOf(Object.values(LoopsLayoutMode)),
+  showHorizontalArrows: PropTypes.bool,
+  connectorType: PropTypes.oneOf(Object.values(ConnectorType)),
   bevelSize: PropTypes.number,
   elbowType: PropTypes.oneOf(Object.values(ElbowType)),
   elbowDotSize: PropTypes.number,
   emptyDiagramMessage: PropTypes.string,
-  items: PropTypes.arrayOf(ItemConfig),
-  annotations: PropTypes.arrayOf(
-    PropTypes.oneOfType([BackgroundAnnotationConfig, ConnectorAnnotationConfig, HighlightPathAnnotationConfig, ShapeAnnotationConfig, LabelAnnotationConfig])
-  ),
+  items: PropTypes.arrayOf(OrgItemConfigShape),
+  annotations: PropTypes.arrayOf(PropTypes.oneOfType([BackgroundAnnotationConfigShape, ConnectorAnnotationConfigShape, HighlightPathAnnotationConfigShape, ShapeAnnotationConfigShape])),
   cursorItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   highlightItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   highlightGravityRadius: PropTypes.number,
@@ -44,10 +36,8 @@ const Config = PropTypes.shape({
   hasSelectorCheckbox: PropTypes.oneOf(Object.values(Enabled)),
   selectCheckBoxLabel: PropTypes.string,
   selectionPathMode: PropTypes.oneOf(Object.values(SelectionPathMode)),
-  neighboursSelectionMode: PropTypes.oneOf(Object.values(NeighboursSelectionMode)),
-  templates: PropTypes.arrayOf(TemplateConfig),
+  templates: PropTypes.arrayOf(TemplateConfigShape),
   defaultTemplateName: PropTypes.string,
-  defaultLabelAnnotationTemplate: PropTypes.string,
   hasButtons: PropTypes.oneOf(Object.values(Enabled)),
   onButtonsRender: PropTypes.func,
 
@@ -60,15 +50,14 @@ const Config = PropTypes.shape({
   cousinsIntervalMultiplier: PropTypes.number,
   itemTitleFirstFontColor: PropTypes.string,
   itemTitleSecondFontColor: PropTypes.string,
+
   minimizedItemShapeType: PropTypes.oneOf(Object.values(ShapeType)),
   linesColor: PropTypes.string,
   linesWidth: PropTypes.number,
   linesType: PropTypes.oneOf(Object.values(LineType)),
-  showNeigboursConnectorsHighlighted: PropTypes.bool,
   highlightLinesColor: PropTypes.string,
   highlightLinesWidth: PropTypes.number,
   highlightLinesType: PropTypes.oneOf(Object.values(LineType)),
-  linesPalette: PropTypes.arrayOf(PaletteItemConfig),
   calloutMaximumVisibility: PropTypes.oneOf(Object.values(Visibility)),
   showCallout: PropTypes.bool,
   calloutPlacementOffset: PropTypes.number,
@@ -80,6 +69,11 @@ const Config = PropTypes.shape({
   calloutPointerWidth: PropTypes.string,
   calloutLineWidth: PropTypes.number,
   calloutOpacity: PropTypes.number,
+  childrenPlacementType: PropTypes.oneOf(Object.values(ChildrenPlacementType)),
+  leavesPlacementType: PropTypes.oneOf(Object.values(ChildrenPlacementType)),
+  placeAssistantsAboveChildren: PropTypes.bool,
+  placeAdvisersAboveChildren: PropTypes.bool,
+  maximumColumnsInMatrix: PropTypes.number,
   buttonsPanelSize: PropTypes.number,
   groupTitlePanelSize: PropTypes.number,
   checkBoxPanelSize: PropTypes.number,
@@ -133,4 +127,4 @@ const Config = PropTypes.shape({
   })
 });
 
-export default Config;
+export default OrgConfigShape;

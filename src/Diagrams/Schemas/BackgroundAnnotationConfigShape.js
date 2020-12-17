@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {AnnotationType, ZOrderType, LineType} from 'basicprimitives';
 
-const BackgroundAnnotationConfig = PropTypes.shape({
+const BackgroundAnnotationConfigShape = PropTypes.shape({
   annotationType: PropTypes.oneOf([AnnotationType.Background]),
   items: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
   includeChildren: PropTypes.bool,
@@ -20,4 +20,4 @@ const BackgroundAnnotationConfig = PropTypes.shape({
   selectItems: PropTypes.bool
 });
 
-export default BackgroundAnnotationConfig;
+export default BackgroundAnnotationConfigShape;

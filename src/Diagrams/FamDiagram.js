@@ -1,10 +1,10 @@
 import { FamTaskManagerFactory, FamEventArgs } from 'basicprimitives';
 import BaseDiagram from './BaseDiagram';
-import FamDiagramConfig from './Schemas/FamDiagramConfig';
+import FamConfigShape from './Schemas/FamConfigShape';
 
 class FamDiagram extends BaseDiagram {
   static propTypes = {
-    config: FamDiagramConfig.isRequired // eslint-disable-line react/no-unused-prop-types
+    config: FamConfigShape.isRequired // eslint-disable-line react/no-unused-prop-types
   };
 
   constructor(props) {

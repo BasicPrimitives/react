@@ -1,10 +1,10 @@
 import { OrgTaskManagerFactory, OrgEventArgs } from 'basicprimitives';
 import BaseDiagram from './BaseDiagram';
-import OrgDiagramConfig from './Schemas/OrgDiagramConfig';
+import OrgConfigShape from './Schemas/OrgConfigShape';
 
 class OrgDiagram extends BaseDiagram {
   static propTypes = {
-    config: OrgDiagramConfig.isRequired // eslint-disable-line react/no-unused-prop-types
+    config: OrgConfigShape.isRequired // eslint-disable-line react/no-unused-prop-types
   };
 
   constructor(props) {
