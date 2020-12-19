@@ -16,12 +16,12 @@ The size of the buttons panel set in component `Config` `buttonsPanelSize` prope
 
 Buttons panel content can be customized per component or per item template with `onButtonsRender` callback function. See item template definition in the following example:
 
-Please, pay attention that every button `onClick` event handler suppresses even propogation, it is needed to avoid chart cursor item change and following layout
+Please, pay attention that every button `onClick` event handler suppresses even propagation, it is needed to avoid chart cursor item change and following layout
 
 ```JavaScript
 onClick={(event) => {
   event.stopPropagation();
-  alert(`User clicked on Coffe button for node ${itemConfig.title}`)
+  alert(`User clicked on Coffee button for node ${itemConfig.title}`)
 }}>
 ```
 

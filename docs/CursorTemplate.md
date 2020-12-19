@@ -2,8 +2,8 @@
 The diagram in general is collection component, so it supports concept of current cursor item, which enables navigation related functionality. The current cursor item is supposed to have visual feedback on diagram, by default it is solid `2px` wide border line around it. The general idea about cursor template is to provide convenient API to customize that border line around cursor item.
 
 ## Properties:
-Component customizes visual representaion of items with `templates`, every template has customization properties for item content, cursor and highlight visualizations. By default if properties are not set then component uses built in default functionality. The following properties customize cursor template:
-* `cursorPadding` - Reserves space around item, for example: `{left: 3, top: 3, right: 50, bottom: 3}` will provide extra `50px` on right side of item for sursor content.
+Component customizes visual representation of items with `templates`, every template has customization properties for item content, cursor and highlight visualizations. By default if properties are not set then component uses built in default functionality. The following properties customize cursor template:
+* `cursorPadding` - Reserves space around item, for example: `{left: 3, top: 3, right: 50, bottom: 3}` will provide extra `50px` on right side of item for cursor content.
 * `cursorBorderWidth` - some sort of legacy property, it is used to align cursor position around item properly.
 * `onCursorRender` - callback method to render cursor content for given item of diagram
 

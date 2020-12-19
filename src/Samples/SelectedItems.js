@@ -18,7 +18,7 @@ class Sample extends Component {
           {
             id: 1,
             parent: null,
-            title: 'Scott Aasrud',
+            title: 'James Smith',
             description: 'VP, Public Sector',
             image: '/react/photos/a.png'
           },

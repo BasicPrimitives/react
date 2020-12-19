@@ -17,7 +17,7 @@ class Sample extends Component {
         new OrgItemConfig({
           id: 0,
           parent: null,
-          title: "Scott Aasrud",
+          title: "James Smith",
           description: "VP, Public Sector",
           groupTitle: "Group 1",
           image: "/react/photos/a.png",

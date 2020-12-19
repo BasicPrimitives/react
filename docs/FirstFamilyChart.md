@@ -1,6 +1,6 @@
 # First Family Chart
 
-Basic Primitives Diagrams for React - data visualization component library that implements organizational chart and multi-parent dependency diagrams. It renders diagrams using React Virtual DOM without direct DOM manipulations, so it complient with all React features and popular react extensions like [React Drag & Drop](http://react-dnd.github.io/react-dnd/about)
+Basic Primitives Diagrams for React - data visualization component library that implements organizational chart and multi-parent dependency diagrams. It renders diagrams using React Virtual DOM without direct DOM manipulations, so it compliant with all React features and popular react extensions like [React Drag & Drop](http://react-dnd.github.io/react-dnd/about)
 
 Package is designed to work within React application created with [`create-react-app`](https://facebook.github.io/create-react-app/)
 
@@ -55,7 +55,7 @@ class Sample extends Component {
         { id: 5, parents: [2, 3], spouses: [6, 7], title: "Mike Kirby", label: "Mike Kirby", description: "5, 2nd son, having 2 spouses", image: photos.a },
         { id: 6, title: "Lynette Maloney", label: "Lynette Maloney", description: "5, Spouse I", image: photos.a },
         { id: 7, title: "Sara Kemp", label: "Sara Kemp", description: "5, Spouse II :-)", image: photos.a },
-        { id: 8, parents: [7], title: "Leon Kemp", label: "Leon Kemp", description: "5, Orphant", image: photos.a }
+        { id: 8, parents: [7], title: "Leon Kemp", label: "Leon Kemp", description: "5, Orphan", image: photos.a }
       ]
     };
 
@@ -68,13 +68,13 @@ class Sample extends Component {
 export default Sample;
 ```
 
-## Oraganizational chart vs. Family Diagram
+## Organizational chart vs. Family Diagram
 Family diagram shares a lot of common features with Organizational chart. The main difference of family diagram compared to organizational chart is support of multiple parents. Organizational chart is defined with a regular tree structure of items, where every branch is independent, so it makes possible to place children to custom locations relative to their parent and group children into various shapes. It is possible in organizational chart since its nodes have no logical connections between branches. If we look at family diagram where every item may belong to multiple parents, there is no such thing as single parent anymore, so it is impossible to define children shape layout in parent node, since it create ambiguity in API. So organizational chart is a simple tree structure enhanced with layout customizations, so if your data has distinct core tree structure then we recommend you to stay within organizational chart API functionality as long as it possible. Your chart structure is going to be simple for understanding to end users. At the same time organizational chart provides limited multiple parents support with partner item types, it has on screen annotations to show relations between various branches of your tree, it supports multiple root items, so you can place multiple organizational charts side by side and imitate multiple inheritance for some extend. If we are in situation when our data have multiple parents equal in logical value then it makes sense to switch to family diagram. Family diagram supports multiple parents but it lacks usage of custom item types due to API ambiguity. 
 
 ## Family Diagram Specific Features
 * Matrix Nodes Layout - nodes having common set of parents and children can be shaped into matrix.
-* In layout cascades of lables - label annotation over connector lines
+* In layout cascades of labels - label annotation over connector lines
 * Loops - loop references between nodes
-* Hiding grand parent connections - if node is accessable via other node then direct connection can be eliminated to minimize clutter
+* Hiding grand parent connections - if node is accessible via other node then direct connection can be eliminated to minimize clutter
 
 [React](../src/Samples/FirstFamilyChart.js)

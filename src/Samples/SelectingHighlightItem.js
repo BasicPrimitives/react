@@ -18,7 +18,7 @@ class Sample extends Component {
           {
             id: 0,
             parent: null,
-            title: 'Scott Aasrud',
+            title: 'James Smith',
             description: 'VP, Public Sector',
             image: '/react/photos/a.png'
           },
@@ -68,7 +68,7 @@ class Sample extends Component {
 
     return <>
       <p>Set highlight for: &nbsp;
-        <button onClick={() => this.update(0)}>Scott Aasrud</button>&nbsp;
+        <button onClick={() => this.update(0)}>James Smith</button>&nbsp;
         <button onClick={() => this.update(1)}>Ted Lucas</button>&nbsp;
         <button onClick={() => this.update(2)}>Fritz Stuger</button>&nbsp;
         <button onClick={() => this.update(null)}>Unselect</button>

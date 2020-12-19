@@ -1,6 +1,6 @@
 # First Organizational Chart
 
-Basic Primitives Diagrams for React - data visualization component library that implements organizational chart and multi-parent dependency diagrams. It renders diagrams using React Virtual DOM without direct DOM manipulations, so it complient with all React features and popular react extensions like [React Drag & Drop](http://react-dnd.github.io/react-dnd/about)
+Basic Primitives Diagrams for React - data visualization component library that implements organizational chart and multi-parent dependency diagrams. It renders diagrams using React Virtual DOM without direct DOM manipulations, so it compliant with all React features and popular react extensions like [React Drag & Drop](http://react-dnd.github.io/react-dnd/about)
 
 Package is designed to work within React application created with [`create-react-app`](https://facebook.github.io/create-react-app/)
 
@@ -60,7 +60,7 @@ function App() {
       {
         id: 0,
         parent: null,
-        title: 'Scott Aasrud',
+        title: 'James Smith',
         description: 'VP, Public Sector',
         image: photos.a
       },

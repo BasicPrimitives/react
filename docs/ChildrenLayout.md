@@ -8,7 +8,7 @@ Children Placement Layout can be defined individually per item or globally for a
 
 In general children layouts are all matrix, the only difference is that horizontal layout has only one row and vertical layout has only one column.
 
-The `maximumColumnsInMatrix` value should limit children matrix growth outside of the view port width, in order to avoid the necessety of simultanious horizontal and vertical scrolling of nodes. Keeping square shape of nodes is good for small matrixes which easely fit into view port, but large groups of children are better shaped into wide columns.
+The `maximumColumnsInMatrix` value should limit children matrix growth outside of the view port width, in order to avoid the necessity of simultaneous horizontal and vertical scrolling of nodes. Keeping square shape of nodes is good for small matrixes which easily fit into view port, but large groups of children are better shaped into wide columns.
 
 [React](../src/Samples/ChildrenPlacementType.js)
 

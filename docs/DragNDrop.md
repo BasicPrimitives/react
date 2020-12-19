@@ -1,10 +1,10 @@
 # Drag & Drop Support
 
-Basic Primitives Diagrams library for React was created with only one purpose, it is to be complient with [React Drag & Drop](http://react-dnd.github.io/react-dnd/about) library. The only option to achive this is to render all content using React Virtual DOM without direct DOM manipulations. 
+Basic Primitives Diagrams library for React was created with only one purpose, it is to be compliant with [React Drag & Drop](http://react-dnd.github.io/react-dnd/about) library. The only option to achieve this is to render all content using React Virtual DOM without direct DOM manipulations. 
 
-In the best software engineering traditions our library does not implement any Drag & Drop related functionalty. Everything as before is achived via item templates customizations.
+In the best software engineering traditions our library does not implement any Drag & Drop related functionally. Everything as before is achieved via item templates customizations.
 
-See [React Drag & Drop](http://react-dnd.github.io/react-dnd/about) library for reference and samples, from our side pay attentions to the following take aways:
+See [React Drag & Drop](http://react-dnd.github.io/react-dnd/about) library for reference and samples
 
 ## npm packages
 * [react-dnd](https://www.npmjs.com/package/react-dnd)
@@ -38,7 +38,7 @@ export default Sample;
 
 
 ## Drag & Drop diagram nodes to application
-The following example shows Drag & Drop functionality between diagram items and application componenents. We made it possible by implementing virtual DOM rendering in our components. If a regualar JavaScript control is integrated via warapping it into React component, so it performs direct DOM manupulations then its nodes are not going to see react context objects, so control is not going to support Drag & Drop between Diagram Nodes and other Application components.
+The following example shows Drag & Drop functionality between diagram items and application components. We made it possible by implementing virtual DOM rendering in our components. If a regular JavaScript control is integrated via wrapping it into React component, so it performs direct DOM manipulations then its nodes are not going to see react context objects, so control is not going to support Drag & Drop between Diagram Nodes and other Application components.
 
 [React](../src/Samples/DragToTrashBin.js)
 

@@ -3,7 +3,7 @@
 Connector annotation is on screen direct connection line between two nodes of diagram. Use them the same way as highlight markers for temporary or per transaction drawings over diagram nodes. See following example for how it works:
 
 ## Styles
-Connector annotations are drawn on top of exisiting diagram, so sometimes space between nodes is not enough to fit annotation label and arrow, so for this case connector annotation supports offbeat style of drawing, so instead of straight line connecting two nodes, the connector is drawn as free hand spline on side of them.
+Connector annotations are drawn on top of existing diagram, so sometimes space between nodes is not enough to fit annotation label and arrow, so for this case connector annotation supports offbeat style of drawing, so instead of straight line connecting two nodes, the connector is drawn as free hand spline on side of them.
 * `ConnectorPlacementType.Offbeat` - Free hand drawing of connector annotation
 * `ConnectorPlacementType.Straight` - Straight line between nodes
 

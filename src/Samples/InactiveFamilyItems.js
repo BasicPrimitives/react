@@ -43,14 +43,14 @@ class Sample extends Component {
         {
           id: 0,
           parents: null,
-          title: "Scott Aasrud",
+          title: "James Smith",
           description: "Co-CEO",
           image: "/react/photos/a.png"
         },
         {
           id: 100,
           parents: null,
-          title: "Scott Aasrud 2",
+          title: "James Smith 2",
           description: "Co-CEO",
           image: "/react/photos/a.png"
         },

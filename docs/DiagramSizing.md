@@ -6,15 +6,15 @@ Like any other Data Visualization component it combines scalable and non-scalabl
 Component occupies all available space inside parent `div`, so if application changes size of `div` containing diagram component it triggers component state change and following rendering cycle. Component uses [`resize-observer-polyfill`](https://www.npmjs.com/package/resize-observer-polyfill) to handle diagram size change.
 
 ## Component Sizing with CSS @Media
-The main point of CSS @Media based control sizing is to keep diagram component size less than screen size. We want to have diagram to be as large as possible, but we need to avoid situation when user has to scroll diagram and page srollbars altogether in order to see diagram content. The first image shows unusable scroll bars.
+The main point of CSS @Media based control sizing is to keep diagram component size less than screen size. We want to have diagram to be as large as possible, but we need to avoid situation when user has to scroll diagram and page scroll bars altogether in order to see diagram content. The first image shows unusable scroll bars.
 
-![Unusable scrollbars](./images/PageSizeDiagram1.png "Unusable scrollbars")
+![Unusable scroll bars](./images/PageSizeDiagram1.png "Unusable scroll bars")
 
-Having scroll bars enabled for components is fine if they fit into the page view port. So we can place diagram component and stack it verticaly with other components on the page. The following image shows 2 components having scrollable content, both of them are usable, since user can scroll them into the current view port and work with their content scrollbars individually.
+Having scroll bars enabled for components is fine if they fit into the page view port. So we can place diagram component and stack it vertically with other components on the page. The following image shows 2 components having scrollable content, both of them are usable, since user can scroll them into the current view port and work with their content scroll bars individually.
 
-![Usable control scrollbars](./images/PageSizeDiagram2.png "Usable control scrollbars")
+![Usable control scroll bars](./images/PageSizeDiagram2.png "Usable control scroll bars")
 
-The "classic" and the most popular approach for desktop applications is to fit page and diagram 100%. In that case you have to design your web site appropriatly.
+The "classic" and the most popular approach for desktop applications is to fit page and diagram 100%. In that case you have to design your web site appropriately.
 
 ![Classic desktop layout](./images/PageSizeDiagram3.png "Classic desktop layout")
 
@@ -25,7 +25,7 @@ See [CSS @Media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) for mo
 [React](../src/Samples/PageSizeDiagram.js)
 
 ## Auto Size Diagram in Article
-Another diagram integration scenario is diagram placement inside article, so component needs to auto expand its size in order to accommodate all nodes of diagram without minimization or trancation. Set `pageFitMode` to `PageFitMode.AutoSize` and component will size itself to show all nodes of diagram. 
+Another diagram integration scenario is diagram placement inside article, so component needs to auto expand its size in order to accommodate all nodes of diagram without minimization or truncation. Set `pageFitMode` to `PageFitMode.AutoSize` and component will size itself to show all nodes of diagram. 
 
 Use following options to constrain component auto size:
 

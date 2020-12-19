@@ -1,5 +1,5 @@
 # Family diagram items ordering
-Family diagram supports multiple parents and children per node, so there is no deterministic way to define groups of items and their order inside of the group, so family diagram provides non-determenistic API to order items. That means if items expected to be in one layout group then user can use following properties to guide layout engine about user preferred relative order of items:
+Family diagram supports multiple parents and children per node, so there is no deterministic way to define groups of items and their order inside of the group, so family diagram provides non-deterministic API to order items. That means if items expected to be in one layout group then user can use following properties to guide layout engine about user preferred relative order of items:
 
 1. `relativeItem` - item position and placement type defined relative to this property referenced item
 2. `placementType` - item placement on the left or right side of relative item. Property has following values:
@@ -21,7 +21,7 @@ Please, pay attention that loops in references are completely ignored, so don't 
 
 ## Primary Parent
 
-If node has multiple parents and they belong to distinct branches of the diagram then `primaryParent` property can give higher pritority to one of them. So child node will be placed into hierarchy of that primary parent node.
+If node has multiple parents and they belong to distinct branches of the diagram then `primaryParent` property can give higher priority to one of them. So child node will be placed into hierarchy of that primary parent node.
 
 `primaryParent` - control placed node to the hierarchy of the primary parent, this property is ignored if parent does not exists.
 

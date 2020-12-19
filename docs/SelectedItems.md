@@ -1,5 +1,5 @@
 # Selected items & Check boxes
-Basic Primitives Diagrams have API properties equivalent to regular collecion components:
+Basic Primitives Diagrams have API properties equivalent to regular collection components:
 * `cursorItem` - is used to select single item in diagram with mouse click
 * `highlightItem` - provides visual feed back for mouse over
 * `selectedItems` - collection is equivalent to check marked items in ListView or TreeView controls.
