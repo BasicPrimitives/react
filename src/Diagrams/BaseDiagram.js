@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { getFixOfPixelALignment, getInnerSize, getElementOffset,
+import { getFixOfPixelAlignment, getInnerSize, getElementOffset,
   OrientationType,
-  Rect, Size, Point, Thickness
+  Rect, Size, Point
 } from 'basicprimitives';
 import Graphics from './Graphics';
 import {
@@ -15,7 +15,9 @@ import {
   HighlightTemplate,
   ItemTemplate,
   UserTemplate,
-  LabelAnnotationTemplate
+  LabelAnnotationTemplate,
+  LevelTitleTemplate,
+  LevelBackgroundTemplate
 } from './Templates';
 
 class BaseDiagram extends Component {
@@ -92,6 +94,8 @@ class BaseDiagram extends Component {
     this.controlPanelRef = React.createRef();
     this.frameMousePanelRef = React.createRef();
     this.framePlaceholderRef = React.createRef();
+    this.titlesMousePanelRef = React.createRef();
+    this.titlesPlaceholderRef = React.createRef();
     this.scrollPanelRef = React.createRef();
     this.mousePanelRef = React.createRef();
     this.placeholderRef = React.createRef();
@@ -110,7 +114,9 @@ class BaseDiagram extends Component {
       HighlightTemplate,
       ItemTemplate,
       UserTemplate,
-      LabelAnnotationTemplate
+      LabelAnnotationTemplate,
+      LevelTitleTemplate,
+      LevelBackgroundTemplate
     }
     this.tasks = TaskManagerFactory(this.getOptions, this.getGraphics, this.getLayout, this.setLayout, this.templates);
   }
@@ -169,7 +175,7 @@ class BaseDiagram extends Component {
 
   fixPixelAlignment() {
     const { current } = this.controlPanelRef;
-    var pixelAlignmentFix = getFixOfPixelALignment(current);
+    var pixelAlignmentFix = getFixOfPixelAlignment(current);
     current.style.marginLeft = pixelAlignmentFix.width + "px";
     current.style.marginTop = pixelAlignmentFix.height + "px";
   }
@@ -531,14 +537,32 @@ class BaseDiagram extends Component {
   }
 
   setLayout(layoutOptions) {
-    const {autoSize, scale, scaledContentSize, viewportSize, frameThickness, controlSize} = layoutOptions;
+    const { 
+        autoSize, // resize control if true
+        controlSize, // Sets control Size in auto scale mode
+        scale, // scale is needed for scale transform CSS creation
+        frameMousePanelRect,
+        framePlaceholderSize, // the frame content size before CSS Scale Transform applied
+        titlesMousePanelRect,
+        titlesPlaceholderSize, // Titles size before CSS Scale Transform applied
+        scrollPanelRect,
+        mousePanelSize, // Content mouse panel size
+        placeholderSize // Content size before CSS Scale Transform applied
+    } = layoutOptions;
+
     this.layoutOptions = {
       autoSize,
+      controlSize: new Size(controlSize),
       scale,
-      scaledContentSize: new Size(scaledContentSize),
-      viewportSize: new Size(viewportSize),
-      frameThickness: new Thickness(frameThickness),
-      controlSize: new Size(controlSize)
+      frameMousePanelRect: new Rect(frameMousePanelRect),
+      framePlaceholderSize: new Size(framePlaceholderSize),
+
+      titlesMousePanelRect: new Rect(titlesMousePanelRect),
+      titlesPlaceholderSize: new Size(titlesPlaceholderSize),
+
+      scrollPanelRect: new Rect(scrollPanelRect),
+      mousePanelSize: new Size(mousePanelSize),
+      placeholderSize: new Size(placeholderSize)
     }
   }
 
@@ -546,10 +570,18 @@ class BaseDiagram extends Component {
     const graphics = this.graphics;
     this.tasks.process('OptionsTask', null, false);
 
-    const { placeholder, calloutplaceholder, frameplaceholder } = this.graphics.placeholders;
+    const { placeholder, calloutplaceholder, frameplaceholder, titlesplaceholder } = this.graphics.placeholders;
     const placeholderRectCSS = placeholder.rect.getCSS();
 
-    const { autoSize, scale, scaledContentSize, viewportSize, frameThickness, controlSize } = this.layoutOptions;
+    const { 
+      autoSize, // resize control if true
+      controlSize, // Sets control Size in auto scale mode
+      scale, // scale is needed for scale transform CSS creation
+      frameMousePanelRect,
+      titlesMousePanelRect,
+      scrollPanelRect,
+      mousePanelSize // Content mouse panel size
+    } = this.layoutOptions;
 
     /* set CSS scale of content */
     var scaletext = "scale(" + scale + "," + scale + ")";
@@ -572,7 +604,7 @@ class BaseDiagram extends Component {
         }}
         tabIndex="0"
       >
-        {!frameThickness.isEmpty() &&
+        {frameplaceholder &&
           <div
             ref={this.frameMousePanelRef}
             onMouseMove={this.onFrameMouseMove}
@@ -580,7 +612,7 @@ class BaseDiagram extends Component {
             style={{
               position: "absolute",
               overflow: "hidden",
-              ...(controlSize.getCSS())
+              ...(frameMousePanelRect.getCSS())
             }}>
             <div
               ref={this.framePlaceholderRef}
@@ -608,6 +640,42 @@ class BaseDiagram extends Component {
             </div>
           </div>
         }
+        {titlesplaceholder &&
+          <div
+            ref={this.titlesMousePanelRef}
+            onMouseMove={this.onFrameMouseMove}
+            onClick={this.onFrameClick}
+            style={{
+              position: "absolute",
+              overflow: "hidden",
+              ...(titlesMousePanelRect.getCSS())
+            }}>
+            <div
+              ref={this.titlesMousePanelRef}
+              style={{
+                ...(titlesplaceholder.rect.getCSS()),
+                position: "absolute",
+                overflow: "hidden",
+                "transformOrigin": "0 0",
+                "transform": scaletext,
+                "msTransform": scaletext, /* IE 9 */
+                "WebkitTransform": scaletext, /* Safari and Chrome */
+                "OTransform": scaletext, /* Opera */
+                "MozTransform": scaletext /* Firefox */
+              }}>
+              {graphics.map(this, "titlesplaceholder", (layerKey, elements) =>
+                <div key={layerKey} style={{
+                  position: "absolute",
+                  overflow: "visible",
+                  left: "0px",
+                  top: "0px"
+                }}>
+                  {elements}
+                </div>
+              )}
+            </div>
+          </div>
+        }
         <div
           ref={this.scrollPanelRef}
           onScroll={this.onScroll}
@@ -615,10 +683,8 @@ class BaseDiagram extends Component {
             position: "absolute",
             overflow: "auto",
             WebkitOverflowScrolling: "touch",
-            left: frameThickness.left + "px",
-            top: frameThickness.top + "px",
-            ...(viewportSize.getCSS()),
-            border: (!frameThickness.isEmpty() ? "1px dotted #dddddd" : "")
+            ...(scrollPanelRect.getCSS()),
+            border: (scrollPanelRect.x > 0 ? "1px dotted #dddddd" : "")
           }}
         >
           <div
@@ -629,7 +695,7 @@ class BaseDiagram extends Component {
             style={{
               position: "absolute",
               overflow: "hidden",
-              ...(scaledContentSize.getCSS())
+              ...(mousePanelSize.getCSS())
             }}>
             <div
               ref={this.placeholderRef}

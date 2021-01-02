@@ -25,7 +25,7 @@ import {
   SelectionPathMode,
   InactiveItems,
   CustomLayoutWithInvisibleItems,
-  ChildrenAndAssitantsLevelOffset,
+  ChildrenAndAssistantsLevelOffset,
   SkippedLevels,
   InactiveFamilyItems,
   SpousesInFamilyLayout,
@@ -49,6 +49,7 @@ import {
   HighlightTemplate,
   ConnectorAnnotation,
   ShapeAnnotation,
+  LevelAnnotation,
   HighlightPathAnnotation,
   PERTChart,
   FamilyHideGrandParentsConnections
@@ -122,7 +123,7 @@ const SamplesList = [
       },
       {
         label: "Children & Assistants Levels",
-        component: <ChildrenAndAssitantsLevelOffset />
+        component: <ChildrenAndAssistantsLevelOffset />
       },
       {
         label: "Adviser and Assistant item types",
@@ -165,7 +166,7 @@ const SamplesList = [
         component: <CustomLayoutWithInvisibleItems />
       },
       {
-        label: "Assitants Children Placement",
+        label: "Assistants Children Placement",
         component: <PlaceAssistantsAboveChildren />
       },
       {
@@ -179,7 +180,7 @@ const SamplesList = [
     ]
   },
   {
-    label: "Family Diagram Laout Use Cases",
+    label: "Family Diagram Layout Use Cases",
     items: [
       {
         label: "Inactive Family Items in layout",
@@ -278,6 +279,10 @@ const SamplesList = [
       {
         label: "Shape & Background Annotations",
         component: <ShapeAnnotation />
+      },
+      {
+        label: "Level Annotation",
+        component: <LevelAnnotation />
       },
       {
         label: "Highlight Path Annotation",
