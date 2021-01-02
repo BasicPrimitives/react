@@ -175,6 +175,6 @@ Through a full API you can add, remove and modify individual items and their pro
 
 ### License
 
-Copyright (c) 2013 - 2020 Basic Primitives Inc
+Copyright (c) 2013 - 2021 Basic Primitives Inc
 * [Non-commercial - Free](http://creativecommons.org/licenses/by-nc/3.0/)
 * [Commercial and government licenses](license.pdf)

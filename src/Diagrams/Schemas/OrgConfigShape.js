@@ -9,6 +9,7 @@ import BackgroundAnnotationConfigShape from './BackgroundAnnotationConfigShape';
 import ConnectorAnnotationConfigShape from './ConnectorAnnotationConfigShape';
 import HighlightPathAnnotationConfigShape from './HighlightPathAnnotationConfigShape';
 import ShapeAnnotationConfigShape from './ShapeAnnotationConfigShape';
+import LevelAnnotationConfigShape from './LevelAnnotationConfigShape';
 
 const OrgConfigShape = PropTypes.shape({
   navigationMode: PropTypes.oneOf(Object.values(NavigationMode)),
@@ -28,7 +29,7 @@ const OrgConfigShape = PropTypes.shape({
   elbowDotSize: PropTypes.number,
   emptyDiagramMessage: PropTypes.string,
   items: PropTypes.arrayOf(OrgItemConfigShape),
-  annotations: PropTypes.arrayOf(PropTypes.oneOfType([BackgroundAnnotationConfigShape, ConnectorAnnotationConfigShape, HighlightPathAnnotationConfigShape, ShapeAnnotationConfigShape])),
+  annotations: PropTypes.arrayOf(PropTypes.oneOfType([BackgroundAnnotationConfigShape, ConnectorAnnotationConfigShape, HighlightPathAnnotationConfigShape, ShapeAnnotationConfigShape, LevelAnnotationConfigShape])),
   cursorItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   highlightItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   highlightGravityRadius: PropTypes.number,
@@ -86,6 +87,18 @@ const OrgConfigShape = PropTypes.shape({
   groupTitleColor: PropTypes.string,
   groupTitleFontWeight: PropTypes.string,
   groupTitleFontStyle: PropTypes.string,
+  levelTitlePanelSize: PropTypes.number,
+  levelTitlePlacementType: PropTypes.oneOf(Object.values(AdviserPlacementType)),
+  levelTitlePlaceInside: PropTypes.bool,
+  levelTitleOrientation: PropTypes.oneOf(Object.values(TextOrientationType)),
+  levelTitleVerticalAlignment: PropTypes.oneOf(Object.values(VerticalAlignmentType)),
+  levelTitleHorizontalAlignment: PropTypes.oneOf(Object.values(HorizontalAlignmentType)),
+  levelTitleFontSize: PropTypes.string,
+  levelTitleFontFamily: PropTypes.string,
+  levelTitleFontColor: PropTypes.string,
+  levelTitleColor: PropTypes.string,
+  levelTitleFontWeight: PropTypes.string,
+  levelTitleFontStyle: PropTypes.string,
   distance: PropTypes.number,
   scale: PropTypes.number,
   minimumScale: PropTypes.number,
