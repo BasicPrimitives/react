@@ -9,18 +9,6 @@ object-assign
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
-/**
- * @preserve Basic Primitives Diagrams v5.9.2
- * Copyright (c) 2013 - 2020 Basic Primitives Inc
- *
- * Non-commercial - Free
- * http://creativecommons.org/licenses/by-nc/3.0/
- *
- * Commercial and government licenses:
- * http://www.basicprimitives.com/pdf/license.pdf
- *
- */
-
 /** @license React v0.20.1
  * scheduler.production.min.js
  *
