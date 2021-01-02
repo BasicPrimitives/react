@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { OrgDiagram } from '../Diagrams';
-import { Colors, ChildrenPlacementType, AdviserPlacementType, ItemType, PageFitMode, Enabled, GroupByType } from 'basicprimitives';
+import { AnnotationType, Colors, ChildrenPlacementType, AdviserPlacementType, ItemType, LineType, PageFitMode, Enabled, GroupByType, Thickness } from 'basicprimitives';
 
 class Sample extends Component {
   constructor(props) {
@@ -172,8 +172,60 @@ class Sample extends Component {
       levelOffset: 0
     });
 
+    var annotations = [
+      {
+        annotationType: AnnotationType.Level,
+        levels: [0],
+        title: "CEO",
+        titleColor: Colors.RoyalBlue,
+        offset: new Thickness(0, 0, 0, -1),
+        lineWidth: new Thickness(0, 0, 0, 0),
+        opacity: 0,
+        borderColor: Colors.Gray,
+        fillColor: Colors.Gray,
+        lineType: LineType.Dotted
+      },
+      {
+        annotationType: AnnotationType.Level,
+        levels: [1],
+        title: "Children 1",
+        titleColor: Colors.RoyalBlue,
+        offset: new Thickness(0, 0, 0, -1),
+        lineWidth: new Thickness(0, 0, 0, 0),
+        opacity: 0.08,
+        borderColor: Colors.Gray,
+        fillColor: Colors.Gray,
+        lineType: LineType.Dotted
+      },
+      {
+        annotationType: AnnotationType.Level,
+        levels: [2],
+        title: "Children 2",
+        titleColor: Colors.RoyalBlue,
+        offset: new Thickness(0, 0, 0, -1),
+        lineWidth: new Thickness(0, 0, 0, 0),
+        opacity: 0,
+        borderColor: Colors.Gray,
+        fillColor: Colors.Gray,
+        lineType: LineType.Dotted
+      },
+      {
+        annotationType: AnnotationType.Level,
+        levels: [3],
+        title: "Members",
+        titleColor: Colors.RoyalBlue,
+        offset: new Thickness(0, 0, 0, -1),
+        lineWidth: new Thickness(0, 0, 0, 0),
+        opacity: 0.08,
+        borderColor: Colors.Gray,
+        fillColor: Colors.Gray,
+        lineType: LineType.Dotted
+      }
+    ];
+
     this.state = {
-      items
+      items,
+      annotations
     }
   }
   render() {

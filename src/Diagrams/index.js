@@ -11,4 +11,5 @@ export { default as OrgConfigShape } from './Schemas/OrgConfigShape';
 export { default as OrgItemConfigShape } from './Schemas/OrgItemConfigShape';
 export { default as PaletteItemConfigShape } from './Schemas/PaletteItemConfigShape';
 export { default as ShapeAnnotationConfigShape } from './Schemas/ShapeAnnotationConfigShape';
+export { default as LevelAnnotationConfigShape } from './Schemas/LevelAnnotationConfigShape';
 export { default as TemplateConfigShape } from './Schemas/TemplateConfigShape';
