@@ -76,6 +76,10 @@ class RotatedText extends Component {
       OTransform: transform,
       msTransform: transform,
       transform,
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      tableLayout: "fixed",
       ...size
     };
 
@@ -90,7 +94,10 @@ class RotatedText extends Component {
             <tr>
               <td style={{
                 verticalAlign: verticalAlignment,
-                padding: 0
+                padding: 0,
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+                overflow: "hidden"
               }}>
                 {children}
               </td>

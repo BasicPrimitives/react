@@ -7,7 +7,7 @@ class Sample extends Component {
     super(props);
 
     this.state = {
-      placeAdvisersAboveChildren: true
+      placeAdvisersAboveChildren: false
     }
   }
 
