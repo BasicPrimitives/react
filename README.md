@@ -128,20 +128,8 @@ By default, we display hierarchy as a regular tree, where children that belong t
 #### Automatic transformation of connection lines between nodes
 A diagram can have multiple parent and child nodes all interconnected between each other. This relationship results in an excessive number of connections between the nodes and creates a visual clutter in the diagram. In extreme cases, this makes the chart barely readable.
 
-The following is an example of a complete bipartite graph having every parent node connected with every child node.
-
-![Complete Bipartite Graph](samples/images/cbp88.png)
-
-A complete bipartite graph is an extreme example of family relations. Still, it could happen, and the component automatically groups connectors into bundles, so it produces the following optimized set of connections: 
-
-![Complete Bipartite Graph Bundled](samples/images/cbp88bundled.png)
-
-This connector bundling method is actively used throughout the product to increase the readability of the diagrams.
-
 #### Automatic elimination of redundant relations between nodes
 Another typical problem with visualizing connections is the possible excessive amount of relations that can take place between multiple grandchildren and grandparent nodes. Usually, when we draw family diagrams, we are more interested to see the overall order of dependencies over the more direct and specific node relations. In a family tree case, we know that nodes have links to one another via their immediate parents. We can remove the direct ties between non-immediate parents and reduce the amount of visual clutter on the screen and still get the same dependencies order. By doing this, the diagram becomes a lot easier to analyze, view and navigate.
-
-![Excessive amount of connections](samples/images/cbp88everyparent.png)
 
 ### Annotating diagram nodes
 Every time we make changes to our diagrams, we need to visualize the performed transaction. Otherwise, it is hard to follow the organizational chart changes, so to show the diagram's transition from one state to another, the control provides various annotations to the end-user. Annotations are API elements that are attached to the diagram nodes. We draw our annotations either in front of the nodes or in the background. The annotations don't affect the placement of the nodes in any way. As a result, the control redraws them instantaneously without rendering or recalculating the actual diagram layout. It would be best if you avoid usage of annotations for every node in the diagram. The application is supposed to show them and add them to the chart only in the current user focus or operation that the user is performing with the data.
