@@ -40,7 +40,7 @@ class Sample extends Component {
           <button key="1" className="StyledButton"
             onClick={(event) => {
               event.stopPropagation();
-              alert(`User clicked on Coffe button for node ${itemConfig.title}`)
+              alert(`User clicked on Coffee button for node ${itemConfig.title}`)
             }}>
             <FontAwesomeIcon icon={faCoffee} />
           </button>

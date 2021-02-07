@@ -1,19 +1,17 @@
 # Item template
 
 ## Configuration Classes
-Component configuration `config` property contains collection of `templates`. Every template is named object describing template sizes and providing callback functions to render item content, cursor, highlight and buttons panel. If callback function or property is not defined then component uses default value or function to render template.
+The `config` argument of the component is the configuration object. It has the `templates` property, a collection of the `TemplateConfig` configuration objects. Every template must have a unique name, defined with the `name` property. The template configuration defines sizes and the callback functions to render item content, cursor, highlight, and context buttons panel. If callback function or property is not specified, then the component uses default value or function to render the template.
 
-See template configuration properties in the following classes:
-
-* `OrgItemConfig`
-* `FamItemConfig`
-* `FamConfig`
-* `OrgConfig`
-* `TemplateConfig`
-* `TemplateConfig`
+The ReactJS components share many template configuration options with the JavaScript controls, but have their own specifics. See the following [property types](https://reactjs.org/docs/typechecking-with-proptypes.html) for reference:
+* `OrgItemConfigShape`
+* `FamItemConfigShape`
+* `FamConfigShape`
+* `OrgConfigShape`
+* `TemplateConfigShape`
 
 ## Size
-Component deals with fixed size layout, it makes no guesses about content and size of nodes. So we don't support in any form nodes auto sizing. In order to support such feature control should measure content of every node before rendering cycle. Taking into account that nodes visibility depends on available space it is going to be infinite loop of diagram layout and nodes measure iterations. The more space we provide to nodes the less number of diagram nodes is going to be visible. So control expect that node size is hard valued in template configuration. 
+The ReactJS component deals with the fixed-size layout. It makes no guesses about the content and size of nodes. So we don't support in any form nodes auto-sizing. It should measure every node's content before the layout to implement nodes auto-sizing in the component. Considering that nodes' visibility depends on available space, it will be an infinite loop of diagram layout, and nodes measure iterations. The more room we provide to nodes, the fewer the number of diagram nodes will be visible. So control expects that node size is hard valued in the template configuration. 
 
 ## Rendering methods
 * `onItemRender` - item content rendering method
@@ -30,15 +28,52 @@ Every rendering method receives `RenderEventArgs` object as first argument, it p
 * `hasButtons` - `true` if buttons panel is visible
 * `hasGroupTitle` - `true` if item has group title
 
-## Item placeholder is `div`
-Component creates placeholder `div` for every item it renders, that placeholder `div` has pre-set absolute position and size properties, so when you create item content for the rendered item you can expect that elements you create are going to be child nodes of that absolute positioned and hardcoded in size item placeholder.
+```JavaScript
+import { OrgDiagram } from basicprimitivesreact;
+<OrgDiagram config={
+    templates: [{
+        name: "contactTemplate",
+        itemSize: { width: 120, height: 100 },
+        onItemRender: ({ context: itemConfig }) => {
+            const itemTitleColor = itemConfig.itemTitleColor != null ? itemConfig.itemTitleColor : Colors.RoyalBlue;
+            return <div className="ContactTemplate">
+            <div className="ContactTitleBackground" style={{ backgroundColor: itemTitleColor }}>
+                <div className="ContactTitle">{itemConfig.title}</div>
+            </div>
+            <div className="ContactPhotoFrame">
+                <img className="ContactPhoto" src={itemConfig.image} alt={itemConfig.title} />
+            </div>
+            <div className="ContactPhone">{itemConfig.phone}</div>
+            <div className="ContactEmail">{itemConfig.email}</div>
+            <div className="ContactDescription">{itemConfig.description}</div>
+            </div>;
+        },
+    }],
+    items: [
+        {
+            id: 0,
+            parent: null,
+            title: "James Smith",
+            description: "VP, Public Sector",
+            image: "/react/photos/a.png",
+            phone: "(123) 456-78-90",
+            email: "itema@org.com",
+            templateName: "contactTemplate"
+        }
+    ]
+  }
+/>
+```
+
+## Item placeholder is `div` HTML element
+The component creates a placeholder `div` element for every item it renders. The diagram sets absolute position and size properties for it, so when you make content for the item, you should expect that elements you create will be placed inside that div element. 
 
 ## Names
-Every template object has `name` property, that `name` is used to set default template for all diagram items or per item basis:
+Every template object must have a unique name defined with the `name` property. Use that name to set a global default template for all your diagram items or on per item basis:
 
 [React](../src/Samples/ItemTemplate.js)
 
-## Adding selection checkbox to Item Template
-Chart supports selected items collection on its API, so checkbox element is necessary part of control's functionality. If you want to place it inside of item template instead of having it shown outside as decorator of element boundaries, you have to add `bp-selectioncheckbox` to your checkbox `class` style property.
+## Adding selection checkbox to the item template
+The chart supports the selection of multiple items. The checkbox element is a necessary element of the control's functionality. Suppose you want to place the checkbox inside of the item template instead of having it shown outside as a decorator. In that case, you have to add the `bp-selectioncheckbox` class name to your checkbox `class` style property.
 
 [React](../src/Samples/SelectionCheckboxInItemTemplate.js)

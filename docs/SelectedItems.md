@@ -1,15 +1,26 @@
-# Selected items & Check boxes
-Basic Primitives Diagrams have API properties equivalent to regular collection components:
-* `cursorItem` - is used to select single item in diagram with mouse click
-* `highlightItem` - provides visual feed back for mouse over
-* `selectedItems` - collection is equivalent to check marked items in ListView or TreeView controls.
+# Selected items & Checkboxes
+Selected items property is the standard UI control option for multi-select of items in collection control. The selected items property is a collection of item ids:
 
-Selected items is a collection of items ids having checked their check boxes. Chart always shows selected items in full size form. So this can be convenient for navigation and pinning nodes in order to keep them in full size. 
+```JavaScript
+import { OrgDiagram } from basicprimitivesreact;
+<OrgDiagram config={
+    selectedItems: [1, 2, 3, 4]
+  }
+/>
+```
 
-Selected items can be used for example when we need to display cross functional working group in organization hierarchy or visualize large mail recipients list in organization by groups and seniority. Usually as number of people exceeds 10 it is hard to say who is enlisted in subscription except active participants.
+The control displays selected items with checked checkboxes and in the full-size form. So this can be convenient for navigation. Users can browse diagram and checkmark nodes, so they stay pinned and visible. 
 
-Collection of `selectedItems` contains item id's. Component notifies about changes in this collection with `onSelectionChanged` event.
+Use selected items property when you need to display cross-functional working groups in the organization hierarchy or visualize extensive mail recipients list in the organization by groups and seniority. Usually, when the number of people exceeds ten, it is hard to say who is in the subscription except for active participants.
 
-Following example demonstrates how to programmatically select items in organizational chart and get notified about changes in selection.
+Collection of `OrgConfig.selectedItems` contains item id's. The control notifies about changes in this collection with `OrgConfig.onSelectionChanged` event.
+
+The following example demonstrates how to programmatically select items in the organizational chart and be notified about selection changes.
 
 [React](../src/Samples/SelectedItems.js)
+
+# Showing selected items on the frame
+
+The control displays selected items invisible in the current viewport on the control's frame as markers. The control uses the same marker properties defined by item templates for markers in the diagram. Marker's placement on the frame indicates the direction towards the selected item outside the control view area. The frame takes as much space as the largest marker in the diagram. Use `fameInnerPadding` and `frameOuterPadding` configuration properties to add extra padding around frame markers.
+
+[React](../src/Samples/ShowFrame.js)

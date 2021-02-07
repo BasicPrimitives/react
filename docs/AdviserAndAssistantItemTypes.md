@@ -1,45 +1,43 @@
 # Custom Placement of Children
-## Adviser & Assistant Item Types
+## Adviser & Assistant Item Types:
 
-Organizational Chart items are defined in form of regular hierarchy, so every item may have only one parent. This is conceptually easy to understand for end user who edits organizational chart and software developer to maintain required structures in database and in application.
+The organizational chart structure is a regular tree. That means that every node can only have one logical parent in the hierarchy. That makes the organizational chart conceptually easy to work with for the end-user who edits the organizational chart and the software developer to maintain the database's required structures and the application.
 
-In the reality pure hierarchical relations are rare, so organizational chart provides means to represent none hierarchical relations in form of item types and on-screen annotations.
+In reality, pure hierarchical relations are rare. So in our organizational chart, we provide the means to represent non-hierarchical relations by using different child item types and on-screen annotations.
 
-Chart supports following `itemType`s:
+The component has the following child positions in diagram layout relative to the parent node:
+* Regular
+* Adviser
+* Assistant
+* Sub Adviser
+* Sub Assistant
+* General Partner
+* Limited Partner
+* Adviser Partner
 
-* `ItemType.Regular`
-* `ItemType.Adviser`
-* `ItemType.Assistant`
-* `ItemType.SubAdviser`
-* `ItemType.SubAssistant`
-* `ItemType.GeneralPartner`
-* `ItemType.LimitedPartner`
-* `ItemType.AdviserPartner`
+All of them affect child placement relative to its parent in the hierarchy. The following example demonstrates  Adviser and Assistant types. The adviser item is placed at the same level as its parent and connected to it horizontally. The assistant occupies the row between the parent and all other regular children. It has a horizontal connection to the vertical line going from the parent to the remaining children.
 
-All of them control child placement relative to its logical parent in the hierarchy. The following example demonstrates  `Adviser` and `Assistant` types. `Adviser` item placed on the side of its logical parent and connected to it horizontally. `Assistant` item is placed at level in between its parent and remaining `Regular` children and horizontally connected to connection line connecting parent and its `Regular` children.
+Use the `adviserPlacementType` option to place an adviser or assistant on the parent's node hierarchy's left or right side.
 
-Use `adviserPlacementType` property of `ItemConfig` to place `Adviser` or `Assistant` on the left or right side of the hierarchy
-* `AdviserPlacementType.Left`
-* `AdviserPlacementType.Right`
+Use the `levelOffset` option to arrange assistants into multiple rows. See the regular children layout sample.
 
 [React](../src/Samples/AdviserAndAssistantItemTypes.js)
 
 ## Sub Adviser & Sub Assistant item types
 
-Sub Adviser & Sub Assistant item types are variations of regular Adviser & Assistant types. The only difference is they are shift down one level relative to their parents, so they are connected by their top side to the hierarchy.
+Sub Adviser & Sub Assistant item types are variations of regular Adviser & Assistant types. The only difference is that they have the connection line going from the top edge of the node, and they are shift down one level relative to their parents.
 
-Use `adviserPlacementType` property to place them on the left or right side of parent's hierarchy as well.
+Use the `adviserPlacementType` option to place them on the parent's hierarchy's left or right side.
 
 [React](../src/Samples/SubAdviserAndSubAssistantItemTypes.js)
 
 ## Adviser child nodes placement above parent's node children
 
-If adviser node has its own children then control adds extra levels, so advisers children are placed above level of the regular children. This behavior can be altered with `placeAdvisersAboveChildren` property. So parent's node and advisers node children would be rendered side by side at the same level.
+If the adviser node has its children, then control adds extra levels, so it places advisers children at rows above the parent's children. You can alter this layout schema with the `placeAdvisersAboveChildren` option. If you set it to false, control would place advisers and the parent's children at the same row of the diagram. 
 
 [React](../src/Samples/PlaceAdvisersAboveChildren.js)
 
 ## Assistant child nodes placement above parent's node children
-
-If assistant node has its own children then control adds extra levels, so assistant's children are placed one level above of the regular children. This behavior can be altered with `placeAssistantsAboveChildren` property. So parent's node and assistants node children would be rendered side by side at the same level.
+If the assistant node has its children, then control pushes the parent's children down, placing assistant children at rows above the parent's children. You can alter this layout schema with the `placeAssistantsAboveChildren` option. If you set it to false, then the parent's and assistant's node children would be rendered side by side at the same level. 
 
 [React](../src/Samples/PlaceAssistantsAboveChildren.js)
