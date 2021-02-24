@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ConnectorType, NavigationMode, GraphicsType, PageFitMode, Visibility, OrientationType,
+import { ConnectorType, NavigationMode, PageFitMode, Visibility, OrientationType,
 HorizontalAlignmentType, VerticalAlignmentType, GroupByType, ElbowType, Enabled, SelectionPathMode,
 ShapeType, LineType, ChildrenPlacementType, AdviserPlacementType, TextOrientationType,
 PlacementType } from 'basicprimitives';
@@ -13,7 +13,6 @@ import LevelAnnotationConfigShape from './LevelAnnotationConfigShape';
 
 const OrgConfigShape = PropTypes.shape({
   navigationMode: PropTypes.oneOf(Object.values(NavigationMode)),
-  graphicsType: PropTypes.oneOf(Object.values(GraphicsType)),
   pageFitMode: PropTypes.oneOf(Object.values(PageFitMode)),
   minimalVisibility: PropTypes.oneOf(Object.values(Visibility)),
   orientationType: PropTypes.oneOf(Object.values(OrientationType)),

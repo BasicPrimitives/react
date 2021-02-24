@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { GraphicsType, Visibility, OrientationType, VerticalAlignmentType, ElbowType,
+import { Visibility, OrientationType, VerticalAlignmentType, ElbowType,
   NeighboursSelectionMode, ShapeType, TextOrientationType, HorizontalAlignmentType, 
   PlacementType, NavigationMode, PageFitMode, GroupByType, LoopsLayoutMode,
   Enabled, LineType, AdviserPlacementType, SelectionPathMode } from 'basicprimitives';
@@ -15,7 +15,6 @@ import PaletteItemConfigShape from './PaletteItemConfigShape';
 
 const FamConfigShape = PropTypes.shape({
   navigationMode: PropTypes.oneOf(Object.values(NavigationMode)),
-  graphicsType: PropTypes.oneOf(Object.values(GraphicsType)),
   pageFitMode: PropTypes.oneOf(Object.values(PageFitMode)),
   minimalVisibility: PropTypes.oneOf(Object.values(Visibility)),
   orientationType: PropTypes.oneOf(Object.values(OrientationType)),
