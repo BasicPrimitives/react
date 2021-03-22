@@ -6,3 +6,8 @@ Label annotations can bind multiple nodes together, so visually label annotation
 See LabelAnnotationConfig for details. By default, label annotations display regular text labels, but we can use node templates to define their content. So from this perspective, they are regular diagram nodes, having complex placement logic in the diagram. See `templateName` option of `LabelAnnotationConfig` and `defaultLabelAnnotationTemplate` of `FamConfig` class.
 
 [React](../src/Samples/LabelsCascadesInFamilyChart.js)
+
+# Labels over connection lines in matrix-shaped family chart
+The following sample demonstrates how matrix layout places labels around nodes.
+
+[React](../src/Samples/LabelsNMatrixInFamilyChart.js)

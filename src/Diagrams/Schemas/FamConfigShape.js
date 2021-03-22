@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Visibility, OrientationType, VerticalAlignmentType, ElbowType,
   NeighboursSelectionMode, ShapeType, TextOrientationType, HorizontalAlignmentType, 
-  PlacementType, NavigationMode, PageFitMode, GroupByType, LoopsLayoutMode,
+  PlacementType, NavigationMode, PageFitMode, GroupByType,
   Enabled, LineType, AdviserPlacementType, SelectionPathMode } from 'basicprimitives';
 import FamItemConfigShape from './FamItemConfigShape';
 import TemplateConfigShape from './TemplateConfigShape';
@@ -28,7 +28,6 @@ const FamConfigShape = PropTypes.shape({
   minimumMatrixSize: PropTypes.number,
   maximumColumnsInMatrix: PropTypes.number,
   hideGrandParentsConnectors: PropTypes.bool,
-  loopsLayoutMode: PropTypes.oneOf(Object.values(LoopsLayoutMode)),
   bevelSize: PropTypes.number,
   elbowType: PropTypes.oneOf(Object.values(ElbowType)),
   elbowDotSize: PropTypes.number,
