@@ -26,9 +26,10 @@ export { default as CustomLayoutWithInvisibleItems} from './CustomLayoutWithInvi
 export { default as ChildrenAndAssistantsLevelOffset} from './ChildrenAndAssistantsLevelOffset';
 export { default as SkippedLevels} from './SkippedLevels';
 export { default as InactiveFamilyItems} from './InactiveFamilyItems';
-export { default as SpousesInFamilyLayout} from './SpousesInFamilyLayout';
 export { default as MatrixLayoutInFamilyChart} from './MatrixLayoutInFamilyChart';
+export { default as MatrixGroupsInFamilyChart} from './MatrixGroupsInFamilyChart';
 export { default as LabelsCascadesInFamilyChart} from './LabelsCascadesInFamilyChart';
+export { default as LabelsNMatrixInFamilyChart} from './LabelsNMatrixInFamilyChart';
 export { default as FamilyChartItemsOrdering} from './FamilyChartItemsOrdering';
 export { default as MultipleFamiliesOrdering} from './MultipleFamiliesOrdering';
 export { default as FamilyChartPrimaryParent} from './FamilyChartPrimaryParent';

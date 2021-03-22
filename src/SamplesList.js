@@ -28,9 +28,10 @@ import {
   ChildrenAndAssistantsLevelOffset,
   SkippedLevels,
   InactiveFamilyItems,
-  SpousesInFamilyLayout,
   MatrixLayoutInFamilyChart,
+  MatrixGroupsInFamilyChart,
   LabelsCascadesInFamilyChart,
+  LabelsNMatrixInFamilyChart,
   FamilyChartItemsOrdering,
   MultipleFamiliesOrdering,
   FamilyChartPrimaryParent,
@@ -187,16 +188,20 @@ const SamplesList = [
         component: <InactiveFamilyItems />
       },
       {
-        label: "Spouses having no children in Family Layout",
-        component: <SpousesInFamilyLayout />
-      },
-      {
-        label: "Matrix Nodes layout in Family Chart",
+        label: "Matrix Nodes layout",
         component: <MatrixLayoutInFamilyChart />
       },
       {
-        label: "Labels cascades over connection lines in family chart",
+        label: "Matrix Groups",
+        component: <MatrixGroupsInFamilyChart />
+      },
+      {
+        label: "Labels cascades over connection lines",
         component: <LabelsCascadesInFamilyChart />
+      },
+      {
+        label: "Labels over matrix shaped nodes connection lines",
+        component: <LabelsNMatrixInFamilyChart />
       },
       {
         label: "Nodes ordering",

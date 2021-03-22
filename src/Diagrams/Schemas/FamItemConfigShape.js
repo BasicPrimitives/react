@@ -4,7 +4,6 @@ import { ShapeType, Enabled, TextOrientationType, PlacementType, AdviserPlacemen
 const FamItemConfigShape = PropTypes.shape({
   id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   parents: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
-  spouses: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -30,7 +29,9 @@ const FamItemConfigShape = PropTypes.shape({
   primaryParent: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   relativeItem: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   position: PropTypes.number,
-  placementType: PropTypes.oneOf(Object.values(AdviserPlacementType))
+  placementType: PropTypes.oneOf(Object.values(AdviserPlacementType)),
+  matrixId: PropTypes.string,
+  addToMatrix: PropTypes.bool
 });
 
 export default FamItemConfigShape;

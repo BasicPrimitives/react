@@ -1,24 +1,10 @@
 import React, { Component } from 'react';
 import { FamDiagram } from '../Diagrams';
-import { LoopsLayoutMode, AnnotationType, GroupByType, ConnectorType, ElbowType, LineType, Colors, PageFitMode, Enabled } from 'basicprimitives';
+import { AnnotationType, GroupByType, ConnectorType, ElbowType, LineType, Colors, PageFitMode, Enabled } from 'basicprimitives';
 
 class Sample extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loopsLayoutMode: (LoopsLayoutMode.Optimized)
-    }
-  }
-
-  onSelectionChanged(loopsLayoutMode) {
-    this.setState({ loopsLayoutMode });
-  }
-
   render() {
-    const { loopsLayoutMode } = this.state;
     const config = {
-      loopsLayoutMode,
       annotations: [
         { annotationType: AnnotationType.Label, fromItem: 1, toItems: [3], title: <div className="InLayoutLabel">10%</div> },
         { annotationType: AnnotationType.Label, fromItem: 1, toItems: [5], title: <div className="InLayoutLabel">30%</div> },
@@ -63,30 +49,6 @@ class Sample extends Component {
     };
 
     return <>
-      <p>Loops Layout Mode:
-        <br />
-        <label>
-          <input
-            onChange={() => this.onSelectionChanged(0)}
-            name="loopsLayoutMode"
-            type="radio"
-            value="0"
-            checked={loopsLayoutMode === 0 ? 'checked' : ''}
-          />
-          Optimized
-        </label>
-        <br />
-        <label>
-          <input
-            onChange={() => this.onSelectionChanged(1)}
-            name="loopsLayoutMode"
-            type="radio"
-            value="1"
-            checked={loopsLayoutMode === 1 ? 'checked' : ''}
-          />
-          Keep Items Order
-        </label>
-      </p>
       <div className="placeholder">
         <FamDiagram centerOnCursor={true} config={config} />
       </div>
