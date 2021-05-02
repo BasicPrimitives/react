@@ -17,6 +17,7 @@ const FamConfigShape = PropTypes.shape({
   navigationMode: PropTypes.oneOf(Object.values(NavigationMode)),
   pageFitMode: PropTypes.oneOf(Object.values(PageFitMode)),
   minimalVisibility: PropTypes.oneOf(Object.values(Visibility)),
+  minimumVisibleLevels: PropTypes.number,
   orientationType: PropTypes.oneOf(Object.values(OrientationType)),
   verticalAlignment: PropTypes.oneOf(Object.values(VerticalAlignmentType)),
   arrowsDirection: PropTypes.oneOf(Object.values(GroupByType)),
@@ -137,6 +138,12 @@ const FamConfigShape = PropTypes.shape({
     bottom: PropTypes.number.isRequired
   }),
   frameOuterPadding: PropTypes.shape({
+    left: PropTypes.number.isRequired,
+    top: PropTypes.number.isRequired,
+    right: PropTypes.number.isRequired,
+    bottom: PropTypes.number.isRequired
+  }),
+  padding: PropTypes.shape({
     left: PropTypes.number.isRequired,
     top: PropTypes.number.isRequired,
     right: PropTypes.number.isRequired,

@@ -15,6 +15,7 @@ const OrgConfigShape = PropTypes.shape({
   navigationMode: PropTypes.oneOf(Object.values(NavigationMode)),
   pageFitMode: PropTypes.oneOf(Object.values(PageFitMode)),
   minimalVisibility: PropTypes.oneOf(Object.values(Visibility)),
+  minimumVisibleLevels: PropTypes.number,
   orientationType: PropTypes.oneOf(Object.values(OrientationType)),
   horizontalAlignment: PropTypes.oneOf(Object.values(HorizontalAlignmentType)),
   verticalAlignment: PropTypes.oneOf(Object.values(VerticalAlignmentType)),
@@ -132,6 +133,12 @@ const OrgConfigShape = PropTypes.shape({
     bottom: PropTypes.number.isRequired
   }),
   frameOuterPadding: PropTypes.shape({
+    left: PropTypes.number.isRequired,
+    top: PropTypes.number.isRequired,
+    right: PropTypes.number.isRequired,
+    bottom: PropTypes.number.isRequired
+  }),
+  padding: PropTypes.shape({
     left: PropTypes.number.isRequired,
     top: PropTypes.number.isRequired,
     right: PropTypes.number.isRequired,

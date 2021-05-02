@@ -10,6 +10,7 @@ class Sample extends Component {
       hasSelectorCheckbox: Enabled.True,
       normalItemsInterval: 10,
       normalLevelShift: 44,
+      padding: { left: 10, top: 20, right: 10, bottom: 10 },
       items: [
         { id: 0, parent: null, label: "100%", isVisible: true, description: "Chief Executive Officer (CEO)", email: "davidalt@name.com", image: "/react/photos/q.png", itemTitleColor: "#4169e1", phone: "(352) 206-7599", title: "David Dalton" },
         { id: 1, parent: 0, label: "50%", isVisible: true, description: "Co-Presidents, Platform Products & Services Division", email: "jeanwhit@name.com", image: "/react/photos/w.png", itemTitleColor: "#4b0082", phone: "(505) 791-1689", title: "Jeanna White" },
