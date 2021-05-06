@@ -651,7 +651,7 @@ class BaseDiagram extends Component {
               ...(titlesMousePanelRect.getCSS())
             }}>
             <div
-              ref={this.titlesMousePanelRef}
+              ref={this.titlesPlaceholderRef}
               style={{
                 ...(titlesplaceholder.rect.getCSS()),
                 position: "absolute",
@@ -721,7 +721,9 @@ class BaseDiagram extends Component {
                 </div>
               )}
               {calloutplaceholder &&
-                <div key="Callout"
+                <div
+                  key="Callout"
+                  ref={this.calloutPlaceholderRef}
                   style={{
                     position: "absolute",
                     overflow: "visible",
