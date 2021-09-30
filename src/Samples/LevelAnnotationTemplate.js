@@ -81,8 +81,8 @@ class Sample extends Component {
       arrowsDirection: GroupByType.Parents,
       pageFitMode: PageFitMode.FitToPage,
       onLevelTitleRender: ((data) => {
-        var {context, width, height, fillColor} = data;
-        var { title, titleColor, fillColor } = context;
+        var {context, width, height } = data;
+        var { title, titleColor } = context;
         return <div style={{...style, background: titleColor}} onClick={(event) => {
           event.stopPropagation();
           alert(`User clicked on level title ${title}`)
@@ -97,8 +97,8 @@ class Sample extends Component {
         </div>
       }),
       onLevelBackgroundRender: ((data) => {
-        var {context, width, height, fillColor} = data;
-        var { title, titleColor, fillColor, opacity } = context;
+        var {context, width, height } = data;
+        var { title, fillColor, opacity } = context;
         return !opacity ? <div style={{
           fontSize: "120px",
           fontFamily: "Arial, Helvetica, sans-serif",
