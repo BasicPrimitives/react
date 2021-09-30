@@ -1,6 +1,8 @@
 export { default as OrgDiagram } from './OrgDiagram';
 export { default as FamDiagram } from './FamDiagram';
 
+export { default as RotatedText } from './Templates/RotatedText';
+
 export { default as BackgroundAnnotationConfigShape } from './Schemas/BackgroundAnnotationConfigShape';
 export { default as ConnectorAnnotationConfigShape } from './Schemas/ConnectorAnnotationConfigShape';
 export { default as FamConfigShape } from './Schemas/FamConfigShape';

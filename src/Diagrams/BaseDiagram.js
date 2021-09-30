@@ -15,6 +15,7 @@ import {
   HighlightTemplate,
   ItemTemplate,
   UserTemplate,
+  CustomRenderTemplate,
   LabelAnnotationTemplate,
   LevelTitleTemplate,
   LevelBackgroundTemplate
@@ -114,6 +115,7 @@ class BaseDiagram extends Component {
       HighlightTemplate,
       ItemTemplate,
       UserTemplate,
+      CustomRenderTemplate,
       LabelAnnotationTemplate,
       LevelTitleTemplate,
       LevelBackgroundTemplate
