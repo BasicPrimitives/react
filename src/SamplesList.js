@@ -11,6 +11,7 @@ import {
   SelectedItems,
   ButtonsPanel,
   ItemAndGroupTitleColors,
+  GroupTitleTemplate,
   Labels,
   ChildrenPlacementType,
   AdviserAndAssistantItemTypes,
@@ -51,6 +52,7 @@ import {
   ConnectorAnnotation,
   ShapeAnnotation,
   LevelAnnotation,
+  LevelAnnotationTemplate,
   HighlightPathAnnotation,
   PERTChart,
   FamilyHideGrandParentsConnections
@@ -108,6 +110,10 @@ const SamplesList = [
       {
         label: "Item and group title colors",
         component: <ItemAndGroupTitleColors />
+      },
+      {
+        label: "Group title - Custom template",
+        component: <GroupTitleTemplate />
       },
       {
         label: "Labels",
@@ -288,6 +294,10 @@ const SamplesList = [
       {
         label: "Level Annotation",
         component: <LevelAnnotation />
+      },
+      {
+        label: "Level Annotation - Custom template",
+        component: <LevelAnnotationTemplate />
       },
       {
         label: "Highlight Path Annotation",
