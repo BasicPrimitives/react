@@ -14,6 +14,7 @@ import {
   GroupTitleTemplate,
   Labels,
   ChildrenPlacementType,
+  CrossBranchAlignment,
   AdviserAndAssistantItemTypes,
   PlaceAdvisersAboveChildren,
   PlaceAssistantsAboveChildren,
@@ -127,6 +128,10 @@ const SamplesList = [
       {
         label: "Children Placement",
         component: <ChildrenPlacementType />
+      },
+      {
+        label: "Cross-Branch Alignment",
+        component: <CrossBranchAlignment />
       },
       {
         label: "Children & Assistants Levels",

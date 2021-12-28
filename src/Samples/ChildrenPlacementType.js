@@ -6,7 +6,7 @@ class Sample extends Component {
   render() {
     const config = {
       pageFitMode: PageFitMode.None,
-      maximumColumnsInMatrix: 2,
+      maximumColumnsInMatrix: 3,
       cursorItem: 1,
       highlightItem: 0,
       normalItemsInterval: 20,

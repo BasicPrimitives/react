@@ -14,6 +14,7 @@ import LevelAnnotationConfigShape from './LevelAnnotationConfigShape';
 const OrgConfigShape = PropTypes.shape({
   navigationMode: PropTypes.oneOf(Object.values(NavigationMode)),
   pageFitMode: PropTypes.oneOf(Object.values(PageFitMode)),
+  alignBranches: PropTypes.bool,
   minimalVisibility: PropTypes.oneOf(Object.values(Visibility)),
   minimumVisibleLevels: PropTypes.number,
   orientationType: PropTypes.oneOf(Object.values(OrientationType)),

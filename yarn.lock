@@ -2722,10 +2722,10 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
-basicprimitives@6.4.1:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/basicprimitives/-/basicprimitives-6.4.1.tgz#9ad74f77916adf9f0e8cde07f4aa05bb914aea6a"
-  integrity sha512-xqZgOi1x3lLxh/kS+YYJaDi8ESv4pxIa+jESo0CwTPleZDd3i8mA2pk8JLxdDf+TsKUtxrMVppG+7du49n0FHw==
+basicprimitives@6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/basicprimitives/-/basicprimitives-6.5.0.tgz#68265e4f80bda6de31896ca04501086b2257694b"
+  integrity sha512-nFvF67UAjn++5Ps2RuaZ0dzgZ+Snf1z5XLft1N5u+VRGRomi9gVAs3eCo5+X/9QEnC6zHyQPWgvKC1InkY8ETg==
 
 batch@0.6.1:
   version "0.6.1"

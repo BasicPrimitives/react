@@ -12,6 +12,7 @@ export { default as ItemAndGroupTitleColors} from './ItemAndGroupTitleColors';
 export { default as GroupTitleTemplate} from './GroupTitleTemplate';
 export { default as Labels} from './Labels';
 export { default as ChildrenPlacementType} from './ChildrenPlacementType';
+export { default as CrossBranchAlignment} from './CrossBranchAlignment';
 export { default as AdviserAndAssistantItemTypes} from './AdviserAndAssistantItemTypes';
 export { default as PlaceAssistantsAboveChildren} from './PlaceAssistantsAboveChildren';
 export { default as PlaceAdvisersAboveChildren} from './PlaceAdvisersAboveChildren';
