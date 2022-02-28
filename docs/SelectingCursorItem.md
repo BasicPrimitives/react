@@ -18,15 +18,21 @@ For example, use the onCursorChanging event in the web applications to make mode
 
 ```JavaScript
 import { OrgDiagram } from basicprimitivesreact;
-<OrgDiagram config={
-	onCursorChanging={(event, data) => {
+<OrgDiagram onCursorChanging={(event, data) => {
 		const { context } = data;
         	setCursorItem(context.id);
         	// Return true in order to suppress set cursor item in control
         	// it will be updated via subsequent state change and rendering event
         	return true;
-	}}
-} />
+	}} />
+```
+
+```JavaScript
+import { OrgDiagram } from basicprimitivesreact;
+<OrgDiagram onCursorChanged={(event, data) => {
+		const { context } = data;
+        	console.log(context);
+	}} />
 ```
 
 To make some node inactive, so the user cannot set the cursor to it, set the `isActive` option to false for that item or template configuration objects. See "Inactive items" use case.
