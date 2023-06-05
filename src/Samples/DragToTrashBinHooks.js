@@ -127,7 +127,8 @@ class Sample extends Component {
 
     function NodeDragSource({ itemConfig }) {
       const [{ opacity }, dragRef] = useDrag({
-        item: { type: ItemTypes.NODE, id: itemConfig.id },
+        type: ItemTypes.NODE,
+        item: () => ({id: itemConfig.id }),
         collect: (monitor) => ({
           opacity: monitor.isDragging() ? 0.5 : 1,
         })

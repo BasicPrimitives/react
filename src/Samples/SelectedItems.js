@@ -68,6 +68,7 @@ class Sample extends Component {
       this.setState({
         config: {
           ...config,
+          // eslint-disable-next-line
           selectedItems: (selectedItems.filter(id => id != itemid))
         }
       })
