@@ -2,7 +2,7 @@
 
 Basic Primitives Diagrams for React - data visualization component library that implements organizational chart and multi-parent dependency tree diagrams. It renders nodes using ReactJS Virtual DOM without direct DOM manipulations, so it compliant with all React features and popular react extensions like [React Drag & Drop](http://react-dnd.github.io/react-dnd/about) and [React Context](https://reactjs.org/docs/context.html)
 
-Our site contains samples and demo published on GitHub. The recommended way to get familiar with our library is to clone our GitHub [react](https://github.com/BasicPrimitives/react) repository and run it locally. It contains simple, single-page examples. If you need to see more complex end to end applications developed in ReactJS using hooks and Redux state management, then clone our GitHub [react-demos](https://github.com/BasicPrimitives/react-demo) repository
+Our site contains samples and demo published on GitHub. The recommended way to get familiar with our library is to clone our GitHub [React Sample](https://github.com/BasicPrimitives/react) repository and run it locally. It contains simple, single-page examples. If you need to see more complex end to end applications developed in ReactJS using hooks and Redux state management, then clone our GitHub [react-demos](https://github.com/BasicPrimitives/react-demo) repository
 
 ## NPM packages:
 Use the following commands to import our components from npm packages. 
@@ -14,7 +14,7 @@ import { Enabled, PageFitMode } from 'basicprimitives';
 * `basicprimitivesreact` - react components
 * `basicprimitives` - the core of the library which contains common configuration objects and enumerations.
 
-[React](../src/Samples/FirstOrganizationalChart.js)
+[React Sample](../src/components/Samples/FirstOrganizationalChart.js)
 
 ## Create React App Sample
 The diagramming components work in React applications created with [`create-react-app`](https://facebook.github.io/create-react-app/), use the following steps to create and run the first diagram:

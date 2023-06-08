@@ -2,7 +2,7 @@
 
 Basic Primitives Diagrams for React - data visualization component library that implements organizational chart and layered multi-parent dependency tree diagrams. It renders nodes using ReactJS Virtual DOM without direct DOM manipulations, so it compliant with all React features and popular react extensions like [React Drag & Drop](http://react-dnd.github.io/react-dnd/about) and [React Context](https://reactjs.org/docs/context.html)
 
-Our site contains samples and demo published on GitHub. The recommended way to get familiar with our library is to clone our GitHub [react](https://github.com/BasicPrimitives/react) repository and run it locally. It contains simple, single-page examples. If you need to see more complex end to end applications developed in ReactJS using hooks and Redux state management, then clone our GitHub [react-demos](https://github.com/BasicPrimitives/react-demo) repository
+Our site contains samples and demo published on GitHub. The recommended way to get familiar with our library is to clone our GitHub [React Sample](https://github.com/BasicPrimitives/react) repository and run it locally. It contains simple, single-page examples. If you need to see more complex end to end applications developed in ReactJS using hooks and Redux state management, then clone our GitHub [react-demos](https://github.com/BasicPrimitives/react-demo) repository
 
 
 ## Organizational chart vs. Family Diagram
@@ -25,7 +25,7 @@ You can guide the family diagram control on how to order nodes in layout relativ
 
 The following is the copy-paste of the "First Organization Chart" sample, but for the family diagram. See the organizational chart sample for more technical details.
 
-[React](../src/Samples/FirstFamilyChart.js)
+[React Sample](../src/components/Samples/FirstFamilyChart.js)
 
 ## Create React App Sample
 

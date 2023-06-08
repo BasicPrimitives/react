@@ -26,7 +26,7 @@ import { ChildrenPlacementType } from basicprimitives;
 />
 ```
 
-[React](../src/Samples/ChildrenPlacementType.js)
+[React Sample](../src/components/Samples/ChildrenPlacementType.js)
 
 # Placing children into multiple horizontal levels
 To programmatically place children nodes into multiple rows, use the `levelOffset` property. Child nodes would be grouped by that property and placed in rows. If level offsets defined for children have gaps, then the control would preserve empty row, so different branches and teams of the same organizations would be properly aligned.  See the matrixed layout demo for the matrixed team structure in the organization.
@@ -68,4 +68,4 @@ import { ChildrenPlacementType } from basicprimitives;
 />
 ```
 
-[React](../src/Samples/ChildrenAndAssistantsLevelOffset.js)
+[React Sample](../src/components/Samples/ChildrenAndAssistantsLevelOffset.js)

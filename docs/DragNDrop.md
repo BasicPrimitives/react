@@ -39,8 +39,8 @@ The following example shows Drag & Drop functionality between diagram items and 
 * [useDrop](https://react-dnd.github.io/react-dnd/docs/api/use-drop)
   
 
-[React](../src/Samples/DragNDropHooks.js)
+[React Sample](../src/components/Samples/DragNDropHooks.js)
 
 ## Drag & Drop diagram nodes to other components
 
-[React](../src/Samples/DragToTrashBinHooks.js)
+[React Sample](../src/components/Samples/DragToTrashBinHooks.js)

@@ -15,16 +15,16 @@ Use ItemConfig.adviserPlacementType option to place partners to the left or righ
 
 ## General Partner
 
-[React](../src/Samples/GeneralPartnerItemType.js)
+[React Sample](../src/components/Samples/GeneralPartnerItemType.js)
 
 ## Limited Partner
 
 Limited Partner is a variation of GeneralPartner having no connection to the parent of the logical parent. Limited Partner shares children of the logical parent, but it does not share its parents. 
 
-[React](../src/Samples/LimitedPartnerItemType.js)
+[React Sample](../src/components/Samples/LimitedPartnerItemType.js)
 
 ## Adviser Partner
 
 Adviser Partner item type is a combination of Partner and Adviser types. It has an in-row horizontal connection to its logical parent, it shares children of the logical parent, but it has no links to its parents.
 
-[React](../src/Samples/AdviserPartnerItemType.js)
+[React Sample](../src/components/Samples/AdviserPartnerItemType.js)

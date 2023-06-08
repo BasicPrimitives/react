@@ -17,4 +17,4 @@ In general shape of connector annotation may indicate various relations, so comp
 ## Labels
 Connector annotations labels are plain text or JSX elements. Please, pay attention that component does not resolve connector annotations labels overlapping, so many annotations labels can clutter view and diagram in general.
 
-[React](../src/Samples/ConnectorAnnotation.js)
+[React Sample](../src/components/Samples/ConnectorAnnotation.js)

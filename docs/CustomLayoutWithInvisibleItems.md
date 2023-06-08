@@ -22,7 +22,7 @@ import { OrgDiagram } from basicprimitivesreact;
 
 See custom item types, children layout, and inactive items samples as well. 
 
-[React](../src/Samples/CustomLayoutWithInvisibleItems.js)
+[React Sample](../src/components/Samples/CustomLayoutWithInvisibleItems.js)
 
 ## Skipped Levels
 
@@ -30,5 +30,5 @@ We can use hidden items to skip levels in the organizational chart as well. The 
 
 Use the `levelOffset` option of the item configuration object to arrange regular children into rows.
 
-[React](../src/Samples/SkippedLevels.js)
+[React Sample](../src/components/Samples/SkippedLevels.js)
 

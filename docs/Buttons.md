@@ -88,4 +88,4 @@ import { OrgDiagram } from basicprimitivesreact;
 />
 ```
 
-[React](../src/Samples/ButtonsPanel.js)
+[React Sample](../src/components/Samples/ButtonsPanel.js)

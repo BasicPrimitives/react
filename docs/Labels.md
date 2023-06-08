@@ -30,9 +30,9 @@ import { Enabled } from basicprimitives;
 />
 ```
 
-[React](../src/Samples/Labels.js)
+[React Sample](../src/components/Samples/Labels.js)
 
 ## Adding labels to the item template
 If we need to draw labels for visible items, we can add them to templates. The following example demonstrates how to add an extra property "percent" to the item and render it a label over the item connection line.
 
-[React](../src/Samples/ItemTemplateLabel.js)
+[React Sample](../src/components/Samples/ItemTemplateLabel.js)

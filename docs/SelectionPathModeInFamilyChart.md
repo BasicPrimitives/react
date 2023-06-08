@@ -19,4 +19,4 @@ import { SelectionPathMode } from basicprimitives;
 />
 ```
 
-[React](../src/Samples/SelectionPathModeInFamilyChart.js)
+[React Sample](../src/components/Samples/SelectionPathModeInFamilyChart.js)

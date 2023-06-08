@@ -35,4 +35,4 @@ import { OrgDiagram } from basicprimitivesreact;
 />
 ```
 
-[React](../src/Samples/InactiveItems.js)
+[React Sample](../src/components/Samples/InactiveItems.js)

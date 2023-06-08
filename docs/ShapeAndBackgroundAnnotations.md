@@ -13,4 +13,4 @@ If you define multiple nodes, then annotation draws one large shape on top of th
 ## Background Annotation
 This visual is a common background area having borderline and fill color. When we render the same background annotation for multiple items, control automatically blends them into a single continuous shape. Increase background offset around nodes if they don't merge. Merging annotations improves visualization and minimizes visual clutter in the diagram. Use `includeChildren` option to expand the background around the item down to all of its descendants. 
 
-[React](../src/Samples/ShapeAnnotation.js)
+[React Sample](../src/components/Samples/ShapeAnnotation.js)

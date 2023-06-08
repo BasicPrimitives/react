@@ -5,7 +5,7 @@ Basic Primitives Diagrams render layered hierarchies and dependency diagrams. Le
 Level Annotations reference logical levels of the diagram. The first node placed into the logical level defines the level index. So if you have manager nodes vertically aligned under their CEO, you will have multiple managerial level annotations alternating with direct reports level annotations. See vertical organizational chart demo application.
 The node's children types and layout options change the number of visual levels in the hierarchy; use the `alignBranches` option to align children having the same logical level at one visual level.
 
-[React](../src/Samples/LevelAnnotation.js)
+[React Sample](../src/components/Samples/LevelAnnotation.js)
 
 # Templates
 
@@ -16,4 +16,4 @@ Use the following options to modify level annotation default content and mouse e
 
 Click on the level annotation title to see a popup message.
 
-[React](../src/Samples/LevelAnnotationTemplate.js)
+[React Sample](../src/components/Samples/LevelAnnotationTemplate.js)

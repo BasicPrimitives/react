@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Basic Primitives Diagrams for React",
+  "name": "Basic Primitives Diagrams Samples for React",
   "icons": [
     {
       "src": "favicon.ico",

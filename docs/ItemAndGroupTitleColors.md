@@ -27,4 +27,4 @@ import { Enabled, Colors, TextOrientationType } from basicprimitives;
 />
 ```
 
-[React](../src/Samples/ItemAndGroupTitleColors.js)
+[React Sample](../src/components/Samples/ItemAndGroupTitleColors.js)

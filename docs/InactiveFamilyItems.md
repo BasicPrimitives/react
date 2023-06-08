@@ -35,4 +35,4 @@ import { FamDiagram } from basicprimitivesreact;
 />
 ```
 
-[React](../src/Samples/InactiveFamilyItems.js)
+[React Sample](../src/components/Samples/InactiveFamilyItems.js)

@@ -6,5 +6,5 @@ The following options control cross-branch nodes alignment:
 * `alignBranches` - property enables alignment
 * `placeAdvisersAboveChildren` - if this property is disabled, then advisers' children are placed at the same level and aligned to the children of the parent's node.
 
-[React](../src/Samples/CrossBranchAlignment.js)
+[React Sample](../src/components/Samples/CrossBranchAlignment.js)
 
