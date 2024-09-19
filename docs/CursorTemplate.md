@@ -38,5 +38,5 @@ Every time we select a cursor node, the control recalculates the layout, which t
 ## Custom cursor template border
 The following example demonstrates how to create a custom cursor border having item specific color and tag element.
 
-[React Sample](../src/components/Samples/CursorTemplate.js)
+[React](../src/Samples/CursorTemplate.jsx)
 

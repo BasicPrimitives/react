@@ -4,7 +4,7 @@ Multiple root items are convenient to display tree structure having missing pare
 
 Following example shows two disconnected hierarchies: 
 
-[React Sample](../src/components/Samples/MultipleRootItemsInChart.js)
+[React](../src/Samples/MultipleRootItemsInChart.jsx)
 
 ## Matrix layout of multiple root items
 It is an extreme example when nodes don't have parent relations at all. So the control displays them in the form of a long horizontal list of nodes. It isn't easy to scroll and arrange them. The suggested solution is to shape root items into the matrixed formation, so our fragments take less space and fit into the available screen space.
@@ -14,4 +14,4 @@ In the following example, we create an invisible root item and use it as a paren
 
 See Children Layout example to place fragments vertically or horizontally.
 
-[React Sample](../src/components/Samples/MatrixLayoutOfMultipleRootItemsInChart.js)
+[React](../src/Samples/MatrixLayoutOfMultipleRootItemsInChart.jsx)

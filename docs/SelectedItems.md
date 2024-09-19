@@ -17,10 +17,10 @@ Collection of `OrgConfig.selectedItems` contains item id's. The control notifies
 
 The following example demonstrates how to programmatically select items in the organizational chart and be notified about selection changes.
 
-[React Sample](../src/components/Samples/SelectedItems.js)
+[React](../src/Samples/SelectedItems.jsx)
 
 # Showing selected items on the frame
 
 The control displays selected items invisible in the current viewport on the control's frame as markers. The control uses the same marker properties defined by item templates for markers in the diagram. Marker's placement on the frame indicates the direction towards the selected item outside the control view area. The frame takes as much space as the largest marker in the diagram. Use `fameInnerPadding` and `frameOuterPadding` configuration properties to add extra padding around frame markers.
 
-[React Sample](../src/components/Samples/ShowFrame.js)
+[React](../src/Samples/ShowFrame.jsx)

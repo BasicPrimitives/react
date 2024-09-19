@@ -10,4 +10,4 @@ The component ignores changes in node options, not affecting the diagram layout.
 
 The application stores the collection of items in the application component: `state`.  The diagram component updates its layout every time it gets a new configuration object reference. The diagram keeps the internal state between rendering cycles and tracks property changes for individual configuration objects. The configuration object properties may affect different visuals and transformations of the graph. The component tracks every property individually and optimizes rendering time.  For the more complex implementation of chart editing functionality, see the matrixed organizational chart structure editor demo at this site.
 
-[React Sample](../src/components/Samples/AddingNewItemsToChartAtRuntime.js)
+[React](../src/Samples/AddingNewItemsToChartAtRuntime.jsx)

@@ -27,7 +27,7 @@ import { FamDiagram } from basicprimitivesreact;
             parents: null,
             title: "James Smith",
             description: "Co-CEO",
-            image: "/react/photos/a.png",
+            image: "./photos/a.png",
             isActive: false
         }
     ]
@@ -35,4 +35,4 @@ import { FamDiagram } from basicprimitivesreact;
 />
 ```
 
-[React Sample](../src/components/Samples/InactiveFamilyItems.js)
+[React](../src/Samples/InactiveFamilyItems.jsx)

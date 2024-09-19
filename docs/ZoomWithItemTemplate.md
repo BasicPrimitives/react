@@ -11,4 +11,4 @@ Scaling diagrams with custom templates is very similar to developing responsive 
 
 See item template use case for more details about templates usage.
 
-[React Sample](../src/components/Samples/ZoomWithItemTemplate.js)
+[React](../src/Samples/ZoomWithItemTemplate.jsx)

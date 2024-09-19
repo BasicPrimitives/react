@@ -14,12 +14,12 @@ import { LineType, Colors } from basicprimitives;
   }
 />
 ```
-[React Sample](../src/components/Samples/HighlightPathAnnotation.js)
+[React](../src/Samples/HighlightPathAnnotation.jsx)
 
 ## PERT - Program evaluation and review technique chart & Critical Path Visualization
 PERT chart critical path visualization with Highlight Path Annotation. The chart does not provide any means to find a critical path. It is the developer's responsibility to trace items and visualize critical path with Highlight Path Annotation. The application should sequence the Critical path nodes and set them in the annotation.
 
-[React Sample](../src/components/Samples/PERTChart.js)
+[React](../src/Samples/PERTChart.jsx)
 
 ## Routing Highlight Path Annotation for hidden grandparents connections
 
@@ -33,4 +33,4 @@ import { FamDiagram } from basicprimitivesreact;
 />
 ```
 
-[React Sample](../src/components/Samples/FamilyHideGrandParentsConnections.js)
+[React](../src/Samples/FamilyHideGrandParentsConnections.jsx)

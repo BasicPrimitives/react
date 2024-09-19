@@ -31,7 +31,7 @@ import { Enabled } from basicprimitives;
         parent: null,
         title: "James Smith",
         description: "VP, Public Sector",
-        image: "/react/photos/a.png",
+        image: "./photos/a.png",
         hasButtons: Enabled.True
       }
     ]
@@ -88,4 +88,4 @@ import { OrgDiagram } from basicprimitivesreact;
 />
 ```
 
-[React Sample](../src/components/Samples/ButtonsPanel.js)
+[React](../src/Samples/ButtonsPanel.jsx)

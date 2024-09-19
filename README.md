@@ -10,8 +10,8 @@ Data visualization diagramming components library for dependencies visualization
 
 ## React Example
 
-```bash
-yarn create next-app test1
+```
+yarn create vite test1 --template react
 cd test1
 
 yarn add basicprimitivesreact
@@ -19,10 +19,9 @@ yarn add basicprimitivesreact
 yarn dev
 ```
 
-Add following changes into src/app/page.js.
+Add following changes into App.js
 
 ``` JavaScript
-'use client';
 import React from 'react';
 import { OrgDiagram } from 'basicprimitivesreact';
 import { PageFitMode, Enabled } from 'basicprimitives';
@@ -86,7 +85,7 @@ export default App;
 * No dependencies on 3rd party libraries.
 * Webpack [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) support
 
-### Basic Primitives Diagrams for [React Sample](https://reactjs.org/)
+### Basic Primitives Diagrams for [React](https://reactjs.org/)
 * User [JSX](https://reactjs.org/docs/introducing-jsx.html) templates
 * 100% [Virtual DOM](https://reactjs.org/docs/faq-internals.html) rendering cycle
 * [react-dnd](http://react-dnd.github.io/react-dnd/about) & [React Context](https://reactjs.org/docs/context.html) compatible 
@@ -153,6 +152,6 @@ Do you want to use a Basic Primitives diagram for a personal website, a school s
 ## Performance
 Through a full API, you can add, remove and modify individual items and their properties. The component will only update the visual elements affected by the API changes. We put in much effort to make it happen!
 
-Copyright (c) 2013 - 2023 Basic Primitives Inc
+Copyright (c) 2013 - 2024 Basic Primitives Inc
 * [Non-commercial - Free](http://creativecommons.org/licenses/by-nc/3.0/)
 * [Commercial and government licenses](license.pdf)
