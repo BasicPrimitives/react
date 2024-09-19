@@ -22,7 +22,7 @@ The following sample uses CSS @Media rules to control the diagram size on the pa
 
 See [CSS @Media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) for more reference
 
-[React Sample](../src/components/Samples/PageSizeDiagram.js)
+[React](../src/Samples/PageSizeDiagram.jsx)
 
 ## Auto size diagram in the article
 Another diagram integration scenario is diagram placement inside the article, so the component needs to auto expand its size to accommodate all diagram nodes without minimization or truncation. Set `pageFitMode` to `PageFitMode.AutoSize` and component will size itself to show all nodes of diagram. 
@@ -44,4 +44,4 @@ import { Size } from basicprimitives;
 }} />
 ```
 
-[React Sample](../src/components/Samples/AutoSize.js)
+[React](../src/Samples/AutoSize.jsx)

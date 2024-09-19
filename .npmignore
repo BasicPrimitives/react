@@ -3,8 +3,10 @@
 /public
 /docs
 /src
-/.next
+/output
 .gitignore
+create-react-app-readme.md
+package-lock.json
 yarn.lock
 .vscode
 *.log

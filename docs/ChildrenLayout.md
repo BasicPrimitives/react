@@ -18,7 +18,7 @@ import { ChildrenPlacementType } from basicprimitives;
         parent: null,
         title: "James Smith",
         description: "VP, Public Sector",
-        image: "/react/photos/a.png",
+        image: "./photos/a.png",
         childrenPlacementType: ChildrenPlacementType.Matrix // Individually
       }
     ]
@@ -26,7 +26,7 @@ import { ChildrenPlacementType } from basicprimitives;
 />
 ```
 
-[React Sample](../src/components/Samples/ChildrenPlacementType.js)
+[React](../src/Samples/ChildrenPlacementType.jsx)
 
 # Placing children into multiple horizontal levels
 To programmatically place children nodes into multiple rows, use the `levelOffset` property. Child nodes would be grouped by that property and placed in rows. If level offsets defined for children have gaps, then the control would preserve empty row, so different branches and teams of the same organizations would be properly aligned.  See the matrixed layout demo for the matrixed team structure in the organization.
@@ -44,7 +44,7 @@ import { ChildrenPlacementType } from basicprimitives;
         parent: null,
         title: "James Smith",
         description: "VP, Public Sector",
-        image: "/react/photos/a.png",
+        image: "./photos/a.png",
         childrenPlacementType: ChildrenPlacementType.Horizontal
       },
       {
@@ -52,7 +52,7 @@ import { ChildrenPlacementType } from basicprimitives;
         parent: 1,
         title: "James Smith",
         description: "VP, Public Sector",
-        image: "/react/photos/a.png",
+        image: "./photos/a.png",
         levelOffset: 0
       },
       {
@@ -60,7 +60,7 @@ import { ChildrenPlacementType } from basicprimitives;
         parent: 1,
         title: "James Smith",
         description: "VP, Public Sector",
-        image: "/react/photos/a.png",
+        image: "./photos/a.png",
         levelOffset: 1
       }
     ]
@@ -68,4 +68,4 @@ import { ChildrenPlacementType } from basicprimitives;
 />
 ```
 
-[React Sample](../src/components/Samples/ChildrenAndAssistantsLevelOffset.js)
+[React](../src/Samples/ChildrenAndAssistantsLevelOffset.jsx)

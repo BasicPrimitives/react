@@ -14,4 +14,4 @@ import { SelectionPathMode } from basicprimitives;
 
 When we need to compare two or three selected items in the organizational chart, it is essential to show their selection paths. It gives you context for nodes comparison:  immediate managers,  departments, and relative levels in the organization. In the case of many selected items, it is better to hide selection paths to save valuable space and fit the chart into the screen.
 
-[React Sample](../src/components/Samples/SelectionPathMode.js)
+[React](../src/Samples/SelectionPathMode.jsx)

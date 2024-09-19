@@ -29,4 +29,4 @@ import { OrgDiagram } from basicprimitivesreact;
 ## Custom highlight template border
 The following example demonstrates how to create a custom highlight border having item dependent color and tag element.
 
-[React Sample](../src/components/Samples/HighlightTemplate.js)
+[React](../src/Samples/HighlightTemplate.jsx)

@@ -65,4 +65,4 @@ The control supports keyboard arrows keys to choose highlighted node and `Enter`
 
 Suppose your node templates contain HTML elements supporting keyboard focus and keyboard interactivity.  All of them are going to have their TAB order. Use buttons panel to place HTML elements having a keyboard or mouse interactivity elements above all other diagram elements, so they are not blocked. See the context buttons sample for more details.
 
-[React Sample](../src/components/Samples/SelectingCursorItem.js)
+[React](../src/Samples/SelectingCursorItem.jsx)
