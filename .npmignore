@@ -5,8 +5,10 @@
 /src
 /output
 .gitignore
-create-react-app-readme.md
+eslint.config.js
 package-lock.json
 yarn.lock
+index.html
 .vscode
 *.log
+vite.config.js
