@@ -33,14 +33,18 @@ export default Sample;
 ```
 
 ## Drag & Drop diagram nodes
-The following example shows Drag & Drop functionality between diagram items and application components. 
+This demo showcases the drag-and-drop functionality for diagram nodes using **React DnD** hooks. You can easily drag nodes within the diagram and drop them to interact with other nodes.
 
-* [useDrag](https://react-dnd.github.io/react-dnd/docs/api/use-drag)
-* [useDrop](https://react-dnd.github.io/react-dnd/docs/api/use-drop)
+* [useDrag](https://react-dnd.github.io/react-dnd/docs/api/use-drag) – Hook to manage the drag state.
+* [useDrop](https://react-dnd.github.io/react-dnd/docs/api/use-drop) – Hook to manage the drop state.
   
+The following example demonstrates how to drag and drop diagram nodes using React hooks:
 
-[React Sample](../src/components/Samples/DragNDropHooks.js)
+[React](../src/Samples/DragNDropHooks.jsx)
 
 ## Drag & Drop diagram nodes to other components
+This example demonstrates dragging diagram nodes and interacting with other components outside the diagram:
 
-[React Sample](../src/components/Samples/DragToTrashBinHooks.js)
+[React](../src/Samples/DragToTrashBinHooks.jsx)
+
+
