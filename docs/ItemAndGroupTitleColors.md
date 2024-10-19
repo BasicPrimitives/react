@@ -17,7 +17,7 @@ import { Enabled, Colors, TextOrientationType } from basicprimitives;
           parent: 0,
           title: "Ted Lucas",
           description: "VP, Human Resources",
-          image: "/react/photos/b.png",
+          image: "./photos/b.png",
           itemTitleColor: Colors.Green,
           groupTitle: "Group 2",
           groupTitleColor: Colors.Gray
@@ -27,4 +27,4 @@ import { Enabled, Colors, TextOrientationType } from basicprimitives;
 />
 ```
 
-[React Sample](../src/components/Samples/ItemAndGroupTitleColors.js)
+[React](../src/Samples/ItemAndGroupTitleColors.jsx)

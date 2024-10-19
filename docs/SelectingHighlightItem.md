@@ -48,4 +48,4 @@ import { OrgDiagram } from basicprimitivesreact;
     }} />
 ```
 
-[React Sample](../src/components/Samples/SelectingHighlightItem.js)
+[React](../src/Samples/SelectingHighlightItem.jsx)

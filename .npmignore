@@ -3,8 +3,12 @@
 /public
 /docs
 /src
-/.next
+/output
 .gitignore
+eslint.config.js
+package-lock.json
 yarn.lock
+index.html
 .vscode
 *.log
+vite.config.js

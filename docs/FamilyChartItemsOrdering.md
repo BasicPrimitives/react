@@ -13,11 +13,11 @@ Please, pay attention that control ignores looped references between nodes, so i
 
 ## Family Items Ordering Sample
 
-[React Sample](../src/components/Samples/FamilyChartItemsOrdering.js)
+[React](../src/Samples/FamilyChartItemsOrdering.jsx)
 
 ## Multiple Families Ordering Sample
 
-[React Sample](../src/components/Samples/MultipleFamiliesOrdering.js)
+[React](../src/Samples/MultipleFamiliesOrdering.jsx)
 
 ## Primary Parent
 
@@ -25,4 +25,4 @@ If a node has multiple parents and belongs to distant branches of the diagram, t
 
 * `primaryParent` - defines the primary parent of the node. The control would place the node into the hierarchy of the primary node.  If there is no parent found, then the layout engine will ignore it. 
 
-[React Sample](../src/components/Samples/FamilyChartPrimaryParent.js)
+[React](../src/Samples/FamilyChartPrimaryParent.jsx)

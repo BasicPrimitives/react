@@ -27,7 +27,7 @@ import { OrgDiagram } from basicprimitivesreact;
             parent: null,
             title: "James Smith",
             description: "Co-CEO",
-            image: "/react/photos/a.png",
+            image: "./photos/a.png",
             isActive: false
         }
     ]
@@ -35,4 +35,4 @@ import { OrgDiagram } from basicprimitivesreact;
 />
 ```
 
-[React Sample](../src/components/Samples/InactiveItems.js)
+[React](../src/Samples/InactiveItems.jsx)

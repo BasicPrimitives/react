@@ -18,7 +18,7 @@ import { FamDiagram } from basicprimitivesreact;
 />
 ```
 
-[React Sample](../src/components/Samples/MatrixLayoutInFamilyChart.js)
+[React](../src/Samples/MatrixLayoutInFamilyChart.jsx)
 
 Another typical problem in connectors visualization is excessive grandparents relations. It is the situation when an item has direct links to all its grandparents. Usually, when we draw the family diagram, we are more interested in showing dependencies over actual relations. We know that the grandparent precedes the parent, the great grandparent precedes the grandparent, and so on.  So this precedence defines the indirect link between the child node and grand-grandparent. So direct relation visualization between the child node and its grandparents can be omitted from the diagram and replaced with dynamic annotations. Look at the following example where every child references all preceding parents:
 
@@ -34,6 +34,6 @@ import { FamDiagram } from basicprimitivesreact;
 />
 ```
 
-[React Sample](../src/components/Samples/FamilyHideGrandParentsConnections.js)
+[React](../src/Samples/FamilyHideGrandParentsConnections.jsx)
 
 So we got a relatively clean relations diagram between nodes. We still have all relations in place. The only difference is that grandparent's connections go through actual parents, so we need to visualize them dynamically with highlight path annotations. As we browse the diagram nodes, we can highlight all directly linked parents and children with Connector Path Annotations and set dynamically custom Item Template for them.

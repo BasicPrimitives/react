@@ -21,7 +21,7 @@ Use the `adviserPlacementType` option to place an adviser or assistant on the pa
 
 Use the `levelOffset` option to arrange assistants into multiple rows. See the regular children layout sample.
 
-[React Sample](../src/components/Samples/AdviserAndAssistantItemTypes.js)
+[React](../src/Samples/AdviserAndAssistantItemTypes.jsx)
 
 ## Sub Adviser & Sub Assistant item types
 
@@ -29,15 +29,15 @@ Sub Adviser & Sub Assistant item types are variations of regular Adviser & Assis
 
 Use the `adviserPlacementType` option to place them on the parent's hierarchy's left or right side.
 
-[React Sample](../src/components/Samples/SubAdviserAndSubAssistantItemTypes.js)
+[React](../src/Samples/SubAdviserAndSubAssistantItemTypes.jsx)
 
 ## Adviser child nodes placement above parent's node children
 
 If the adviser node has its children, then control adds extra levels, so it places advisers children at rows above the parent's children. You can alter this layout schema with the `placeAdvisersAboveChildren` option. If you set it to false, control would place advisers and the parent's children at the same row of the diagram. 
 
-[React Sample](../src/components/Samples/PlaceAdvisersAboveChildren.js)
+[React](../src/Samples/PlaceAdvisersAboveChildren.jsx)
 
 ## Assistant child nodes placement above parent's node children
 If the assistant node has its children, then control pushes the parent's children down, placing assistant children at rows above the parent's children. You can alter this layout schema with the `placeAssistantsAboveChildren` option. If you set it to false, then the parent's and assistant's node children would be rendered side by side at the same level. 
 
-[React Sample](../src/components/Samples/PlaceAssistantsAboveChildren.js)
+[React](../src/Samples/PlaceAssistantsAboveChildren.jsx)

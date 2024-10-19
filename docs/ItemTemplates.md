@@ -55,7 +55,7 @@ import { OrgDiagram } from basicprimitivesreact;
             parent: null,
             title: "James Smith",
             description: "VP, Public Sector",
-            image: "/react/photos/a.png",
+            image: "./photos/a.png",
             phone: "(123) 456-78-90",
             email: "itema@org.com",
             templateName: "contactTemplate"
@@ -71,9 +71,9 @@ The component creates a placeholder `div` element for every item it renders. The
 ## Names
 Every template object must have a unique name defined with the `name` property. Use that name to set a global default template for all your diagram items or on per item basis:
 
-[React Sample](../src/components/Samples/ItemTemplate.js)
+[React](../src/Samples/ItemTemplate.jsx)
 
 ## Adding selection checkbox to the item template
 The chart supports the selection of multiple items. The checkbox element is a necessary element of the control's functionality. Suppose you want to place the checkbox inside of the item template instead of having it shown outside as a decorator. In that case, you have to add the `bp-selectioncheckbox` class name to your checkbox `class` style property.
 
-[React Sample](../src/components/Samples/SelectionCheckboxInItemTemplate.js)
+[React](../src/Samples/SelectionCheckboxInItemTemplate.jsx)

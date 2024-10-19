@@ -46,5 +46,3 @@ The following example demonstrates how to drag and drop diagram nodes using Reac
 This example demonstrates dragging diagram nodes and interacting with other components outside the diagram:
 
 [React](../src/Samples/DragToTrashBinHooks.jsx)
-
-
