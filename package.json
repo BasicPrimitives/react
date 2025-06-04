@@ -1,7 +1,7 @@
 {
   "name": "basicprimitivesreact",
   "sideEffects": false,
-  "version": "6.5.3",
+  "version": "6.6.0",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
   "babel": {
@@ -20,7 +20,7 @@
   "homepage": "https://basicprimitives.github.io/react/",
   "license": "SEE LICENSE IN license.pdf",
   "dependencies": {
-    "basicprimitives": "^6.5.1",
+    "basicprimitives": "^6.6.0",
     "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {

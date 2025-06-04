@@ -1666,10 +1666,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-basicprimitives@^6.5.1:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/basicprimitives/-/basicprimitives-6.5.1.tgz#9cd1a2de50e24497667b1561cac12aff5f776465"
-  integrity sha512-zwHeLl3DfpsLvjTSf2MYqfOSttCvGNGQhYEUVVL4u5lt5FgioCupK0V+B77TNW0uPlkf8hKhif29TvtlrnbFew==
+basicprimitives@^6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/basicprimitives/-/basicprimitives-6.6.0.tgz#8178b0a172c7882e1f944bd74c6150869be086d1"
+  integrity sha512-CF963MYWcCf2cakzyqjVcjCr9yOv/+45kH/2GjXV5xoZbcSadawXUnONSB7XQqMp30rVC9+Vgn8LJ3gMoViOYA==
 
 binary-extensions@^2.0.0:
   version "2.3.0"

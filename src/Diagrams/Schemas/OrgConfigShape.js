@@ -103,6 +103,15 @@ const OrgConfigShape = PropTypes.shape({
   levelTitleFontStyle: PropTypes.string,
   onLevelTitleRender: PropTypes.func,
   onLevelBackgroundRender: PropTypes.func,
+  onEndPointRender: PropTypes.func,
+  showEndPoints: PropTypes.oneOf(Object.values(Enabled)),
+  endPointSize: PropTypes.shape({
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired
+  }),
+  endPointCornerRadius: PropTypes.number,
+  endPointFillColor: PropTypes.string,
+  endPointOpacity: PropTypes.number,
   distance: PropTypes.number,
   scale: PropTypes.number,
   minimumScale: PropTypes.number,
