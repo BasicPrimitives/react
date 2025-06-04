@@ -18,7 +18,8 @@ import {
   CustomRenderTemplate,
   LabelAnnotationTemplate,
   LevelTitleTemplate,
-  LevelBackgroundTemplate
+  LevelBackgroundTemplate,
+  EndPointTemplate
 } from './Templates';
 // The following code is ResizeObserver Polyfill
 // It is added to the rendered page to track size changes of control placeholder
@@ -122,7 +123,8 @@ class BaseDiagram extends Component {
       CustomRenderTemplate,
       LabelAnnotationTemplate,
       LevelTitleTemplate,
-      LevelBackgroundTemplate
+      LevelBackgroundTemplate,
+      EndPointTemplate
     }
     this.tasks = TaskManagerFactory(this.getOptions, this.getGraphics, this.getLayout, this.setLayout, this.templates);
   }

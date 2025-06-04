@@ -11,3 +11,4 @@ export { default as CustomRenderTemplate } from './CustomRenderTemplate';
 export { default as LabelAnnotationTemplate } from './LabelAnnotationTemplate';
 export { default as LevelTitleTemplate } from './LevelTitleTemplate';
 export { default as LevelBackgroundTemplate } from './LevelBackgroundTemplate';
+export { default as EndPointTemplate } from './EndPointTemplate';

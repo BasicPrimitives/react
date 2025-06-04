@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { ConnectorLabelPlacementType, ConnectorPlacementType, 
-  ConnectorShapeType, ZOrderType, AnnotationType, LineType } from 'basicprimitives';
+  ConnectorShapeType, ZOrderType, AnnotationType, LineType, Enabled } from 'basicprimitives';
 
 const ConnectorAnnotationConfigShape = PropTypes.shape({
   annotationType: PropTypes.oneOf([AnnotationType.Connector]),
@@ -24,10 +24,13 @@ const ConnectorAnnotationConfigShape = PropTypes.shape({
   lineType: PropTypes.oneOf(Object.values(LineType)),
   selectItems: PropTypes.bool,
   label: PropTypes.any,
-  size: PropTypes.shape({
+  labelSize: PropTypes.shape({
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired
-  })
+  }),
+  showFromEndpoint: PropTypes.oneOf(Object.values(Enabled)),
+  showToEndpoint: PropTypes.oneOf(Object.values(Enabled)),
+  context: PropTypes.any
 });
 
 export default ConnectorAnnotationConfigShape;

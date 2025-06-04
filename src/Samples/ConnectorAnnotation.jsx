@@ -25,6 +25,7 @@ class Sample extends Component {
         { id: 2, parent: 0, title: "Fritz Stuger", description: "Business Solutions, US", image: "./photos/c.png" },
         { id: 3, parent: 0, title: "Joseph Gipson", description: "President, Entertainment & Devices Devision", image: "./photos/d.png" }
       ],
+      showEndPoints: Enabled.Auto,
       annotations: [
         /* JSON noname object equivalent to ConnectorAnnotationConfig */
         {
