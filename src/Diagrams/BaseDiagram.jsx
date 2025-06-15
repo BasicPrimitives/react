@@ -570,6 +570,36 @@ class BaseDiagram extends Component {
     }
   }
 
+  /**
+   * This method returns item position relative to the control's element.
+   *
+   * @returns {Rect} Returns item position
+   */
+  getItemPosition(itemId) {
+    var combinedContextsTask = this.tasks.getTask("CombinedContextsTask"),
+      alignDiagramTask = this.tasks.getTask("AlignDiagramTask"),
+      itemConfig = combinedContextsTask.getConfig(itemId),
+      itemPosition,
+      result,
+      offset,
+      panelOffset;
+
+    if (itemConfig && itemConfig.id != null) {
+      panelOffset = getElementOffset(this.mousePanelRef.current);
+      offset = getElementOffset(this.controlPanelRef.current);
+      itemPosition = alignDiagramTask.getItemPosition(itemId);
+      result = new Rect(itemPosition.actualPosition)
+          .translate(panelOffset.left, panelOffset.top)
+          .translate(-offset.left, -offset.top);
+    }
+
+    return result;
+  };
+
+  getComponentOffset() {
+    return getElementOffset(this.controlPanelRef.current);
+  }
+
   render() {
     const graphics = this.graphics;
     this.tasks.process('OptionsTask', null, false);
@@ -667,12 +697,13 @@ class BaseDiagram extends Component {
                 "OTransform": scaletext, /* Opera */
                 "MozTransform": scaletext /* Firefox */
               }}>
-              {graphics.map(this, "titlesplaceholder", (layerKey, elements) =>
+              {graphics.map(this, "titlesplaceholder", (layerKey, elements, isMouseTransparent) =>
                 <div key={layerKey} style={{
                   position: "absolute",
                   overflow: "visible",
                   left: "0px",
-                  top: "0px"
+                  top: "0px",
+                  ...(isMouseTransparent ? { pointerEvents: "none" } : {})
                 }}>
                   {elements}
                 </div>
@@ -714,12 +745,13 @@ class BaseDiagram extends Component {
                 "OTransform": scaletext, /* Opera */
                 "MozTransform": scaletext /* Firefox */
               }}>
-              {graphics.map(this, "placeholder", (layerKey, elements) =>
+              {graphics.map(this, "placeholder", (layerKey, elements, isMouseTransparent) =>
                 <div key={layerKey} style={{
                   position: "absolute",
                   overflow: "visible",
                   left: "0px",
-                  top: "0px"
+                  top: "0px",
+                   ...(isMouseTransparent ? { pointerEvents: "none" } : {})
                 }}>
                   {elements}
                 </div>
@@ -732,12 +764,14 @@ class BaseDiagram extends Component {
                     position: "absolute",
                     overflow: "visible",
                     left: calloutplaceholder.rect.x + "px",
-                    top: calloutplaceholder.rect.y + "px"
+                    top: calloutplaceholder.rect.y + "px",
+                    pointerEvents: "none"
                   }}>
                   {graphics.map(this, "calloutplaceholder", (layerKey, elements) =>
                     <div key={layerKey} style={{
                       position: "absolute",
-                      overflow: "visible"
+                      overflow: "visible",
+                      pointerEvents: "none"
                     }}>
                       {elements}
                     </div>

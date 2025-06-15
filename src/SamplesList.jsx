@@ -54,7 +54,12 @@ import {
   LevelAnnotationTemplate,
   HighlightPathAnnotation,
   PERTChart,
-  FamilyHideGrandParentsConnections
+  FamilyHideGrandParentsConnections,
+  ConnectorAnnotationComponentSample,
+  CalloutAnnotationComponentSample,
+  ShapeAnnotationComponentSample,
+  RotatedTextComponentSample,
+  ConnectorAnnotationDragNDropHooks
 } from './Samples';
 
 const SamplesList = [
@@ -283,6 +288,10 @@ const SamplesList = [
         component: <ConnectorAnnotation />
       },
       {
+        label: "On-screen Connector Annotation Drag & Drop",
+        component: <ConnectorAnnotationDragNDropHooks />
+      },
+      {
         label: "Shape & Background Annotations",
         component: <ShapeAnnotation />
       },
@@ -305,6 +314,27 @@ const SamplesList = [
       {
         label: "Routing Highlight Path Annotation for hidden grand parents connections",
         component: <FamilyHideGrandParentsConnections />
+      }
+    ]
+  },
+    {
+    label: "Auxiliary Components",
+    items: [
+      {
+        label: "Connector Annotation Component",
+        component: <ConnectorAnnotationComponentSample />
+      },
+      {
+        label: "Callout Annotation Component",
+        component: <CalloutAnnotationComponentSample />
+      },
+      {
+        label: "Shape Annotation Component",
+        component: <ShapeAnnotationComponentSample />
+      },
+      {
+        label: "Rotated Text Component",
+        component: <RotatedTextComponentSample />
       }
     ]
   }

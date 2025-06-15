@@ -53,3 +53,8 @@ export { default as LevelAnnotationTemplate} from './LevelAnnotationTemplate';
 export { default as HighlightPathAnnotation} from './HighlightPathAnnotation';
 export { default as PERTChart} from './PERTChart';
 export { default as FamilyHideGrandParentsConnections} from './FamilyHideGrandParentsConnections';
+export { default as ConnectorAnnotationComponentSample} from './ConnectorAnnotationComponentSample';
+export { default as CalloutAnnotationComponentSample} from './CalloutAnnotationComponentSample';
+export { default as ShapeAnnotationComponentSample} from './ShapeAnnotationComponentSample';
+export { default as RotatedTextComponentSample} from './RotatedTextComponentSample';
+export { default as ConnectorAnnotationDragNDropHooks} from './ConnectorAnnotationDragNDropHooks';
