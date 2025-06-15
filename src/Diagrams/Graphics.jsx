@@ -44,6 +44,11 @@ class Graphics {
       agg[Layers[key]] = key;
       return agg;
     }, []);
+    // Set pointer-events: none and make them mouse transparent for the following layers
+    this.mouseTransparentLayers = {};
+    this.mouseTransparentLayers["ForegroundAnnotations"] = true;
+    this.mouseTransparentLayers["ForegroundConnectorAnnotation"] = true;
+    this.mouseTransparentLayers["Annotation"] = true;
 
     this.orientations = ['Horizontal', 'RotateLeft', 'RotateRight', 'Horizontal'];
     this.horizontalAlignments = ['center', 'left', 'right'];
@@ -134,13 +139,33 @@ class Graphics {
         const layer = placeholder.layers[layerKey];
         if (layer != null) {
           result.push(onLayer.call(thisArg, layerKey, <React.Fragment>
-            {layer.polylines.length > 0 ? <svg height={placeholder.size.height} width={placeholder.size.width}>
+            {layer.polylines.length > 0 ? <svg style={{pointerEvents: "none"}} height={placeholder.size.height} width={placeholder.size.width}>
               {layer.polylines}
             </svg> : null}
             {layer.items}
-          </React.Fragment>));
+          </React.Fragment>,
+          this.mouseTransparentLayers[layerKey])
+        );
         }
       });
+    }
+    return result;
+  }
+
+  getDefaultLayerElements(thisArg, placeholderName, onLayer) {
+    var result = [];
+    if (onLayer != null) {
+      const placeholder = this.placeholders[placeholderName];
+      const layerKey = undefined;
+      const layer = placeholder.layers[layerKey];
+      if (layer != null) {
+        result.push(onLayer.call(thisArg, <React.Fragment>
+          {layer.polylines.length > 0 ? <svg style={{pointerEvents: "none"}} height={placeholder.size.height} width={placeholder.size.width}>
+            {layer.polylines}
+          </svg> : null}
+          {layer.items}
+        </React.Fragment>));
+      }
     }
     return result;
   }
